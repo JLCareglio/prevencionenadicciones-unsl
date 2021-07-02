@@ -65,5 +65,16 @@ font-size: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }
+/*boton de objetivos */
+.boton{
+   background-color: var(--secondary-color);
+   border-radius: 1.5rem;
+   text-decoration: none;
 
+ }
+ .boton:hover{
+     box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.50);
+   transition: 800ms;
+     text-decoration: none;
+ }
 
