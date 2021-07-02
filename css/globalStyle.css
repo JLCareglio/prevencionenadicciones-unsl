@@ -1,4 +1,4 @@
-* {
+{
   /* Correccion para evitar el indeseado scroll horizontal */
   box-sizing: border-box;
   margin: 0;
@@ -12,23 +12,26 @@
   --quarter-color: black;
 }
 html {
-  /* font-size: 62.5%; facilita el uso de medidas rem, usar rem en lugar de px mejora la accesibilidad, ya que permite a los navegadores usar reglas para escalar correctamente el contenido si es necesario */
-  /* Nuevos ejemplos de medidas rem equivalentes a px: 1rem = 10px; 1.8rem = 18px; 18rem = 180px; .2rem = 2px;*/
+  /* font-size: 62.5%; facilita el uso de medidas rem, usar rem en lugar de px mejora la accesibilidad, ya que permite a los navegadores usar reglas para escalar correctamente el contenido si es necesario */
+  /* Nuevos ejemplos de medidas rem equivalentes a px: 1rem = 10px; 1.8rem = 18px; 18rem = 180px; .2rem = 2px;*/
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 body {
   min-width: 32rem;
 }
-/*titulos*/
 .titulos {
   font-weight: bold;
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 15px;
 
 font-family: 'Rubik', sans-serif;
 }
-/*caja contenedora*/
+
+
+
+/* fin novedades */
+/*integrantes */
 .cajadegradado{
   padding: 1rem;
   background-color: White; 
@@ -36,7 +39,6 @@ font-family: 'Rubik', sans-serif;
   box-shadow: 0 1.5rem 10rem rgba(0,0,0,.25);
   text-decoration-color: red;
 }
-/*seciones comicion directiva y estudiantes*/
 .color{
   color: #018A8A;
  font-family: 'DM Sans', sans-serif;
@@ -46,7 +48,7 @@ font-family: 'Rubik', sans-serif;
 font-family: 'DM Sans', sans-serif;
 font-size: 1.5rem;
 }
-/*secion participants*/
+/*integrantes*/
 .contenedor-items-logos {
   margin-top: 2.5rem;
 }
@@ -65,7 +67,7 @@ font-size: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }
-/*boton de objetivos */
+/*integrantes*/
 .boton{
    background-color: var(--secondary-color);
    border-radius: 1.5rem;
