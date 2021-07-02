@@ -7,7 +7,7 @@
 :root {
   /* Variables globales */
   --primary-color: red;
-  --secondary-color: green;
+  --secondary-color: #C3ECC5;
   --tertiary-color: blue;
   --quarter-color: black;
 }
@@ -19,4 +19,30 @@ html {
 }
 body {
   min-width: 32rem;
+}
+/*titulos*/
+.titulos {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+
+font-family: 'Rubik', sans-serif;
+}
+/*caja contenedora*/
+.cajadegradado{
+  padding: 1rem;
+  background-color: White; 
+  background-image: linear-gradient(White, var(--secondary-color), white);
+  box-shadow: 0 1.5rem 10rem rgba(0,0,0,.25);
+  text-decoration-color: red;
+}
+/*seciones comicion directiva y estudiantes*/
+.color{
+  color: #018A8A;
+ font-family: 'DM Sans', sans-serif;
+}
+
+.otraletra{
+font-family: 'DM Sans', sans-serif;
+font-size: 2.4rem;
 }
