@@ -44,5 +44,26 @@ font-family: 'Rubik', sans-serif;
 
 .otraletra{
 font-family: 'DM Sans', sans-serif;
-font-size: 2.4rem;
+font-size: 1.5rem;
 }
+/*secion participants*/
+.contenedor-items-logos {
+  margin-top: 25px;
+}
+
+.item-logos {
+  margin-bottom: 30px;
+}
+
+.logos-cont {
+  background-color: var(--secondary-color);
+  border-radius: 1.5rem;
+  padding-top: 1rem;
+  max-width: 20rem;
+  height: 10rem;
+  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
