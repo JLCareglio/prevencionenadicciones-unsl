@@ -24,7 +24,7 @@ body {
 .titulos {
   font-weight: bold;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 1.5rem;
 
 font-family: 'Rubik', sans-serif;
 }
@@ -48,11 +48,11 @@ font-size: 1.5rem;
 }
 /*secion participants*/
 .contenedor-items-logos {
-  margin-top: 25px;
+  margin-top: 2.5rem;
 }
 
 .item-logos {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 .logos-cont {
