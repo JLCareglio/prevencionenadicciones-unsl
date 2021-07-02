@@ -1,4 +1,4 @@
-{
+* {
   /* Correccion para evitar el indeseado scroll horizontal */
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +7,7 @@
 :root {
   /* Variables globales */
   --primary-color: red;
-  --secondary-color: #C3ECC5;
+  --secondary-color: #c3ecc5;
   --tertiary-color: blue;
   --quarter-color: black;
 }
@@ -20,33 +20,38 @@ html {
 body {
   min-width: 32rem;
 }
+@media (orientation: landscape) {
+  /* En esta orientación el navbar para mobile estará en un lateral, si las pruebas de diseño no dan resultado cambiar de lugar a uno estándar */
+}
+
+@media (orientation: portrait) {
+  /* En esta orientación el navbar para mobile estará abajo, imitar este estándar de diseño: https://material.io/components/bottom-navigation */
+}
 .titulos {
   font-weight: bold;
   text-align: center;
   margin-top: 15px;
 
-font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
-
-
 
 /* fin novedades */
 /*integrantes */
-.cajadegradado{
+.cajadegradado {
   padding: 1rem;
-  background-color: White; 
+  background-color: White;
   background-image: linear-gradient(White, var(--secondary-color), white);
-  box-shadow: 0 1.5rem 10rem rgba(0,0,0,.25);
+  box-shadow: 0 1.5rem 10rem rgba(0, 0, 0, 0.25);
   text-decoration-color: red;
 }
-.color{
-  color: #018A8A;
- font-family: 'DM Sans', sans-serif;
+.color {
+  color: #018a8a;
+  font-family: "DM Sans", sans-serif;
 }
 
-.otraletra{
-font-family: 'DM Sans', sans-serif;
-font-size: 1.5rem;
+.otraletra {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
 }
 /*integrantes*/
 .contenedor-items-logos {
@@ -68,15 +73,13 @@ font-size: 1.5rem;
   margin-left: auto;
 }
 /*integrantes*/
-.boton{
-   background-color: var(--secondary-color);
-   border-radius: 1.5rem;
-   text-decoration: none;
-
- }
- .boton:hover{
-     box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.50);
-   transition: 800ms;
-     text-decoration: none;
- }
-
+.boton {
+  background-color: var(--secondary-color);
+  border-radius: 1.5rem;
+  text-decoration: none;
+}
+.boton:hover {
+  box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.5);
+  transition: 800ms;
+  text-decoration: none;
+}

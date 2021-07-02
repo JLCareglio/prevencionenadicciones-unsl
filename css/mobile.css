@@ -1,7 +1,0 @@
-@media (orientation: landscape) {
-  /* En esta orientación el navbar para mobile estará en un lateral, si las pruebas de diseño no dan resultado cambiar de lugar a uno estándar */
-}
-
-@media (orientation: portrait) {
-  /* En esta orientación el navbar para mobile estará abajo, imitar este estándar de diseño: https://material.io/components/bottom-navigation */
-}
