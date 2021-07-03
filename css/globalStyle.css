@@ -71,3 +71,16 @@ body {
   transition: 800ms;
   text-decoration: none;
 }
+*folletos*/
+.imagenes{
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+/*material*/
+.sombra:hover{
+     box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.50);
+   transition: 800ms;
+   
+ }
+ .acomodoimg{width: 100%;}
