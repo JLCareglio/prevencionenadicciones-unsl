@@ -29,7 +29,9 @@ body {
   padding: 1rem;
   background-color: White;
   background-image: linear-gradient(White, var(--secondary-color), white);
-  box-shadow: 0 1.5rem 10rem rgba(0, 0, 0, 0.25);
+ -webkit-box-shadow: 1px 1px 14px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 1px 14px 1px rgba(0,0,0,0.75);
+box-shadow: 1px 1px 14px 1px rgba(0,0,0,0.75);
   text-decoration-color: red;
 }
 .color {
@@ -71,7 +73,7 @@ body {
   transition: 800ms;
   text-decoration: none;
 }
-*folletos*/
+/*folletos*/
 .imagenes{
   margin-bottom: 2rem;
   margin-top: 2rem;
