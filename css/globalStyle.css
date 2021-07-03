@@ -9,10 +9,10 @@ html {
   /* font-size: 62.5%; facilita el uso de medidas rem, usar rem en lugar de px mejora la accesibilidad, ya que permite a los navegadores usar reglas para escalar correctamente el contenido si es necesario */
   /* Nuevos ejemplos de medidas rem equivalentes a px: 1rem = 10px; 1.8rem = 18px; 18rem = 180px; .2rem = 2px;*/
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 body {
   min-width: 32rem;
+  position: relative;
 }
 
 .titulos {
@@ -29,9 +29,9 @@ body {
   padding: 1rem;
   background-color: White;
   background-image: linear-gradient(White, var(--secondary-color), white);
- -webkit-box-shadow: 1px 1px 14px 1px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 1px 14px 1px rgba(0,0,0,0.75);
-box-shadow: 1px 1px 14px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.75);
   text-decoration-color: red;
 }
 .color {
@@ -74,15 +74,16 @@ box-shadow: 1px 1px 14px 1px rgba(0,0,0,0.75);
   text-decoration: none;
 }
 /*folletos*/
-.imagenes{
+.imagenes {
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
 /*material*/
-.sombra:hover{
-     box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.50);
-   transition: 800ms;
-   
- }
- .acomodoimg{width: 100%;}
+.sombra:hover {
+  box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.5);
+  transition: 800ms;
+}
+.acomodoimg {
+  width: 100%;
+}

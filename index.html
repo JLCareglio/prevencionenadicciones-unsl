@@ -9,21 +9,20 @@
   <link rel="alternate icon" href="img/Isotipo-PrevAdicUNSL.ico">
   <!-- Eliminar la siguiente linea al finalizar el desarrollo, esta impide que la web sea indexada en los buscadores -->
   <meta name="robots" content="noindex">
+  <!-- CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/globalStyle.css">
   <link rel="stylesheet" href="css/responsiveNav.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Rubik:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navItems">
   <!-- HeaderMobile -->
   <header class="myHeader">
     <div class="header-info-left">
@@ -45,8 +44,7 @@
   </header>
   <!-- Fin HeaderMobile -->
   <!-- NavBar -->
-  <!-- z-index creo que soluciono  -->
-  <nav class="myNav">
+  <nav id="navItems" class="myNav list-group">
     <svg version="1.1" baseProfile="full" width="56" height="56">
       <circle cx="28" cy="28" r="28" fill="white" />
       <image href="img/Isotipo-PrevAdicUNSL.svg" x="3" y="4" height="50px" width="50px" />
@@ -55,24 +53,23 @@
       <li><a><span class="material-icons">phone</span>54-266-4520300 int 5543</a></li>
       <li><a><span class="material-icons">mail</span>programa.adicciones@unsl.edu.ar</a></li>
     </ul>
-    <a href="#novedades" class="active">
+    <a class="list-group-item active" href="#novedades">
       <span class="material-icons">web</span>
       <p>Novedades</p>
     </a>
-    <a href="#nosotros">
+    <a class="list-group-item" href="#objetivos">
       <span class="material-icons">info</span>
       <p>Nosotros</p>
     </a>
-    <a href="#prevencion">
+    <a class="list-group-item" href="#folletos">
       <span class="material-icons">gpp_maybe</span>
       <p>Prevencion</p>
     </a>
-    <a href="#contacto">
+    <a class="list-group-item" href="#contacto">
       <span class="material-icons">support_agent</span>
       <p>Contacto</p>
     </a>
   </nav>
-  <script src="js/responsiveNav.js"></script>
   <!-- Fin NavBar -->
 
   <!-- Seccion Novedades -->
@@ -82,13 +79,33 @@
     - Inscripciones
     - Encuestas
   -->
+  <section id="novedades" class="page-section container-fluid">
+    <br><br><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="titulos">
+            Novedades
+          </h1>
+          <br><br><br>
+        </div>
+      </div>
+    </div>
+    <div id="contenedorNovedades" class="row contenedor-items-novedad">
+      <article class="row">
+        <div class="col-md-4 col-sm-6 item-novedad">
+          <br><br><br><br><br><br><br><br><br><br>
+        </div>
+      </article>
+    </div>
+  </section>
   <!-- Fin Seccion Novedades -->
 
   <!-- Seccion About -->
   <!-- Objetivos -->
   <section class="container-fluid">
     <article class="row">
-      <div id="objetivos" class="container cajadegradado"><br><br>
+      <div id="objetivos" class="container cajadegradado page-section"><br><br>
         <div class="my-5 text-center p-3">
           <h1 class="titulos">Objetivos</h1><br><br>
           <p class="otraletra">El objetivo General es crear un Programa Universitario en Prevenci&oacuten de Consumos
@@ -371,7 +388,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 id="folletos" class="titulos">
+            <h1 id="folletos" class="titulos page-section">
               Folletos
             </h1>
             <br><br><br>
@@ -423,6 +440,9 @@
 
   <!-- Seccion Contacto  -->
   <!-- Fin Seccion Contacto -->
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
