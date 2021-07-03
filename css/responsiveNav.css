@@ -1,0 +1,141 @@
+@media screen and (max-width: 600px) {
+  .myHeader {
+    position: absolute;
+    width: 100%;
+    height: 5.6rem;
+    display: flex;
+    background-color: #343a40;
+    color: #f2f2f2;
+  }
+  .myHeader span {
+    font-size: 1.6rem;
+    vertical-align: bottom;
+    padding-right: 0.2rem;
+  }
+
+  .header-info-center {
+    flex-grow: 1;
+    padding: 1rem 0;
+  }
+  .header-info-center ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+  }
+  .header-info-right {
+    padding: 1rem 0;
+    padding-right: 0.1rem;
+    font-size: 2.2rem;
+  }
+  .extaInfo {
+    display: none;
+  }
+  .myNav svg {
+    display: none;
+  }
+  .myNav {
+    font-family: "Rubik";
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #343a40;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .myNav a {
+    text-align: center;
+    margin: 0.6rem auto;
+    padding: 0rem 0rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: #f2f2f275;
+  }
+
+  .myNav a.active {
+    color: #f2f2f2;
+  }
+  .myNav a:hover {
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  .myNav a.active span {
+    transition: 0.2s;
+    font-size: 2.6rem;
+  }
+  .myNav p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .myHeader {
+    display: none;
+  }
+  .extaInfo {
+    display: none;
+  }
+  .myNav {
+    font-family: "Rubik";
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    flex-direction: initial;
+    background-color: #343a40;
+    top: 0;
+    width: 100%;
+  }
+
+  .myNav a {
+    text-decoration: none;
+    margin: 0.6rem 1.2rem;
+    padding: 0.8rem 0rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: #f2f2f275;
+  }
+
+  .myNav a.active {
+    color: #f2f2f2;
+  }
+  .myNav a:hover {
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  .myNav p {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: super;
+  }
+  .myNav svg {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .myNav svg {
+    flex-grow: 0;
+  }
+  .extaInfo {
+    display: block;
+    color: #f2f2f2;
+    list-style-type: none;
+    margin: 1rem 0;
+    padding-left: 1rem;
+    flex-grow: 1;
+  }
+  .extaInfo a {
+    font-size: 1.2rem;
+  }
+  .extaInfo span {
+    font-size: 1.6rem;
+    vertical-align: bottom;
+    padding-right: 0.2rem;
+  }
+}

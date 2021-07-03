@@ -11,17 +11,71 @@
   <meta name="robots" content="noindex">
   <!-- CSS -->
   <link rel="stylesheet" href="css/globalStyle.css">
-  <link rel="stylesheet" href="css/mobileNav.css" media="screen and (max-width: 600px)">
+  <link rel="stylesheet" href="css/responsiveNav.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Rubik:wght@600&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Rubik:wght@300;600&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+  <!-- HeaderMobile -->
+  <header class="myHeader">
+    <div class="header-info-left">
+      <svg version="1.1" baseProfile="full" width="56" height="56">
+        <circle cx="28" cy="28" r="28" fill="white" />
+        <image href="img/Isotipo-PrevAdicUNSL.svg" x="3" y="4" height="50px" width="50px" />
+      </svg>
+    </div>
+    <div class="header-info-center">
+      <ul>
+        <li><a><span class="material-icons">phone</span>54-266-4520300 int 5543</a></li>
+        <li><a><span class="material-icons">mail</span>programa.adicciones@unsl.edu.ar</a></li>
+      </ul>
+    </div>
+    <div class="header-info-right">
+      <a href="https://www.instagram.com/prevencionunsl"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/programauniversitariodeprevencionunsl"><i
+          class="fab fa-facebook-square"></i></a>
+    </div>
+  </header>
+  <!-- Fin HeaderMobile -->
   <!-- NavBar -->
+  <nav class="myNav">
+    <svg version="1.1" baseProfile="full" width="56" height="56">
+      <circle cx="28" cy="28" r="28" fill="white" />
+      <image href="img/Isotipo-PrevAdicUNSL.svg" x="3" y="4" height="50px" width="50px" />
+    </svg>
+    <ul class="extaInfo">
+      <li><a><span class="material-icons">phone</span>54-266-4520300 int 5543</a></li>
+      <li><a><span class="material-icons">mail</span>programa.adicciones@unsl.edu.ar</a></li>
+    </ul>
+    <a href="#novedades" class="active">
+      <span class="material-icons">web</span>
+      <p>Novedades</p>
+    </a>
+    <a href="#nosotros">
+      <span class="material-icons">info</span>
+      <p>Nosotros</p>
+    </a>
+    <a href="#prevencion">
+      <span class="material-icons">gpp_maybe</span>
+      <p>Prevencion</p>
+    </a>
+    <a href="#contacto">
+      <span class="material-icons">support_agent</span>
+      <p>Contacto</p>
+    </a>
+  </nav>
+  <script src="js/responsiveNav.js"></script>
   <!-- Fin NavBar -->
 
   <!-- Seccion Novedades -->
