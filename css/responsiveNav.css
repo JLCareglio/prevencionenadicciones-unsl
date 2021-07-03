@@ -22,6 +22,11 @@
   color: #f2f2f2;
 }
 
+.myNav a.active span {
+  font-size: 2.6rem;
+  transition: 0.2s;
+}
+
 .myNav a:hover {
   color: #f2f2f2;
   text-decoration: none;
@@ -71,11 +76,6 @@
   .myNav a {
     margin: 0.6rem auto;
     padding: 0;
-  }
-
-  .myNav a.active span {
-    font-size: 2.6rem;
-    transition: 0.2s;
   }
 
   .extaInfo,
