@@ -95,10 +95,13 @@ body {
   border-radius: 1.5rem;
   padding-top: 1rem;
   max-width: 50rem;
-  
   margin: auto;
+  margin-bottom: 3rem;
+  
   margin-right: auto;
   margin-left: auto;
+
+
 
 }
 .caja-mitos:hover{
@@ -123,6 +126,21 @@ body {
 .falso{
   color: red;
   font-size: 2;
+}
+#mito2{
+  display: none;
+}
+#mito3{
+  display: none;
+}
+#mito4{
+  display: none;
+}
+#mito5{
+  display: none;
+}
+#mito6{
+  display: none;
 }
 #mito1{
   display: none;
