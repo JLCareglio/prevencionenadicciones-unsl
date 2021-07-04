@@ -15,7 +15,9 @@ body {
   min-width: 32rem;
   position: relative;
 }
-
+.tgrande{
+  font-size: 3.5rem;
+}
 .titulos {
   font-weight: bold;
   text-align: center;
