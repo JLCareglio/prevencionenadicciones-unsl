@@ -61,9 +61,11 @@
     background-color: #343a40;
     color: #f2f2f2;
     display: flex;
+    overflow: hidden;
     height: 5.6rem;
-    position: absolute;
+    position: fixed;
     width: 100%;
+    z-index: 10;
   }
 
   .myHeader span {
@@ -102,7 +104,6 @@
     display: none;
   }
 }
-
 @media screen and (min-width: 701px) {
   .myNav {
     top: 0;
