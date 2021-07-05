@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripcion a Evento</title>
+  <link rel="icon" type="image/svg+xml" href="img/Isotipo-PrevAdicUNSL.svg">
+  <link rel="alternate icon" href="img/Isotipo-PrevAdicUNSL.ico">
+  <!-- Eliminar la siguiente linea al finalizar el desarrollo, esta impide que la web sea indexada en los buscadores -->
+  <meta name="robots" content="noindex">
+  <!-- Metadatos Open Graph protocol -->
+  <meta property="og:url" content="http://www.prevencionenadicciones.unsl.edu.ar/inscripciones.html" />
+  <meta property="og:title" content="Inscripcion a Eventos - PrevencionUNSL" />
+  <meta property="og:description" content="Selecciona y inscrivite a todos los eventos creados y organizados por PrencionUNSL" />
+  <!-- CSS  -->
+  <link rel="stylesheet" href="css/globalStyle.css">
+  <style>
+    body {
+      text-align: center;
+    }
+
+    #gForm {
+      display: none;
+      position: fixed;
+      top: 0rem;
+      left: 0rem;
+      bottom: 0rem;
+      right: 0rem;
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<!-- Nota se usara la Metodología CSS BEM: Block Element Modifier -->
+
+<body>
+  <div id="noGForm">
+    <h1>Cargando formulario...</h1>
+  </div>
+  <iframe id="gForm" frameborder="0" marginheight="0" marginwidth="0">
+    <p>Error al cargar el formulario, continua desde el siguiente enlace:</p>
+    <a id="linkGForm" href="#">🌐</a>
+  </iframe>
+  <script src="js/inscripciones.js"></script>
+</body>
+
+</html>
