@@ -39,8 +39,10 @@ function embeberGform(url = window.location.href.split("gForm=")[1]) {
 // Extraer los id de inputs usndo la variable
 // FB_PUBLIC_LOAD_DATA_ de Google
 
+/*
 // Variables de todos los inputs a validar
 var inputEmail = document.getElementById("email");
 
 // Asignacion de funciones que validan lo ingresado
 inputEmail.addEventListener("focusout", validarEmail);
+*/

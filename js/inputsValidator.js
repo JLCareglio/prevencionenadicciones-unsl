@@ -1,5 +1,7 @@
 // Funciones Validadoras
-function validarEmail() {}
+function validarEmail(email) {}
+function validarNombreApellido(nom) {}
+function validarEdad(edad) {}
 
 // Funcinoes auxiliares
 function showInvalidInput(id) {}
