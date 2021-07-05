@@ -51,7 +51,12 @@
   margin: 0;
   padding: 0;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 445px) {
+  .myNav p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 700px) {
   .myHeader {
     background-color: #343a40;
     color: #f2f2f2;
@@ -98,7 +103,7 @@
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 701px) {
   .myNav {
     top: 0;
   }
@@ -114,7 +119,7 @@
 
   .myNav p {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     vertical-align: super;
   }
 
@@ -124,7 +129,10 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 985px) {
+  .myNav p {
+    font-size: 1.8rem;
+  }
   .myNav svg {
     flex-grow: 0;
   }
