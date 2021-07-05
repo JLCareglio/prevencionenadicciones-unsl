@@ -140,3 +140,26 @@ body {
 #mito1 {
   display: none;
 }
+
+
+/*contacto*/
+.face{
+  margin: auto;
+  width:20rem;
+ height: 6rem;
+}
+.insta{
+ margin: auto;
+ width:20rem;
+ height: 6rem;
+ border:solid 0.02rem;
+ border-color: black;
+ border-radius: 0.2rem;
+}
+
+.cont-contacto{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius:  0.3rem;
+  
+}
