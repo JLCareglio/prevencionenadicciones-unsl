@@ -14,40 +14,133 @@
   <meta property="og:title" content="Inscripcion a Eventos - PrevencionUNSL" />
   <meta property="og:description" content="Selecciona y inscrivite a todos los eventos creados y organizados por PrencionUNSL" />
   <!-- CSS  -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/globalStyle.css">
-  <style>
-    body {
-      text-align: center;
-    }
-
-    #gForm {
-      display: none;
-      position: fixed;
-      top: 0rem;
-      left: 0rem;
-      bottom: 0rem;
-      right: 0rem;
-      width: 100%;
-      height: 100%;
-      border: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-  </style>
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Rubik:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<!-- Nota se usara la Metodología CSS BEM: Block Element Modifier -->
-
 <body>
-  <div id="noGForm">
-    <h1>Cargando formulario...</h1>
+  <div id="inscripcion" class="container cajadegradado my-4">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfEsXircgUUCgpK9iuxgqFm8NXd84hvTzx-MV9sf1qTdXPFUg/formResponse" target="_self" id="bootstrapForm" method="POST">
+      <fieldset>
+        <h1 class="titulos">Formulario de inscripción a eventos<br><small>Dirección del evento: ejemploDirVirtual123
+            Llámanos al (54) 000 0000 o envíanos un correo electrónico a no_reply@example.com
+          </small></h1>
+      </fieldset>
+      <fieldset>
+        <legend for="">Email</legend>
+        <div class="form-group">
+          <input id="emailAddress" type="email" name="emailAddress" class="form-control" required>
+        </div>
+      </fieldset>
+
+
+      <!-- Field type: "short" id: "1939986332" -->
+      <fieldset>
+        <legend for="1939986332">¿Como te llamas?</legend>
+        <div class="form-group">
+          <input id="7835639" type="text" name="entry.7835639" class="form-control" required>
+        </div>
+      </fieldset>
+
+
+      <!-- Field type: "dropdown" id: "831586866" -->
+      <fieldset>
+        <legend for="831586866">Selecciona el evento al que deseas inscribirte</legend>
+        <div class="form-group">
+          <select id="831586866" name="entry.1134359719" class="form-control">
+            <option value="Evento de muestra 1 - 26/07">Evento de muestra 1 - 26/07</option>
+            <option value="Evento de muestra 2 - 01/08">Evento de muestra 2 - 01/08</option>
+            <option value="Evento de muestra 3 - 12/09">Evento de muestra 3 - 12/09</option>
+          </select>
+        </div>
+      </fieldset>
+
+
+      <!-- Field type: "choices" id: "615247920" -->
+      <fieldset>
+        <legend for="615247920">¿Cómo te enteraste de este evento? (Opcional)</legend>
+        <div class="form-group">
+          <div class="radio">
+            <label>
+              <input type="radio" name="entry.253668503" value="Sitio web">
+              Sitio web
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="entry.253668503" value="Amigo">
+              Amigo
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="entry.253668503" value="Boletín informativo">
+              Boletín informativo
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="entry.253668503" value="Anuncio">
+              Anuncio
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+
+      <!-- Field type: "paragraph" id: "291690101" -->
+      <fieldset>
+        <legend for="291690101">Comentarios o preguntas (Opcional)</legend>
+        <div class="form-group">
+          <textarea id="710177639" name="entry.710177639" class="form-control"></textarea>
+        </div>
+      </fieldset>
+
+      <input type="hidden" name="fvv" value="1">
+      <input type="hidden" name="fbzx" value="1898258957749814711">
+      <!--
+      CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+      This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+      Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+      We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+  -->
+      <input type="hidden" name="pageHistory" value="0">
+
+      <input class="btn btn-primary" type="submit" value="Enviar">
+    </form>
   </div>
-  <iframe id="gForm" frameborder="0" marginheight="0" marginwidth="0">
-    <p>Error al cargar el formulario, continua desde el siguiente enlace:</p>
-    <a id="linkGForm" href="#">🌐</a>
-  </iframe>
-  <script src="js/inputsValidator.js"></script>
+  <!-- Modal que se activa al enviar el formulario -->
+  <div class="modal fade" id="inscripcionEnviadaModal" tabindex="-1" aria-labelledby="inscripcionEnviadaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="inscripcionEnviadaModalLabel">Gracias por inscribirte</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="comprobanteInscripcion" class="modal-body">
+          <h2>Comprobante de Inscripcion</h2>
+          <p>Numero de inscripcion: 99761351449</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="btnImprimir" type="button" class="btn btn-primary">Imprimir Comprobante</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle and jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- JS Propios -->
   <script src="js/inscripciones.js"></script>
 </body>
 
