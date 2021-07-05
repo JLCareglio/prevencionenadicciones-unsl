@@ -14,6 +14,7 @@ async function fetchInscripciones() {
   const response = await fetch(hojaInscripciones);
   let json_inscipciones = await response.json();
   json_inscipciones = json_inscipciones.feed.entry;
+  console.log(json_inscipciones);
   embeberGform(json_inscipciones[0].gsx$googleform.$t);
 }
 function embeberGform(url = window.location.href.split("gForm=")[1]) {
