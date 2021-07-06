@@ -1,3 +1,4 @@
+var listadoEventos;
 // Variables de todos los inputs del formulario de inscripcion
 var inputEmail = document.getElementById("emailAddress");
 var inputNombre = document.getElementById("7835639");
@@ -12,26 +13,37 @@ var inputComentarios = document.getElementById("710177639");
 const hojaEventos =
   "https://spreadsheets.google.com/feeds/list/1TUAdPdrHf1lWyYhQe_xm7o9BET8Pi7bioyMAm1zuFVo/od6/public/values?alt=json";
 
-/* Otras hojas
-const SPREADSHEET = "https://spreadsheets.google.com/feeds/list/1TUAdPdrHf1lWyYhQe_xm7o9BET8Pi7bioyMAm1zuFVo/";
-const hojaNovedades = SPREADSHEET + "o7d3cgn/public/values?alt=json";
-const hojaEncuestas = SPREADSHEET + "o57dwj3/public/values?alt=json";
-*/
-
-fetchInscripciones();
-async function fetchInscripciones() {
-  const response = await fetch(hojaEventos);
-  let json_eventos = await response.json();
-  json_eventos = json_eventos.feed.entry;
-  console.log(json_eventos);
+actualizarListadoEventos();
+async function actualizarListadoEventos() {
+  await fetchInscripciones();
+  async function fetchInscripciones() {
+    const response = await fetch(hojaEventos);
+    let json_eventos = await response.json();
+    json_eventos = json_eventos.feed.entry;
+    listadoEventos = { ...json_eventos };
+  }
+  console.log("Listado de Eventos json:", listadoEventos);
+  for (const key in listadoEventos) {
+    if (Object.hasOwnProperty.call(listadoEventos, key)) {
+      const evento = listadoEventos[key];
+      const textoEvento =
+        evento.gsx$nombredelevento.$t +
+        " - " +
+        evento.gsx$fechayhorainicio.$t +
+        " ~ " +
+        evento.gsx$fechayhorafin.$t;
+      inputEvento.innerHTML += `<option value="${textoEvento}">${textoEvento}</option>`;
+    }
+  }
 }
 
 /* ----------Validar Formulario---------- */
 // Asignacion de funciones que validan lo ingresado
-//inputEmail.addEventListener("focusout", validarEmail);
 inputEmail.addEventListener("focusout", validarEmail);
 inputNombre.addEventListener("focusout", validarNombre);
-inputComoEnteraste[3].addEventListener("click", validarOtraOpcion);
+for (const radioBtn of inputComoEnteraste) {
+  radioBtn.addEventListener("click", validarOtraOpcion);
+}
 inputComoEnterasteOtraOpcion.addEventListener("focusout", validarOtraOpcion);
 inputComoEnterasteOtraOpcion.addEventListener("focus", function () {
   inputComoEnteraste[3].checked = true;
@@ -42,9 +54,11 @@ function validarEmail() {
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (exprecionRegular.test(String(inputEmail.value).toLowerCase())) {
     console.log("email valido");
+    colorearBorder(inputEmail, "var(--secondary-color)");
     return true;
   } else {
     console.log("email invalido");
+    colorearBorder(inputEmail, "red");
     return false;
   }
 }
@@ -52,9 +66,11 @@ function validarNombre() {
   const exprecionRegular = /^[A-Za-z\s]+$/;
   if (exprecionRegular.test(String(inputNombre.value).toLowerCase())) {
     console.log("nombre valido");
+    colorearBorder(inputNombre, "var(--secondary-color)");
     return true;
   } else {
     console.log("nombre invalido");
+    colorearBorder(inputNombre, "red");
     return false;
   }
 }
@@ -64,11 +80,19 @@ function validarOtraOpcion() {
     inputComoEnterasteOtraOpcion.value == ""
   ) {
     console.log("por favor, escribe algo si seleccionas 'otra opción'");
+    colorearBorder(inputComoEnterasteOtraOpcion, "red");
     return false;
   } else {
     console.log("'otra opción' ok");
+    colorearBorder(inputComoEnterasteOtraOpcion, "var(--secondary-color)");
     return true;
   }
+}
+function colorearBorder(idElement, color) {
+  idElement.style.border = "2px solid " + color;
+}
+function comprobarTodosInputs() {
+  return validarEmail() && validarNombre() && validarOtraOpcion();
 }
 
 /* ----------Envio de inscripcion a GoogleForm---------- */
@@ -76,17 +100,34 @@ function validarOtraOpcion() {
 $("#bootstrapForm").submit(function (event) {
   event.preventDefault();
   var extraData = {};
-  $("#bootstrapForm").ajaxSubmit({
-    data: extraData,
-    dataType: "jsonp", // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-    error: function () {
-      // Submit of form should be successful but JSONP callback will fail because Google Forms
-      // does not support it, so this is handled as a failure.
-      $("#inscripcionEnviadaModal").modal("show");
-      // You can also redirect the user to a custom thank-you page:
-      // window.location = 'http://www.mydomain.com/thankyoupage.html'
-    },
-  });
+  if (comprobarTodosInputs()) {
+    document.getElementById("comprobanteInscripcion").innerHTML = `
+      <h2>Comprobante de Inscripcion</h2>
+      <p>Numero de inscripcion: ${Math.floor(Math.random() * 10000000)}</p>
+      <p>Email: ${inputEmail.value}</p>
+      <p>Nombre: ${inputNombre.value}</p>
+      <p>Inscripto a: ${inputEvento.value}</p>
+    `;
+    $("#bootstrapForm").ajaxSubmit({
+      data: extraData,
+      dataType: "jsonp", // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+      error: function () {
+        // Submit of form should be successful but JSONP callback will fail because Google Forms
+        // does not support it, so this is handled as a failure.
+        $("#inscripcionEnviadaModal").modal("show");
+        document
+          .querySelector("#btnImprimir")
+          .addEventListener("click", function () {
+            var div = document.querySelector("#comprobanteInscripcion");
+            imprimirElemento(div);
+          });
+      },
+    });
+  } else {
+    alert(
+      "Para inscribirte primero corrige todas las entradas marcadas en rojo."
+    );
+  }
 });
 
 /* ----------Imprimir Comprobante---------- */
@@ -95,13 +136,6 @@ function imprimirElemento(elemento) {
   ventana.document.write("<html><head><title>" + document.title + "</title>");
   ventana.document.write("</head><body >");
   ventana.document.write(elemento.innerHTML);
-  let datosIngresados = document.createElement("div");
-  datosIngresados.innerHTML = `
-    <p>Email: ${inputEmail.value}</p>
-    <p>Nombre: ${inputNombre.value}</p>
-    <p>Evento: ${inputEvento.value}</p>
-  `;
-  ventana.document.write(datosIngresados.innerHTML);
   ventana.document.write("</body></html>");
   ventana.document.close();
   ventana.focus();
@@ -109,7 +143,3 @@ function imprimirElemento(elemento) {
   ventana.close();
   return true;
 }
-document.querySelector("#btnImprimir").addEventListener("click", function () {
-  var div = document.querySelector("#comprobanteInscripcion");
-  imprimirElemento(div);
-});
