@@ -30,10 +30,10 @@ function agregarNovedad(fecha, titulo, contenido, enlace) {
   contenedorNovedades.innerHTML += `
   <div class="col-sm-6">
     <a href="${enlace}" target="_blank">
-      <div class="card bg-light mb-3">
-        <div class="card-header">${fecha} ${titulo}</div>
+      <div class="card cajadegradado bg-light mb-3">
+        <div class="card-header"><h3 class="color otraletra">${fecha} ${titulo}</h3></div>
         <div class="card-body">
-          <p class="card-text">${contenido}</p>
+          <p class="card-text otraletra">${contenido}</p>
         </div>
       </div>
     </a>
