@@ -2,7 +2,7 @@ document.getElementById("fboton").addEventListener("click",validar);
 
  function validarnom(name) {
   const exprecionRegular = /^[A-Za-z\s]+$/;
-  if (exprecionRegular.test(String(name).toLowerCase())) {
+  if (exprecionRegular.test(String(name))) {
     console.log("nombre valido");
     return true;
   } else {
@@ -11,8 +11,8 @@ document.getElementById("fboton").addEventListener("click",validar);
   }
 }
 function valmail(ema) {
-  const exprecionRegular = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  if (exprecionRegular.test(String(ema).toLowerCase())) {
+  const exprecionRegular = /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
+  if (exprecionRegular.test(String(ema))) {
     console.log("email valido");
     return true;
   } else {
@@ -21,7 +21,7 @@ function valmail(ema) {
   }
 }
 function  validar() {
-
+var control=0;
 var name=document.f1.nombre.value;
  var ema=document.f1.mail.value;
  var msg=document.f1.mensaje.value;
@@ -30,7 +30,8 @@ var name=document.f1.nombre.value;
 if (name==""||!(validarnom(name)) ){
 
         	document.getElementById("fnombre").style.background="#FC220D";
-        	return;
+          control=1;
+        	
 	
 	}else{
 		document.getElementById("fnombre").style.background="white";
@@ -39,7 +40,7 @@ if (name==""||!(validarnom(name)) ){
 	if(ema==""||!(valmail(ema))){
         	
         		document.getElementById("fmail").style.background="#FC220D";
-        	return;
+        	control=1;
 
         }else{
         	document.getElementById("fmail").style.background="white";
@@ -48,14 +49,17 @@ if (name==""||!(validarnom(name)) ){
     if (msg=="") {
     	document.getElementById("fmensaje").style.background="#FC220D";
     	console.log("no dejo ningun mensaje");
-        	return;
+      control=1;
+        	
 
     }else{
     	document.getElementById("fmensaje").style.background="white";
     }
+    if (control==0) {
     document.getElementById("fcont").submit();
-    alert("gracias por enviarnos tu consulta");
+  }else{
+    return
+  }
+ 
    
 }
-	
-
