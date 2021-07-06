@@ -54,11 +54,11 @@ function validarEmail() {
     /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
   if (exprecionRegular.test(String(inputEmail.value))) {
     console.log("email valido");
-    colorearBorder(inputEmail, "var(--secondary-color)");
+    colorearBorder(inputEmail, "#0DFC77");
     return true;
   } else {
     console.log("email invalido");
-    colorearBorder(inputEmail, "red");
+    colorearBorder(inputEmail, "#FC220D");
     return false;
   }
 }
@@ -66,11 +66,11 @@ function validarNombre() {
   const exprecionRegular = /^[A-Za-z\s]+$/;
   if (exprecionRegular.test(String(inputNombre.value))) {
     console.log("nombre valido");
-    colorearBorder(inputNombre, "var(--secondary-color)");
+    colorearBorder(inputNombre, "#0DFC77");
     return true;
   } else {
     console.log("nombre invalido");
-    colorearBorder(inputNombre, "red");
+    colorearBorder(inputNombre, "#FC220D");
     return false;
   }
 }
@@ -80,11 +80,11 @@ function validarOtraOpcion() {
     inputComoEnterasteOtraOpcion.value == ""
   ) {
     console.log("por favor, escribe algo si seleccionas 'otra opción'");
-    colorearBorder(inputComoEnterasteOtraOpcion, "red");
+    colorearBorder(inputComoEnterasteOtraOpcion, "#FC220D");
     return false;
   } else {
     console.log("'otra opción' ok");
-    colorearBorder(inputComoEnterasteOtraOpcion, "var(--secondary-color)");
+    colorearBorder(inputComoEnterasteOtraOpcion, "#0DFC77");
     return true;
   }
 }
