@@ -27,16 +27,42 @@ async function actualizarListadoNovedades() {
   }
 }
 function agregarNovedad(fecha, titulo, contenido, enlace) {
+  let separador = " : ";
   contenedorNovedades.innerHTML += `
   <div class="col-sm-6">
-    <a href="${enlace}" target="_blank">
-      <div class="card cajadegradado bg-light mb-3">
-        <div class="card-header"><h3 class="color otraletra">${fecha} ${titulo}</h3></div>
-        <div class="card-body">
-          <p class="card-text otraletra">${contenido}</p>
+    ${enlace != "" ? "<a href='" + enlace + "' target='_blank'>" : ""}
+      <div class="card cajadegradado bg-light mb-3${
+        enlace != "" ? " sombra" : ""
+      }">
+        <div class="card-header">
+          <h3 class="color otraletra">
+            ${
+              fecha != ""
+                ? "<span class='material-icons float-left'>event</span>"
+                : ""
+            }
+            ${
+              fecha != ""
+                ? "<span class='fecha'>" + fecha + separador + "</span>"
+                : ""
+            }
+            <span>${titulo}</span>
+            ${
+              enlace != ""
+                ? "<span class='material-icons float-right'>link</span>"
+                : ""
+            }
+          </h3>
         </div>
+        ${
+          contenido != ""
+            ? "<div class='card-body'><p class='card-text otraletra'>" +
+              contenido +
+              "</p></div>"
+            : ""
+        }
       </div>
-    </a>
+    ${enlace != "" ? "</a>" : ""}
   </div>
   `;
 }
