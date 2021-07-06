@@ -1,9 +1,10 @@
 :root {
   /* Variables globales */
-  --primary-color: red;
+  --primary-color: #343a40;
   --secondary-color: #c3ecc5;
-  --tertiary-color: blue;
-  --quarter-color: black;
+  --tertiary-color: #f2f2f2;
+  --tertiary-color-alpha: #f2f2f288;
+  --quarter-color: #343a40;
 }
 
 html {
