@@ -51,8 +51,8 @@ inputComoEnterasteOtraOpcion.addEventListener("focus", function () {
 
 function validarEmail() {
   const exprecionRegular =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (exprecionRegular.test(String(inputEmail.value).toLowerCase())) {
+    /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
+  if (exprecionRegular.test(String(inputEmail.value))) {
     console.log("email valido");
     colorearBorder(inputEmail, "var(--secondary-color)");
     return true;
@@ -64,7 +64,7 @@ function validarEmail() {
 }
 function validarNombre() {
   const exprecionRegular = /^[A-Za-z\s]+$/;
-  if (exprecionRegular.test(String(inputNombre.value).toLowerCase())) {
+  if (exprecionRegular.test(String(inputNombre.value))) {
     console.log("nombre valido");
     colorearBorder(inputNombre, "var(--secondary-color)");
     return true;
