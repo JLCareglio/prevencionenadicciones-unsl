@@ -27,13 +27,8 @@ async function actualizarListadoEventos() {
     if (Object.hasOwnProperty.call(listadoEventos, key)) {
       const evento = listadoEventos[key];
       const fechaInicio =
-        evento.gsx$fechayhorainicio.$t != ""
-          ? " ~ " + evento.gsx$fechayhorainicio.$t
-          : "";
-      const fechaFin =
-        evento.gsx$fechayhorafin.$t != ""
-          ? " ~ " + evento.gsx$fechayhorafin.$t
-          : "";
+        evento.gsx$inicio.$t != "" ? " ~ " + evento.gsx$inicio.$t : "";
+      const fechaFin = evento.gsx$fin.$t != "" ? " ~ " + evento.gsx$fin.$t : "";
       const textoEvento =
         evento.gsx$nombredelevento.$t + fechaInicio + fechaFin;
       inputEvento.innerHTML += `<option value="${textoEvento}">${textoEvento}</option>`;
