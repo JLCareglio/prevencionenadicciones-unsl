@@ -101,7 +101,7 @@ $("#bootstrapForm").submit(function (event) {
   var extraData = {};
   if (comprobarTodosInputs()) {
     document.getElementById("comprobanteInscripcion").innerHTML = `
-      <h2>Comprobante de Inscripcion</h2>
+      <h2 class="color">Comprobante de Inscripcion</h2>
       <p>Numero de inscripcion: ${Math.floor(Math.random() * 10000000)}</p>
       <p>Email: ${inputEmail.value}</p>
       <p>Nombre: ${inputNombre.value}</p>
