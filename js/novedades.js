@@ -27,33 +27,34 @@ async function actualizarListadoNovedades() {
   }
 }
 function agregarNovedad(fecha, titulo, contenido, enlace) {
-  let separador = " : ";
   contenedorNovedades.innerHTML += `
   <div class="col-sm-6">
     ${enlace != "" ? "<a href='" + enlace + "' target='_blank'>" : ""}
       <div class="card cajadegradado bg-light mb-3${
         enlace != "" ? " sombra" : ""
       }">
-        <div class="card-header">
-          <h3 class="color otraletra">
-            ${
-              fecha != ""
-                ? "<span class='material-icons float-left'>event</span>"
-                : ""
-            }
-            ${
-              fecha != ""
-                ? "<span class='fecha'>" + fecha + separador + "</span>"
-                : ""
-            }
-            <span>${titulo}</span>
-            ${
-              enlace != ""
-                ? "<span class='material-icons float-right'>link</span>"
-                : ""
-            }
-          </h3>
-        </div>
+        ${
+          fecha != "" || enlace != ""
+            ? "<div class='card-header'><h3 class='color otraletra'>"
+            : ""
+        }
+          ${
+            fecha != ""
+              ? "<span class='material-icons float-left'>event</span>"
+              : ""
+          }
+          ${
+            fecha != ""
+              ? "<span class='fecha float-left'>" + fecha + "</span>"
+              : ""
+          }
+          ${
+            enlace != ""
+              ? "<span class='material-icons float-right'>link</span>"
+              : ""
+          }
+          ${fecha != "" || enlace != "" ? "</h3></div>" : ""}
+        ${titulo != "" ? "<h2 class='card-title'>" + titulo + "</h2>" : ""}
         ${
           contenido != ""
             ? "<div class='card-body'><p class='card-text otraletra'>" +
