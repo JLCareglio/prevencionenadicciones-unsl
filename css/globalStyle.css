@@ -18,8 +18,11 @@ body {
   position: relative;
   overflow-x: hidden;
   font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
 }
-#contenedorNovedades a {
+#contenedorNovedades a,
+.myHeader a,
+.myNav a {
   text-decoration: none;
   color: unset;
 }
@@ -30,7 +33,6 @@ body {
   font-weight: bold;
   text-align: center;
   margin-top: 15px;
-
   font-family: "Rubik", sans-serif;
 }
 

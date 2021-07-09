@@ -13,6 +13,8 @@
   <meta property="og:url" content="http://www.prevencionenadicciones.unsl.edu.ar/inscripciones.html" />
   <meta property="og:title" content="Inscripcion a Eventos - PrevencionUNSL" />
   <meta property="og:description" content="Selecciona e inscríbete a todos los eventos creados y organizados por PrencionUNSL" />
+  <!-- CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS  -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/globalStyle.css">
@@ -21,17 +23,68 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Rubik:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    .myHeader {
+      background-color: var(--primary-color);
+      color: var(--tertiary-color);
+      display: flex;
+      overflow: hidden;
+      height: 5.6rem;
+      position: relative;
+      width: 100%;
+    }
+
+    .myHeader span {
+      font-size: 1.6rem;
+      padding-right: 0.2rem;
+      vertical-align: bottom;
+    }
+
+    .myHeader .header-info-center {
+      padding: 1rem 0;
+      flex-grow: 1;
+    }
+
+    .myHeader .header-info-center ul {
+      font-size: 1.2rem;
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+
+    .myHeader .header-info-right {
+      font-size: 2.2rem;
+      padding: 1rem 0;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Header -->
+  <header class="myHeader">
+    <div class="header-info-left">
+      <svg version="1.1" baseProfile="full" width="56" height="56">
+        <a href="index.html">
+          <circle cx="28" cy="28" r="28" fill="white" />
+          <image href="img/Isotipo-PrevAdicUNSL.svg" x="3" y="4" height="50px" width="50px" />
+        </a>
+      </svg>
+    </div>
+    <div class="header-info-center">
+      <ul>
+        <li><a href="tel:+5426645203005543"><span class="material-icons">phone</span>54-266-4520300 int 5543</a></li>
+        <li><a href="mailto:programa.adicciones@unsl.edu.ar"><span class="material-icons">mail</span>programa.adicciones@unsl.edu.ar</a></li>
+      </ul>
+    </div>
+    <div class="header-info-right pe-2">
+      <a href="https://www.instagram.com/prevencionunsl"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/programauniversitariodeprevencionunsl"><i class="fab fa-facebook-square"></i></a>
+    </div>
+  </header>
+  <!-- Fin HeaderMobile -->
   <div id="inscripcion" class="container cajadegradado my-4">
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSfEsXircgUUCgpK9iuxgqFm8NXd84hvTzx-MV9sf1qTdXPFUg/formResponse" target="_self" id="bootstrapForm" method="POST">
       <fieldset>
-        <h1 class="titulos">Formulario de inscripción a eventos<br>
-          <small>
-            Para mas infomracion llámanos al 54-266-4520300 int 5543 o envíanos un correo electrónico a programa.adicciones@unsl.edu.ar
-          </small>
-        </h1>
+        <h1 class="titulos">Formulario de inscripción a eventos<br></h1>
       </fieldset>
       <fieldset>
         <legend for="">Email</legend>
@@ -133,11 +186,11 @@
     </div>
   </div>
 
-  <!-- CDN de Bootstrap Bundle y Popper-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <!-- CDN jQuery y jQueryForm -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+  <!-- CDN de Bootstrap Bundle y Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <!-- JS Propios -->
   <script src="js/inscripciones.js"></script>
 </body>

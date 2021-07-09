@@ -28,7 +28,7 @@
   z-index: 10;
 }
 
-.myNav a {
+.myNav > a {
   color: var(--tertiary-color-alpha);
   font-size: 1.6rem;
   line-height: 1.6rem;
@@ -37,12 +37,12 @@
   cursor: pointer;
 }
 
-.myNav a.active {
+.myNav > a.active {
   color: var(--tertiary-color);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .myNav a:hover {
+  .myNav > a:hover {
     color: var(--tertiary-color);
     text-decoration: none;
   }
@@ -94,7 +94,7 @@
     bottom: 0;
   }
 
-  .myNav a {
+  .myNav > a {
     margin: 0.6rem auto;
     padding: 0;
   }
@@ -113,7 +113,7 @@
     flex-grow: 1;
   }
 
-  .myNav a {
+  .myNav > a {
     margin: 0.6rem 1.2rem;
     padding: 0.8rem 0;
   }
