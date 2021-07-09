@@ -84,6 +84,9 @@ function validarOtraOpcion() {
   } else {
     console.log("'otra opción' ok");
     colorearBorder(inputComoEnterasteOtraOpcion, "#0DFC77");
+    if (inputComoEnterasteOtraOpcion.value == "") {
+      inputComoEnterasteOtraOpcion.style.border = "1px solid #ced4da";
+    }
     return true;
   }
 }

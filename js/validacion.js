@@ -4,13 +4,13 @@ var fmensaje = document.getElementById("fmensaje");
 
 document.getElementById("fboton").addEventListener("click", validar);
 fnombre.addEventListener("focus", function () {
-  colorearBorder(fnombre, "black");
+  colorearBorder(fnombre, "#ced4da");
 });
 fmail.addEventListener("focus", function () {
-  colorearBorder(fmail, "black");
+  colorearBorder(fmail, "#ced4da");
 });
 fmensaje.addEventListener("focus", function () {
-  colorearBorder(fmensaje, "black");
+  colorearBorder(fmensaje, "#ced4da");
 });
 
 function validarnom(name) {

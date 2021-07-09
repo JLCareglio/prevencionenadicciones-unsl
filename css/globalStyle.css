@@ -167,5 +167,5 @@ body {
 .cont-contacto {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  border-radius: 0.3rem;
+  border: 0.1rem solid #ced4da;
 }
