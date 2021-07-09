@@ -1,7 +1,7 @@
 :root {
   /* Variables globales */
-  --primary-color: #466F7A;
-  --secondary-color: #C8EFFA;
+  --primary-color: #466f7a;
+  --secondary-color: #c8effa;
   --tertiary-color: #f2f2f2;
   --tertiary-color-alpha: #f2f2f288;
   --quarter-color: #0288ad;
@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
   font-family: "Rubik", sans-serif;
 }
-#contenedorNovedades a{
+#contenedorNovedades a {
   text-decoration: none;
   color: unset;
 }

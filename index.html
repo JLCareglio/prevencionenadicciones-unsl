@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-bs-target="#navItems">
+<body data-bs-spy="scroll" data-bs-target="#navItems">
   <!-- HeaderMobile -->
   <header class="myHeader">
     <div class="header-info-left">
@@ -53,7 +53,7 @@
       <li><a><span class="material-icons">phone</span>54-266-4520300 int 5543</a></li>
       <li><a><span class="material-icons">mail</span>programa.adicciones@unsl.edu.ar</a></li>
     </ul>
-    <a class="list-group-item active" href="#novedades">
+    <a class="list-group-item" href="#novedades">
       <span class="material-icons">web</span>
       <p>Novedades</p>
     </a>
@@ -77,21 +77,11 @@
   <!-- Fin NavBar -->
 
   <!-- Seccion Novedades -->
-  <section id="novedades" class="container-fluid">
+  <section id="novedades" class="container">
     <br><br><br><br>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="titulos tgrande">
-            Novedades
-          </h1>
-          <br><br><br>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row" id="contenedorNovedades">
-      </div>
+    <h1 class="titulos tgrande">Novedades</h1>
+    <br><br><br>
+    <div class="row" id="contenedorNovedades">
     </div>
   </section>
   <!-- Fin Seccion Novedades -->
@@ -99,98 +89,91 @@
   <!-- Seccion About -->
   <div id="about">
     <br><br><br>
-    <h1 class="titulos tgrande">
-      Sobre Nosotros
-    </h1>
+    <h1 class="titulos tgrande">Sobre Nosotros</h1>
   </div>
   <br><br>
   <!-- Objetivos -->
-  <section class="container-fluid">
-    <article class="row">
-      <div id="objetivos" class="container cajadegradado "><br><br>
-        <div class="my-5 text-center p-3">
-          <h1 class="titulos">Objetivos</h1><br><br>
-          <p class="otraletra">El objetivo General es crear un Programa Universitario en Prevenci&oacuten de Consumos
-            Problem&aacuteticos y Adicciones, tranversal a todas las Unidades Acad&eacutemicas, las Secretar&iacuteas,
-            la Escuela Normal Juan Pascual Pringles, el Jardín Maternal, y los servicios de salud como la
-            Direcci&oacuten de Obra Social del Personal Universitario (DOSPU) y la Secretar&iacutea de Asuntos
-            Estudiantiles y Bienestar Universitario, de la Universidad Nacional de San Luis.</p>
-          <p class="otraletra">Dado que los consumos problematicos o abusivos, las dependencias y desordenes adictivos,
-            tanto relativos a sustancias, como a comportamientos o a relaciones, pueden afectar gravemente a la salud de
-            los estudiantes, por lo que son considerados un problema social que despierta creciente preocupaci&oacuten,
-            impulsa politicas publicas de salud y concentra esfuerzos de diversas organizaciones de la sociedad civil.
-          </p>
-          <br><br>
-          <button type="button" class="boton otraletra float-center" onclick="window.open('docs/Resolucion.pdf')" />
-          Descargar Resoluci&oacuten
-          </buttom>
-        </div>
+  <section class="container">
+    <article class="row cajadegradado">
+      <div class="my-5 text-center p-3">
+        <h1 class="titulos">Objetivos</h1><br><br>
+        <p class="otraletra">El objetivo General es crear un Programa Universitario en Prevenci&oacuten de Consumos
+          Problem&aacuteticos y Adicciones, tranversal a todas las Unidades Acad&eacutemicas, las Secretar&iacuteas,
+          la Escuela Normal Juan Pascual Pringles, el Jardín Maternal, y los servicios de salud como la
+          Direcci&oacuten de Obra Social del Personal Universitario (DOSPU) y la Secretar&iacutea de Asuntos
+          Estudiantiles y Bienestar Universitario, de la Universidad Nacional de San Luis.</p>
+        <p class="otraletra">Dado que los consumos problematicos o abusivos, las dependencias y desordenes adictivos,
+          tanto relativos a sustancias, como a comportamientos o a relaciones, pueden afectar gravemente a la salud de
+          los estudiantes, por lo que son considerados un problema social que despierta creciente preocupaci&oacuten,
+          impulsa politicas publicas de salud y concentra esfuerzos de diversas organizaciones de la sociedad civil.
+        </p>
+        <br><br>
+        <button type="button" class="boton otraletra float-center" onclick="window.open('docs/Resolucion.pdf')" />
+        Descargar Resoluci&oacuten
+        </buttom>
       </div>
     </article>
     <br><br><br>
   </section>
   <!-- Fin Objetivos -->
   <!-- Participantes -->
-  <section class="container-fluid">
-    <article class="row">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 id="participantes" class="titulos">
-              Participantes
-            </h1>
-            <br><br><br>
-          </div>
+  <section class="container">
+    <article>
+      <div class="row">
+        <div class="col-12">
+          <h1 id="participantes" class="titulos">Participantes</h1>
+          <br><br><br>
         </div>
-        <div class="row contenedor-items-logos text-center">
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://fmn.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fcfmynUNSL.png" class="img-thumbnail" alt="Facultad de Ciencias Físico Matemáticas y Naturales" title="Facultad de Ciencias Físico Matemáticas y Naturales"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://humanas.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fchUNSL.png" class="img-thumbnail" alt="Facultad de Ciencias Humanas" title="Facultad de Ciencias Humanas"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://www.facultaddesalud.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fcsUNSL.png" class="img-thumbnail" alt="Facultad de Ciencias de la Salud" title="Facultad de Ciencias de la Salud"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://www.fcejs.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fcejsUNSL.png" class="img-thumbnail" alt="Facultad de Ciencias Económicas Jurídicas Y Sociales" title="Facultad de Ciencias Económicas Jurídicas Y Sociales"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://www.fica.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-ficaUNSL.png" class="img-thumbnail" alt="Facultad de Ingeniería y Ciencias Agropecuarias" title="Facultad de Ingeniería y Ciencias Agropecuarias"> </a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://www.fqbf.unsl.edu.ar/" target="_blank"> <img src="img/LogosSocios/Logo-fqbfUNSL.png" class="img-thumbnail" alt="Facultad de Química, Bioquímica y Farmacia" title="Facultad de Química, Bioquímica y Farmacia"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://fapsi.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fapsiUNSL.png" class="img-thumbnail" alt="Facultad de Psicología" title="Facultad de Psicología"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="https://jardinmaternal.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-jardinmaternal.png" class="img-thumbnail" alt="Jardín Maternal" title="Jardín Maternal"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://dospu.unsl.edu.ar/#/inicio" target="_blank"><img src="img/LogosSocios/Logo-dospu.jpg" class="img-thumbnail" alt="Direccion de Obra Social del Personal Universitario" title="Direccion de Obra Social del Personal Universitario"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://server-enjpp.unsl.edu.ar/escuela/" target="_blank"><img src="img/LogosSocios/Logo-enjpp.png" class="img-thumbnail" alt="Escuela Juan Pascual Pringles" title="Escuela Juan Pascual Pringles"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="https://www.argentina.gob.ar/jefatura/sedronar" target="_blank"><img src="img/LogosSocios/Logo-sedronar.png" class="img-thumbnail" alt="Secretaría de Programación para la Prevención de la Drogadicción y Lucha contra el Narcotráfico" title="Secretaría de Programación para la Prevención de la Drogadicción y Lucha contra el Narcotráfico"></a>
-          </div>
-          <div class="col-md-2 col-sm-3 col-4 item-logos">
-            <a href="http://saebu.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-saebuUNSL.png" class="img-thumbnail" alt="Secretaría de Asuntos Estudiantiles y Bienestar Universitario" title="Secretaría de Asuntos Estudiantiles y Bienestar Universitario"></a>
-          </div>
-          <div class="col-md-6 col-sm-6 col-6 item-logos">
-            <a href="https://www.argentina.gob.ar/inadi" target="_blank"><img src="img/LogosSocios/Logo-inadi.png" class="img-thumbnail" alt="Instituto Nacional contra la Discriminación, la Xenofobia y el Racismo" title="Instituto Nacional contra la Discriminación, la Xenofobia y el Racismo"></a>
-          </div>
-          <div class="col-md-6 col-sm-6 col-6 item-logos">
-            <a href="https://www.argentina.gob.ar/desarrollosocial/senaf" target="_blank"><img src="img/LogosSocios/Logo-senaf.png" class="img-thumbnail" alt="Secretaría Nacional de Niñez, Adolescencia y Familia" title="Secretaría Nacional de Niñez, Adolescencia y Familia"></a>
-          </div>
+      </div>
+      <div class="row contenedor-items-logos text-center">
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://fmn.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fcfmynUNSL.png" class="img-thumbnail" alt="Facultad de Ciencias Físico Matemáticas y Naturales" title="Facultad de Ciencias Físico Matemáticas y Naturales"></a>
         </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://humanas.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fchUNSL.png" class="img-thumbnail" alt="Facultad de Ciencias Humanas" title="Facultad de Ciencias Humanas"></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://www.facultaddesalud.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fcsUNSL.png" class="img-thumbnail" alt="Facultad de Ciencias de la Salud" title="Facultad de Ciencias de la Salud"></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://www.fcejs.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fcejsUNSL.png" class="img-thumbnail" alt="Facultad de Ciencias Económicas Jurídicas Y Sociales" title="Facultad de Ciencias Económicas Jurídicas Y Sociales"></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://www.fica.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-ficaUNSL.png" class="img-thumbnail" alt="Facultad de Ingeniería y Ciencias Agropecuarias" title="Facultad de Ingeniería y Ciencias Agropecuarias"> </a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://www.fqbf.unsl.edu.ar/" target="_blank"> <img src="img/LogosSocios/Logo-fqbfUNSL.png" class="img-thumbnail" alt="Facultad de Química, Bioquímica y Farmacia" title="Facultad de Química, Bioquímica y Farmacia"></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://fapsi.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-fapsiUNSL.png" class="img-thumbnail" alt="Facultad de Psicología" title="Facultad de Psicología"></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="https://jardinmaternal.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-jardinmaternal.png" class="img-thumbnail" alt="Jardín Maternal" title="Jardín Maternal"></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://dospu.unsl.edu.ar/#/inicio" target="_blank"><img src="img/LogosSocios/Logo-dospu.jpg" class="img-thumbnail" alt="Direccion de Obra Social del Personal Universitario" title="Direccion de Obra Social del Personal Universitario"></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://server-enjpp.unsl.edu.ar/escuela/" target="_blank"><img src="img/LogosSocios/Logo-enjpp.png" class="img-thumbnail" alt="Escuela Juan Pascual Pringles" title="Escuela Juan Pascual Pringles"></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="https://www.argentina.gob.ar/jefatura/sedronar" target="_blank"><img src="img/LogosSocios/Logo-sedronar.png" class="img-thumbnail" alt="Secretaría de Programación para la Prevención de la Drogadicción y Lucha contra el Narcotráfico" title="Secretaría de Programación para la Prevención de la Drogadicción y Lucha contra el Narcotráfico"></a>
+        </div>
+        <div class="col-md-2 col-sm-3 col-4 item-logos">
+          <a href="http://saebu.unsl.edu.ar/" target="_blank"><img src="img/LogosSocios/Logo-saebuUNSL.png" class="img-thumbnail" alt="Secretaría de Asuntos Estudiantiles y Bienestar Universitario" title="Secretaría de Asuntos Estudiantiles y Bienestar Universitario"></a>
+        </div>
+        <div class="col-md-6 col-sm-6 col-6 item-logos">
+          <a href="https://www.argentina.gob.ar/inadi" target="_blank"><img src="img/LogosSocios/Logo-inadi.png" class="img-thumbnail" alt="Instituto Nacional contra la Discriminación, la Xenofobia y el Racismo" title="Instituto Nacional contra la Discriminación, la Xenofobia y el Racismo"></a>
+        </div>
+        <div class="col-md-6 col-sm-6 col-6 item-logos">
+          <a href="https://www.argentina.gob.ar/desarrollosocial/senaf" target="_blank"><img src="img/LogosSocios/Logo-senaf.png" class="img-thumbnail" alt="Secretaría Nacional de Niñez, Adolescencia y Familia" title="Secretaría Nacional de Niñez, Adolescencia y Familia"></a>
+        </div>
+      </div>
     </article>
   </section>
   <!-- Fin Participantes -->
   <!-- Comision -->
-  <div id="comisionDirectiva" class="container cajadegradado  text-center"><br><br><br>
+  <div id="comisionDirectiva" class="container cajadegradado text-center"><br><br><br>
     <h1 class="titulos">Comision Directiva</h1><br><br>
     <div class="row justify-content-center">
       <div class="col-md-12 col-lg-12 p-3">
@@ -323,276 +306,208 @@
   <!-- Seccion Prevencion -->
   <div id="prevencion">
     <br><br><br>
-    <h1 class="titulos tgrande">
-      Prevencion
-    </h1>
+    <h1 class="titulos tgrande">Prevencion</h1>
     <br><br>
   </div>
   <!-- Folletos -->
-  <section class="container-fluid">
+  <section class="container">
     <article class="row">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 id="folletos" class="titulos">
-              Folletos
-            </h1>
-            <br><br><br>
-          </div>
-
-          <img src="img/afiche1.png" class="col-lg-6 imagenes">
-          <img src="img/afiche2.png" class="col-lg-6 imagenes">
-
-
-
-
-        </div>
+      <div class="col-12">
+        <h1 id="folletos" class="titulos">Folletos</h1>
       </div>
+      <img src="img/afiche1.png" class="col-lg-6 imagenes">
+      <img src="img/afiche2.png" class="col-lg-6 imagenes">
     </article>
   </section>
   <!-- Fin Folletos -->
   <!-- Mitos -->
-  <section class="container-fluid">
+  <section class="container">
     <article class="row">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 id="mitos" class="titulos">
-              Mitos
-            </h1>
-            <br><br><br>
-
+      <div class="col-12">
+        <h1 id="mitos" class="titulos">Mitos</h1>
+        <br>
+      </div>
+      <div class="col-lg-6  p-3" onclick="mostrar(1)">
+        <div class="caja-mitos text-center cajadegradado">
+          <div class="mitos-frase ">
+            <br> <br>
+            <h1>solo una vez...</h1>
+            <h1>no pasara nada </h1>
           </div>
-          <div class="col-lg-6  p-3" onclick="mostrar(1)">
-            <div class="caja-mitos text-center cajadegradado">
-              <div class="mitos-frase ">
-                <br> <br>
-                <h1>solo una vez...</h1>
-
-                <h1>no pasara nada </h1>
-
-              </div>
-              <br> <br>
-              <div id="mito1">
-                <h1 class="falso">FALSO</h1>
-                <br> <br> <br>
-
-                <p class="mitos-texto">Detrás de una adicción siempre hay una primera vez.</p>
-                <p class="mitos-texto">Tener la primera experiencia es ponerse en situación de riesgo pues los efectos de las drogras sobre el sistema nervioso central pueden causar sensaciones aparentente placenteras que ,vividas en una persona de baja autoestima,que no tiene suficiente autocontrol,que esta deprimida o se siente sola puede conducir a repetir la experienca, hasta llegar a la dependencia</p>
-
-              </div>
-            </div>
+          <br> <br>
+          <div id="mito1">
+            <h1 class="falso">FALSO</h1>
+            <br> <br> <br>
+            <p class="mitos-texto">Detrás de una adicción siempre hay una primera vez.</p>
+            <p class="mitos-texto">Tener la primera experiencia es ponerse en situación de riesgo pues los efectos de las drogras sobre el sistema nervioso central pueden causar sensaciones aparentente placenteras que ,vividas en una persona de baja autoestima,que no tiene suficiente autocontrol,que esta deprimida o se siente sola puede conducir a repetir la experienca, hasta llegar a la dependencia</p>
           </div>
-          <div class="col-lg-6 p-3" onclick="mostrar(2)">
-            <div class="caja-mitos text-center cajadegradado">
-              <div class="mitos-frase ">
-                <br> <br>
-                <h1>Con la marihuana las personas</h1>
-
-                <h1>aprenden mas rapido</h1>
-
-              </div>
-              <br> <br>
-              <div id="mito2">
-                <h1 class="falso">FALSO</h1>
-                <br> <br> <br>
-
-
-                <p class="mitos-texto">Lo que ocurre es que esta droga altera la percepción de la realidad y la persona cree que esta aprendiendo mas rápido. La marihuana limita el proceso de aprendizaje al producir problemas en la concentración y memoria. </p>
-
-              </div>
-
-            </div>
-          </div>
-
-
-
-          <div class="col-lg-6 p-3" onclick="mostrar(3)">
-            <div class="caja-mitos text-center cajadegradado ">
-              <div class="mitos-frase ">
-                <br> <br>
-                <h1>Las drogas ayudan a aliviar</h1>
-
-                <h1>el estrés y ayudan a las personas </h1>
-                <h1>a sobrellevar sus problemas.</h1>
-
-              </div>
-              <br> <br>
-              <div id="mito3">
-                <h1 class="falso">FALSO</h1>
-                <br> <br> <br>
-
-
-                <p class="mitos-texto">Las drogas sólo hacen que las personas se olviden y no le den importancia a sus problemas temporalmente, cuando el efecto de la droga desaparece los problemas siguen. </p>
-
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-6  p-3" onclick="mostrar(4)">
-            <div class="caja-mitos text-center cajadegradado">
-              <div class="mitos-frase ">
-                <br> <br>
-
-
-                <h1>Si fumas marihuana en el fin de semana </h1>
-
-                <h1>no tendras ningun problema en funcionar </h1>
-                <h1>adecuadamene en tus estudios el lunes. </h1>
-
-              </div>
-              <br> <br>
-              <div id="mito4">
-                <h1 class="falso">FALSO</h1>
-                <br> <br> <br>
-
-
-                <p class="mitos-texto">Los efectos de la marihuana pueden durar hasta 3 días, disminuyendo la memoria, la cordinación y los reflejos. </p>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6  p-3" onclick="mostrar(5)">
-            <div class="caja-mitos text-center cajadegradado">
-              <div class="mitos-frase ">
-                <br> <br>
-
-
-                <h1>Las drogas motivan </h1>
-
-                <h1>la creatividad.</h1>
-
-              </div>
-              <br> <br>
-              <div id="mito5">
-                <h1 class="falso">FALSO</h1>
-                <br> <br> <br>
-
-
-                <p class="mitos-texto">Las drogas por sí solas, jamás otorgan habilidades que no existan de manera natural en las personas, seguramente los artistas que las han utilizado habrían creado las mismas obras de arte sin necesidad de consumir drogas.</p>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6  p-3" onclick="mostrar(6)">
-            <div class="caja-mitos text-center cajadegradado">
-              <div class="mitos-frase ">
-                <br> <br>
-
-
-                <h1>Las drogas mejoran </h1>
-
-                <h1>el desempeño académico.</h1>
-
-              </div>
-              <br> <br>
-              <div id="mito6">
-                <h1 class="falso">FALSO</h1>
-                <br> <br> <br>
-
-
-                <p class="mitos-texto">El ingerir drogas antes de estudiar permite sentir menos cansancio, pero eso sólo dura unas horas, despues el organismo está agotado y ya no responde. </p>
-
-              </div>
-            </div>
-          </div>
-
-
-
-
-
         </div>
-
-    </article>
-  </section>
-
-  <!-- Fin Mitos -->
-  <!-- Descargas -->
-  <section class="container-fluid">
-    <article class="row">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 id="material" class="titulos">
-              Material
-            </h1>
-            <br><br><br>
+      </div>
+      <div class="col-lg-6 p-3" onclick="mostrar(2)">
+        <div class="caja-mitos text-center cajadegradado">
+          <div class="mitos-frase ">
+            <br> <br>
+            <h1>Con la marihuana las personas</h1>
+            <h1>aprenden mas rapido</h1>
           </div>
-          <a href="docs/CuidadosEnJuegoNivelInicial.pdf" class="col-lg-6  imagenes sombra " target="_blank"><img src="img/NivelInicial.png" class="acomodoimg imagenes"></a>
-          <a href="docs/CuidadosEnJuegoNivelPrimario.pdf" class="col-lg-6 imagenes sombra " target="_blank"><img src="img/NivelPrimario.png" class="acomodoimg imagenes"></a>
-          <a href="docs/OrientacionParaElAbordaje.pdf" class="col-lg-6 imagenes sombra  " target="_blank">
-            <picture>
-              <source media="(max-width: 900px)" srcset="img/OrientacionParaElAbordaje-small.png">
-              <source media="(min-width: 901px)" srcset="img/OrientacionParaElAbordaje.png">
-              <img src="img/OrientacionParaElAbordaje.png" class="acomodoimg imagenes">
-            </picture>
-          </a>
-          <a href="docs/OrientacionParaLaIntervencion.pdf" class="col-lg-6  imagenes sombra " target="_blank">
-            <picture>
-              <source media="(max-width: 900px)" srcset="img/OrientacionParaLaIntervencion-small.png">
-              <source media="(min-width: 901px)" srcset="img/OrientacionParaLaIntervencion.png">
-              <img src="img/OrientacionParaLaIntervencion.png" class="acomodoimg imagenes">
-            </picture>
-          </a>
-          <a href="docs/EstarEnPrevencion.pdf" class="col-lg-6  imagenes sombra " target="_blank">
-            <picture>
-              <source media="(max-width: 900px)" srcset="img/EstarEnPrevencion-small.png">
-              <source media="(min-width: 901px)" srcset="img/EstarEnPrevencion.png">
-              <img src="img/EstarEnPrevencion.png" class="acomodoimg imagenes">
-            </picture>
-          </a>
-          <a href="docs/ProyectosIntegralesPreventivos.pdf" class="col-lg-6 imagenes sombra" target="_blank">
-            <picture>
-              <source media="(max-width: 900px)" srcset="img/ProyectosIntegralesPreventivos-small.png">
-              <source media="(min-width: 901px)" srcset="img/ProyectosIntegralesPreventivos.png">
-              <img src="img/ProyectosIntegralesPreventivos.png" class="acomodoimg imagenes">
-            </picture>
-          </a>
+          <br> <br>
+          <div id="mito2">
+            <h1 class="falso">FALSO</h1>
+            <br> <br> <br>
+            <p class="mitos-texto">Lo que ocurre es que esta droga altera la percepción de la realidad y la persona cree que esta aprendiendo mas rápido. La marihuana limita el proceso de aprendizaje al producir problemas en la concentración y memoria. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 p-3" onclick="mostrar(3)">
+        <div class="caja-mitos text-center cajadegradado ">
+          <div class="mitos-frase ">
+            <br> <br>
+            <h1>Las drogas ayudan a aliviar</h1>
+            <h1>el estrés y ayudan a las personas </h1>
+            <h1>a sobrellevar sus problemas.</h1>
+          </div>
+          <br> <br>
+          <div id="mito3">
+            <h1 class="falso">FALSO</h1>
+            <br> <br> <br>
+            <p class="mitos-texto">Las drogas sólo hacen que las personas se olviden y no le den importancia a sus problemas temporalmente, cuando el efecto de la droga desaparece los problemas siguen. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6  p-3" onclick="mostrar(4)">
+        <div class="caja-mitos text-center cajadegradado">
+          <div class="mitos-frase ">
+            <br> <br>
+            <h1>Si fumas marihuana en el fin de semana </h1>
+            <h1>no tendras ningun problema en funcionar </h1>
+            <h1>adecuadamene en tus estudios el lunes. </h1>
+          </div>
+          <br> <br>
+          <div id="mito4">
+            <h1 class="falso">FALSO</h1>
+            <br> <br> <br>
+            <p class="mitos-texto">Los efectos de la marihuana pueden durar hasta 3 días, disminuyendo la memoria, la cordinación y los reflejos. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6  p-3" onclick="mostrar(5)">
+        <div class="caja-mitos text-center cajadegradado">
+          <div class="mitos-frase ">
+            <br> <br>
+            <h1>Las drogas motivan </h1>
+            <h1>la creatividad.</h1>
+          </div>
+          <br> <br>
+          <div id="mito5">
+            <h1 class="falso">FALSO</h1>
+            <br> <br> <br>
+            <p class="mitos-texto">Las drogas por sí solas, jamás otorgan habilidades que no existan de manera natural en las personas, seguramente los artistas que las han utilizado habrían creado las mismas obras de arte sin necesidad de consumir drogas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6  p-3" onclick="mostrar(6)">
+        <div class="caja-mitos text-center cajadegradado">
+          <div class="mitos-frase ">
+            <br> <br>
+            <h1>Las drogas mejoran </h1>
+            <h1>el desempeño académico.</h1>
+          </div>
+          <br> <br>
+          <div id="mito6">
+            <h1 class="falso">FALSO</h1>
+            <br> <br> <br>
+            <p class="mitos-texto">El ingerir drogas antes de estudiar permite sentir menos cansancio, pero eso sólo dura unas horas, despues el organismo está agotado y ya no responde. </p>
+          </div>
         </div>
       </div>
     </article>
   </section>
-  <!-- Fin Descargas -->
+  <!-- Fin Mitos -->
+  <!-- Material -->
+  <section class="container">
+    <article class="row">
+      <div class="col-12">
+        <h1 id="material" class="titulos">Material</h1>
+      </div>
+      <a href="docs/CuidadosEnJuegoNivelInicial.pdf" class="col-lg-6  imagenes sombra " target="_blank"><img src="img/NivelInicial.png" class="acomodoimg imagenes"></a>
+      <a href="docs/CuidadosEnJuegoNivelPrimario.pdf" class="col-lg-6 imagenes sombra " target="_blank"><img src="img/NivelPrimario.png" class="acomodoimg imagenes"></a>
+      <a href="docs/OrientacionParaElAbordaje.pdf" class="col-lg-6 imagenes sombra  " target="_blank">
+        <picture>
+          <source media="(max-width: 900px)" srcset="img/OrientacionParaElAbordaje-small.png">
+          <source media="(min-width: 901px)" srcset="img/OrientacionParaElAbordaje.png">
+          <img src="img/OrientacionParaElAbordaje.png" class="acomodoimg imagenes">
+        </picture>
+      </a>
+      <a href="docs/OrientacionParaLaIntervencion.pdf" class="col-lg-6  imagenes sombra " target="_blank">
+        <picture>
+          <source media="(max-width: 900px)" srcset="img/OrientacionParaLaIntervencion-small.png">
+          <source media="(min-width: 901px)" srcset="img/OrientacionParaLaIntervencion.png">
+          <img src="img/OrientacionParaLaIntervencion.png" class="acomodoimg imagenes">
+        </picture>
+      </a>
+      <a href="docs/EstarEnPrevencion.pdf" class="col-lg-6  imagenes sombra " target="_blank">
+        <picture>
+          <source media="(max-width: 900px)" srcset="img/EstarEnPrevencion-small.png">
+          <source media="(min-width: 901px)" srcset="img/EstarEnPrevencion.png">
+          <img src="img/EstarEnPrevencion.png" class="acomodoimg imagenes">
+        </picture>
+      </a>
+      <a href="docs/ProyectosIntegralesPreventivos.pdf" class="col-lg-6 imagenes sombra" target="_blank">
+        <picture>
+          <source media="(max-width: 900px)" srcset="img/ProyectosIntegralesPreventivos-small.png">
+          <source media="(min-width: 901px)" srcset="img/ProyectosIntegralesPreventivos.png">
+          <img src="img/ProyectosIntegralesPreventivos.png" class="acomodoimg imagenes">
+        </picture>
+      </a>
+    </article>
+  </section>
+  <!-- Fin Material -->
 
   <!-- Fin Seccion Prevencion -->
 
   <!-- Seccion Actividades -->
-  <div id="actividades">
+  <section id="actividades" class="container">
     <br><br><br>
-    <h1 class="titulos tgrande">
-      Participá de Nuestras Actividades
-    </h1>
-  </div>
-  <!-- Encuestas -->
-  <div id="encuestas" class="container cajadegradado my-5 text-center">
-    <h1 class="titulos">Encuestas</h1>
-    <br>
-    <h2 class="color text-left"> Encuesta de Tecnoadicciones en tiempos de COVID-19</h2>
-    <p class=" otraletra color text-left"> Facultad de Ciencias F&iacutesico Matem&aacute;ticas y Naturales - UNSL</p>
-    <p class="otraletra text-left"> En la siguiente encuesta tiene el fin de relevar el uso de tecnolog&iacute;as y coportamientos riesgosos para el adolescente. Los cambios de h&aacute;bitos intimanete ligados al aislamiento, ansiedad que provocan diferentes niveles de consumo de tecnlog&iacute;a.</p>
-    <p class="otraletra text-left"> Dirigido a estudiantes de secundaria, podes participar ayudandonos a difundir o completando el
-      <a href="https://forms.gle/v4tmnJcUumQem5638" target="_blank"> formulario</a>
-    </p>
-    <h2 class="color text-left"> Encuesta Tabaquismo: S.O.S. J&oacute;venes</h2>
-    <p class="otraletra color text-left"> Facultad de Qu&iacute;mica, Bioqu&iacute;mica y Farmacia - UNSL</p>
-    <p class="otraletra text-left">Con este estudio se pretende recabar informaci&oacute;n referida a la exposici&oacute;n involuntaria al humo de tabaco y a productos relacionados en los hogares.</p>
-    <p class="otraletra text-left">Solicitamos su colaboraci&oacute;n, contestando esta breve <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQErfqX5gg6_I5IhkmnlUSo5z-cchJwwCjA4T1cW32ZapPNA/viewform?usp=sf_link" target="_blank">encuesta</a>.</p>
-  </div>
-  <!-- Fin Encuestas -->
-  <!-- Encuentros Realizados -->
-  <div id="encuentros" class="container cajadegradado my-5 text-center">
-    <h1 class="titulos">1° Encuentro: Comunidad y Universidad para la prevención de consumos problemáticos y adicciones</h1>
-    <br>
-    <h2 class="color text-left">Objetivo general</h2>
-    <p class="otraletra text-left"> Convocar a un encuentro entre instituciones y actores sociales de nuestro medio con miembros de la Universidad Nacional de San Luis para promover el intercambio sobre abordajes de consumos problemáticos y adicciones, y la articulación de redes de trabajo preventivo.</p>
-    <h2 class="color text-left">Realizado:</h2>
-    <p class="otraletra text-left">el 5 de Junio del 2019 en el Auditorio Mauricio López (UNSL). <a href="https://www.facebook.com/media/set/?vanity=programauniversitariodeprevencionunsl&set=a.460236394730443" target="_blank">Ver fotos</a></p>
-    <button type="button" class="boton otraletra float-center" onclick="window.open('docs/Resumen1erEncuentro.pdf')" />
-    Descargar Libro de Resumen
-    </buttom>
-  </div>
-  <!-- Fin Encuentros Realizados -->
+    <h1 class="titulos tgrande">Participá de Nuestras Actividades</h1>
+    <br><br>
+    <!-- Encuestas -->
+    <article id="encuestas" class="row cajadegradado">
+      <div class="p-3">
+        <h1 class="titulos">Encuestas</h1>
+        <br>
+        <h2 class="color text-left"> Encuesta de Tecnoadicciones en tiempos de COVID-19</h2>
+        <p class=" otraletra color text-left"> Facultad de Ciencias F&iacutesico Matem&aacute;ticas y Naturales - UNSL</p>
+        <p class="otraletra text-left"> En la siguiente encuesta tiene el fin de relevar el uso de tecnolog&iacute;as y coportamientos riesgosos para el adolescente. Los cambios de h&aacute;bitos intimanete ligados al aislamiento, ansiedad que provocan diferentes niveles de consumo de tecnlog&iacute;a.</p>
+        <p class="otraletra text-left"> Dirigido a estudiantes de secundaria, podes participar ayudandonos a difundir o completando el
+          <a href="https://forms.gle/v4tmnJcUumQem5638" target="_blank"> formulario</a>
+        </p>
+        <h2 class="color text-left"> Encuesta Tabaquismo: S.O.S. J&oacute;venes</h2>
+        <p class="otraletra color text-left"> Facultad de Qu&iacute;mica, Bioqu&iacute;mica y Farmacia - UNSL</p>
+        <p class="otraletra text-left">Con este estudio se pretende recabar informaci&oacute;n referida a la exposici&oacute;n involuntaria al humo de tabaco y a productos relacionados en los hogares.</p>
+        <p class="otraletra text-left">Solicitamos su colaboraci&oacute;n, contestando esta breve <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQErfqX5gg6_I5IhkmnlUSo5z-cchJwwCjA4T1cW32ZapPNA/viewform?usp=sf_link" target="_blank">encuesta</a>.</p>
+      </div>
+    </article>
+    <!-- Fin Encuestas -->
+    <br><br><br>
+    <!-- Encuentros Realizados -->
+    <article id="encuentros" class="row cajadegradado">
+      <div class="p-3">
+        <h1 class="titulos">1° Encuentro: Comunidad y Universidad para la prevención de consumos problemáticos y adicciones</h1>
+        <br>
+        <h2 class="color text-left">Objetivo general</h2>
+        <p class="otraletra text-left"> Convocar a un encuentro entre instituciones y actores sociales de nuestro medio con miembros de la Universidad Nacional de San Luis para promover el intercambio sobre abordajes de consumos problemáticos y adicciones, y la articulación de redes de trabajo preventivo.</p>
+        <h2 class="color text-left">Realizado:</h2>
+        <p class="otraletra text-left">el 5 de Junio del 2019 en el Auditorio Mauricio López (UNSL). <a href="https://www.facebook.com/media/set/?vanity=programauniversitariodeprevencionunsl&set=a.460236394730443" target="_blank">Ver fotos</a></p>
+      </div>
+      <div class="text-center">
+        <button type="button" class="boton otraletra" onclick="window.open('docs/Resumen1erEncuentro.pdf')" />
+        Descargar Libro de Resumen
+        </buttom>
+      </div>
+      <br><br><br>
+    </article>
+    <!-- Fin Encuentros Realizados -->
+  </section>
 
   <!-- Fin Seccion Actividades -->
 
@@ -604,66 +519,48 @@
     </h1>
     <br><br>
   </div>
-  <section class="container-fluid">
-    <article class="container text-center cajadegradado">
-      <div class="row">
-        <div class="col-lg-12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13340.078647354183!2d-66.3396156!3d-33.2921486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2bcfdfba83514ad4!2sUniversidad+Nacional+de+San+Luis+-+UNSL!5e0!3m2!1ses!2sar!4v1535307360778" width="100%" height="360" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-
-        </div>
-
-        <p class="text-center otraletra col-lg-12"><strong> Programa Universitario de Prevenci&oacuten de Consumos Problem&aacuteticos y Adicciones </strong></p>
-
-        <div class="col-md-6 col-sm-6 col-lg-6">
-          <a target="_blank" href="https://www.facebook.com/programauniversitariodeprevencionunsl">
-            <img src="img/face.png" class="face">
-        </div>
-        <div class="col-md-6 col-sm-6 col-lg-6">
-          <a target="_blank" href="https://www.instagram.com/prevencionunsl">
-            <img src="img/insta.png" class="insta"></a>
-        </div>
-        <p class="text-center otraletra col-lg-12"><strong> Universidad Nacional de San Luis </strong></p>
-        <p class="text-center otraletra col-lg-12"><strong> Avenida Ej&eacutercito de los Andes 950, 2do Piso - Edificio de Rectorado - San Luis - Argentina </strong>
-        <p class="text-center otraletra col-lg-12"><strong> Tel: +54 (0266) 4530000 - +54 (0266) 4520300 - Int. 5543 </strong></p>
-        <p class="text-center otraletra col-lg-12"><strong> Envianos tu consulta</strong></p>
-        <form name="f1" id="fcont" action="mailto:programa.adicciones@unsl.edu.ar" method="post" class="col-lg-12">
-
-
-          <input type="text" name="nombre" id="fnombre" placeholder="Nombre" class="cont-contacto col-lg-5 otraletra">
-
-          <input type="ma" name="mail" id="fmail" placeholder="Mail" class="cont-contacto col-lg-5 otraletra">
-          <textarea name="mensaje" id="fmensaje" placeholder="ingrese mensaje" class="cont-contacto col-lg-10 otraletra"></textarea>
-
+  <section class="container">
+    <article class="row text-center cajadegradado">
+      <div class="col-lg-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13340.078647354183!2d-66.3396156!3d-33.2921486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2bcfdfba83514ad4!2sUniversidad+Nacional+de+San+Luis+-+UNSL!5e0!3m2!1ses!2sar!4v1535307360778" width="100%" height="360" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+      </div>
+      <p class="text-center otraletra col-lg-12"><strong> Programa Universitario de Prevenci&oacuten de Consumos Problem&aacuteticos y Adicciones </strong></p>
+      <div class="col-md-6 col-sm-6 col-lg-6">
+        <a target="_blank" href="https://www.facebook.com/programauniversitariodeprevencionunsl"><img src="img/face.png" class="face"></a>
+      </div>
+      <div class="col-md-6 col-sm-6 col-lg-6">
+        <a target="_blank" href="https://www.instagram.com/prevencionunsl"><img src="img/insta.png" class="insta"></a>
+      </div>
+      <p class="text-center otraletra col-lg-12"><strong> Universidad Nacional de San Luis </strong></p>
+      <p class="text-center otraletra col-lg-12"><strong> Avenida Ej&eacutercito de los Andes 950, 2do Piso - Edificio de Rectorado - San Luis - Argentina </strong>
+      <p class="text-center otraletra col-lg-12"><strong> Tel: +54 (0266) 4530000 - +54 (0266) 4520300 - Int. 5543 </strong></p>
+      <p class="text-center otraletra col-lg-12"><strong> Envianos tu consulta</strong></p>
+      <form name="f1" id="fcont" action="mailto:programa.adicciones@unsl.edu.ar" method="post" class="container px-5">
+        <div class="row">
+          <input type="text" name="nombre" id="fnombre" placeholder="Nombre" class="cont-contacto col-12 col-sm-6 otraletra my-1">
+          <input type="mail" name="mail" id="fmail" placeholder="Mail" class="cont-contacto col-12 col-sm-6 otraletra my-1">
+          <textarea name="mensaje" id="fmensaje" placeholder="ingrese mensaje" class="cont-contacto col-12 otraletra mt-1"></textarea>
           <div class="col-lg-12">
             <input type="button" name="enviar" id="fboton" value="Enviar" class="boton otraletra">
           </div>
-        </form>
-
-
-
-
-
-      </div>
+          <br>
+        </div>
+      </form>
     </article>
-
   </section>
-
   <br><br><br>
 
   <!-- Fin Seccion Contacto -->
   <div class="cajadegradado container text-center">
     <p class="otraletra"><strong>creado: </strong>Mariano Ezequiel Ramirez Escudero y Jesús Lautaro Careglio Albornoz</p>
   </div>
-
   <br><br><br>
-
-  <!-- Bootstrap Bundle and jQuery -->
-  <script src="js/jquery-3.5.1.slim.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- CDN de Bootstrap Bundle y Popper-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <!-- JS Propios -->
-  <script type="text/javascript" src="js/mitos.js"></script>
   <script src="js/novedades.js"></script>
-  <script type="text/javascript" src="js/validacion.js"></script>
+  <script src="js/mitos.js"></script>
+  <script src="js/validacion.js"></script>
 </body>
 
 </html>

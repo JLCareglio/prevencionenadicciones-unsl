@@ -35,22 +35,22 @@ function agregarNovedad(fecha, titulo, contenido, enlace) {
       }">
         ${
           fecha != "" || enlace != ""
-            ? "<div class='card-header'><h3 class='color otraletra'>"
+            ? "<div class='card-header'><h3 class='color otraletra d-flex'>"
             : ""
         }
           ${
             fecha != ""
-              ? "<span class='material-icons float-left'>event</span>"
+              ? "<span class='material-icons bd-highlight'>event</span>"
               : ""
           }
           ${
             fecha != ""
-              ? "<span class='fecha float-left'>" + fecha + "</span>"
+              ? "<span class='fecha bd-highlight'>" + fecha + "</span>"
               : ""
           }
           ${
             enlace != ""
-              ? "<span class='material-icons float-right'>link</span>"
+              ? "<span class='material-icons ms-auto bd-highlight'>link</span>"
               : ""
           }
           ${fecha != "" || enlace != "" ? "</h3></div>" : ""}
