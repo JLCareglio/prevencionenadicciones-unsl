@@ -1,0 +1,25 @@
+{
+  "name": "prevencionenadicciones-unsl",
+  "version": "1.0.0",
+  "description": "Web de Programa Universitario de Prevención de Consumos Problemáticos y Adicciones",
+  "main": "docs/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "reducir-bootstrap": "purgecss --css compiled-css/custom-bootstrap.css --content docs/index.html docs/inscripciones.html -o docs/css/bootstrap-reducido.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JLCareglio/prevencionenadicciones-unsl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JLCareglio/prevencionenadicciones-unsl/issues"
+  },
+  "homepage": "https://github.com/JLCareglio/prevencionenadicciones-unsl#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.2"
+  }
+}

@@ -12,7 +12,8 @@
   <!-- CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="../compiled-css/custom-bootstrap.css"> -->
+  <link rel="stylesheet" href="css/bootstrap-reducido.css">
   <link rel="stylesheet" href="css/globalStyle.css">
   <link rel="stylesheet" href="css/responsiveNav.css">
   <!-- Fuentes -->
@@ -86,6 +87,21 @@
     <h1 class="titulos tgrande">Novedades</h1>
     <br><br><br>
     <div class="row" id="contenedorNovedades">
+      <div class="col-sm-6">
+        <div class="card cajadegradado bg-light mb-3 sombra">
+          <div class="card-header">
+            <h3 class="color otraletra d-flex">
+              <span class="material-icons bd-highlight">event</span>
+              <span class="fecha bd-highlight">07/07</span>
+              <span class="material-icons ms-auto bd-highlight">link</span>
+            </h3>
+          </div>
+          <h2 class="card-title">Nueva página para inscripciones a eventos</h2>
+          <div class="card-body">
+            <p class="card-text otraletra">Desde esta web puedes ver y inscrivirte a cualquier evento digital o precencial organizado por PrevencionUNSL o Asociados (Beta).</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- Fin Seccion Novedades -->
@@ -553,6 +569,21 @@
     </article>
   </section>
   <br><br><br>
+  <!-- Modal que se activa al enviar el formulario -->
+  <div class="modal fade" id="contactoEnviado" tabindex="-1" aria-labelledby="contactoEnviadoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content cajadegradado">
+        <div class="modal-header">
+          <h5 class="modal-title titulos tgrande" id="contactoEnviadoLabel">Gracias por inscribirte</h5>
+        </div>
+        <div id="contactoInfomracionEnviada" class="modal-body otraletra">
+        </div>
+        <div class="modal-footer">
+          <button id="btnCerrar" type="button" class="boton otraletra float-center" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Fin Seccion Contacto -->
   <!-- CDN de Bootstrap Bundle y Popper-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
