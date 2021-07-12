@@ -47,7 +47,7 @@
       <a href="https://www.facebook.com/programauniversitariodeprevencionunsl"><i class="fab fa-facebook-square"></i></a>
     </div>
   </header>
-  <!-- Fin Header -->
+  <!-- Fin HeaderMobile -->
   <div id="inscripcion" class="container cajadegradado my-4">
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSfEsXircgUUCgpK9iuxgqFm8NXd84hvTzx-MV9sf1qTdXPFUg/formResponse" target="_self" id="bootstrapForm" method="POST">
       <fieldset>
@@ -56,30 +56,27 @@
       <fieldset>
         <legend for="">Email</legend>
         <div class="form-group">
-          <input id="emailAddress" type="email" name="emailAddress" class="form-control otraletra" required>
+          <input id="emailAddress" type="email" name="emailAddress" class="form-control otraletra inputBorderDefault" required>
         </div>
       </fieldset>
-
-
+      <br>
       <!-- Field type: "short" id: "1939986332" -->
       <fieldset>
         <legend for="1939986332">¿Como te llamas?</legend>
         <div class="form-group">
-          <input id="7835639" type="text" name="entry.7835639" class="form-control otraletra" required>
+          <input id="7835639" type="text" name="entry.7835639" class="form-control otraletra inputBorderDefault" required>
         </div>
       </fieldset>
-
-
+      <br>
       <!-- Field type: "dropdown" id: "831586866" -->
       <fieldset>
         <legend for="831586866">Selecciona el evento al que deseas inscribirte</legend>
         <div class="form-group">
-          <select id="831586866" name="entry.1134359719" class="form-control otraletra">
+          <select id="831586866" name="entry.1134359719" class="form-control otraletra inputBorderDefault">
           </select>
         </div>
       </fieldset>
-
-
+      <br>
       <!-- Field type: "choices" id: "615247920" -->
       <fieldset>
         <legend for="615247920">¿Cómo te enteraste de este evento? (Opcional)</legend>
@@ -105,13 +102,12 @@
           <div class="radio">
             <label class="otraletra">
               <input type="radio" name="entry.253668503" value="__other_option__"> Otro (especificar):
-              <input type="text" name="entry.253668503.other_option_response" style="border: 1px solid #ced4da;">
+              <input type="text" name="entry.253668503.other_option_response" class="inputBorderDefault">
             </label>
           </div>
         </div>
       </fieldset>
-
-
+      <br>
       <!-- Field type: "paragraph" id: "291690101" -->
       <fieldset>
         <legend for="291690101">Comentarios o preguntas (Opcional)</legend>
@@ -129,7 +125,7 @@
       We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
   -->
       <input type="hidden" name="pageHistory" value="0">
-
+      <br>
       <input class="boton otraletra float-center otraletra" type="submit" value="Inscribirme a Evento">
     </form>
   </div>
@@ -139,14 +135,11 @@
       <div class="modal-content cajadegradado">
         <div class="modal-header">
           <h5 class="modal-title titulos tgrande" id="inscripcionEnviadaModalLabel">Gracias por inscribirte</h5>
-          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
         <div id="comprobanteInscripcion" class="modal-body otraletra">
         </div>
         <div class="modal-footer">
-          <button type="button" class="boton otraletra float-center" data-bs-dismiss="modal">Cerrar</button>
+          <button id="btnCerrar" type="button" class="boton otraletra float-center" data-bs-dismiss="modal">Cerrar</button>
           <button id="btnImprimir" type="button" class="boton otraletra float-center">Imprimir Comprobante</button>
         </div>
       </div>

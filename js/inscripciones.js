@@ -105,10 +105,10 @@ $("#bootstrapForm").submit(function (event) {
   if (comprobarTodosInputs()) {
     document.getElementById("comprobanteInscripcion").innerHTML = `
       <h2 class="color">Comprobante de Inscripcion</h2>
-      <p>Numero de inscripcion: ${Math.floor(Math.random() * 10000000)}</p>
-      <p>Email: ${inputEmail.value}</p>
       <p>Nombre: ${inputNombre.value}</p>
+      <p>Email: ${inputEmail.value}</p>
       <p>Inscripto a: ${inputEvento.value}</p>
+      <p>Numero de inscripcion: ${Math.floor(Math.random() * 10000000)}</p>
     `;
     $("#bootstrapForm").ajaxSubmit({
       data: extraData,
@@ -123,6 +123,9 @@ $("#bootstrapForm").submit(function (event) {
             var div = document.querySelector("#comprobanteInscripcion");
             imprimirElemento(div);
           });
+        document
+          .querySelector("#btnCerrar")
+          .addEventListener("click", resetForm);
       },
     });
   } else {
@@ -131,7 +134,12 @@ $("#bootstrapForm").submit(function (event) {
     );
   }
 });
-
+function resetForm() {
+  bootstrapForm.reset();
+  colorearBorder(inputEmail, "#ced4da");
+  colorearBorder(inputNombre, "#ced4da");
+  colorearBorder(inputComoEnterasteOtraOpcion, "#ced4da");
+}
 /* ----------Imprimir Comprobante---------- */
 function imprimirElemento(elemento) {
   var ventana = window.open("", "PRINT");
