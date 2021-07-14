@@ -12,8 +12,8 @@
   <!-- CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS -->
-  <!-- <link rel="stylesheet" href="../compiled-css/custom-bootstrap.css"> -->
-  <link rel="stylesheet" href="css/bootstrap-reducido.css">
+  <link rel="stylesheet" href="../compiled-css/custom-bootstrap.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap-reducido.css"> -->
   <link rel="stylesheet" href="css/globalStyle.css">
   <link rel="stylesheet" href="css/responsiveNav.css">
   <!-- Fuentes -->
@@ -552,18 +552,82 @@
       <p class="text-center otraletra col-lg-12"><strong> Avenida Ej&eacutercito de los Andes 950, 2do Piso - Edificio de Rectorado - San Luis - Argentina </strong>
       <p class="text-center otraletra col-lg-12"><strong> Tel: +54 (0266) 4530000 - +54 (0266) 4520300 - Int. 5543 </strong></p>
       <p class="text-center otraletra col-lg-12"><strong> Envianos tu consulta</strong></p>
-      <form name="f1" id="fcont" action="mailto:programa.adicciones@unsl.edu.ar" method="post" class="container px-5">
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSdlHwWJ913HbYGXtAk2gWSvFlnBOFwDlFkKPI3p52_MECfG6A/formResponse" target="_self" id="bootstrapForm" method="POST">
         <div class="row">
-          <input type="text" name="nombre" id="fnombre" placeholder="Nombre" class="cont-contacto col-12 col-sm-6 otraletra my-1">
-          <input type="mail" name="mail" id="fmail" placeholder="Mail" class="cont-contacto col-12 col-sm-6 otraletra my-1">
-          <textarea name="mensaje" id="fmensaje" placeholder="ingrese mensaje" class="cont-contacto col-12 otraletra mt-1"></textarea>
-          <div class="col-lg-12">
-            <input type="button" name="enviar" id="fboton" value="Enviar" class="boton otraletra">
-          </div>
-          <br>
+          <!-- Field type: "short" id: "1633920210" -->
+          <fieldset class="col-sm-6 col-md-4">
+            <legend for="1633920210">Nombre</legend>
+            <div class="form-group">
+              <input id="2005620554" type="text" name="entry.2005620554" class="form-control otraletra inputBorderDefault" required>
+            </div>
+          </fieldset>
+          <!-- Field type: "short" id: "1770822543" -->
+          <fieldset class="col-sm-6 col-md-4">
+            <legend for="1770822543">Teléfono</legend>
+            <div class="form-group">
+              <input id="1166974658" type="tel" name="entry.1166974658" class="form-control otraletra inputBorderDefault">
+            </div>
+          </fieldset>
+          <!-- Field type: "short" id: "227649005" -->
+          <fieldset class="col-sm-12 col-md-4">
+            <legend for="227649005">Email</legend>
+            <div class="form-group">
+              <input id="1045781291" type="email" name="entry.1045781291" class="form-control otraletra inputBorderDefault">
+            </div>
+          </fieldset>
         </div>
+        <!-- Field type: "checkboxes" id: "1541887317" -->
+        <!--         
+        <fieldset>
+          <legend for="1541887317">¿Como podemos responderte?</legend>
+          <div class="form-group row">
+            <div class="checkbox col-3">
+              <label class="otraletra">
+                <input type="checkbox" name="entry.449413536" value="Email">
+                Email
+              </label>
+            </div>
+            <div class="checkbox col-3">
+              <label class="otraletra">
+                <input type="checkbox" name="entry.449413536" value="Telegram">
+                Telegram
+              </label>
+            </div>
+            <div class="checkbox col-3">
+              <label class="otraletra">
+                <input type="checkbox" name="entry.449413536" value="WhatsApp">
+                WhatsApp
+              </label>
+            </div>
+            <div class="checkbox col-3">
+              <label class="otraletra">
+                <input type="checkbox" name="entry.449413536" value="Llamada">
+                Llamada
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        -->
+        <!-- Field type: "paragraph" id: "1846923513" -->
+        <fieldset>
+          <legend for="1846923513">Mensaje</legend>
+          <div class="form-group">
+            <textarea id="839337160" name="entry.839337160" class="form-control"></textarea>
+          </div>
+        </fieldset>
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="fbzx" value="927499957520930769">
+        <!--
+          CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+          This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+          Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+          We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+      -->
+        <input type="hidden" name="pageHistory" value="0">
+        <input class="boton otraletra float-center otraletra" type="submit" value="Enviar">
       </form>
     </article>
+
   </section>
   <br><br><br>
   <!-- Modal que se activa al enviar el formulario -->
@@ -582,11 +646,15 @@
     </div>
   </div>
   <!-- Fin Seccion Contacto -->
-  <!-- CDN de Bootstrap Bundle y Popper-->
+
+  <!-- CDN jQuery y jQueryForm -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+  <!-- CDN de Bootstrap Bundle y Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <!-- JS Propios -->
   <script src="js/novedades.js"></script>
-  <script src="js/validacion.js"></script>
+  <script src="js/contacto.js"></script>
 </body>
 
 </html>
