@@ -13,7 +13,7 @@ var inputComentarios = document.getElementById("710177639");
 const hojaEventos =
   "https://spreadsheets.google.com/feeds/list/1TUAdPdrHf1lWyYhQe_xm7o9BET8Pi7bioyMAm1zuFVo/od6/public/values?alt=json";
 
-/* actualizarListadoEventos(); */
+actualizarListadoEventos();
 async function actualizarListadoEventos() {
   await fetchInscripciones();
   async function fetchInscripciones() {
