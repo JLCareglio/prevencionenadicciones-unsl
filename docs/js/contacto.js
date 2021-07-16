@@ -6,10 +6,32 @@ var inputMensaje = document.getElementById("839337160");
 
 /* ----------Validar Formulario---------- */
 function resetInputsStyle() {
-  inputNombre.classList.remove("border-success", "border-danger");
-  inputTel.classList.remove("border-success", "border-danger", "border-info");
-  inputEmail.classList.remove("border-success", "border-danger", "border-info");
-  inputMensaje.classList.remove("border-success", "border-danger");
+  inputNombre.classList.remove(
+    "border-success",
+    "border-danger",
+    "is-valid",
+    "is-invalid"
+  );
+  inputTel.classList.remove(
+    "border-success",
+    "border-danger",
+    "border-info",
+    "is-valid",
+    "is-invalid"
+  );
+  inputEmail.classList.remove(
+    "border-success",
+    "border-danger",
+    "border-info",
+    "is-valid",
+    "is-invalid"
+  );
+  inputMensaje.classList.remove(
+    "border-success",
+    "border-danger",
+    "is-valid",
+    "is-invalid"
+  );
   failInputNombre.style.display = "none";
   failInputTel.style.display = "none";
   failInputTel2.style.display = "none";
@@ -21,11 +43,11 @@ function comprobarTodosInputs() {
   let r = true;
   resetInputsStyle();
   if (inputNombre.value == "") {
-    inputNombre.classList.add("border-danger");
+    inputNombre.classList.add("border-danger", "is-invalid");
     failInputNombre.style.display = "inline";
     r = false;
   } else {
-    inputNombre.classList.add("border-success");
+    inputNombre.classList.add("border-success", "is-valid");
   }
   if (inputEmail.value == "" && inputTel.value == "") {
     inputEmail.classList.add("border-info");
@@ -38,9 +60,9 @@ function comprobarTodosInputs() {
     const exprecionRegular =
       /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
     if (exprecionRegular.test(String(inputEmail.value))) {
-      inputEmail.classList.add("border-success");
+      inputEmail.classList.add("border-success", "is-valid");
     } else {
-      inputEmail.classList.add("border-danger");
+      inputEmail.classList.add("border-danger", "is-invalid");
       failInputEmail2.style.display = "inline";
       r = false;
     }
@@ -49,19 +71,19 @@ function comprobarTodosInputs() {
     const exprecionRegular =
       /^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g;
     if (exprecionRegular.test(String(inputTel.value))) {
-      inputTel.classList.add("border-success");
+      inputTel.classList.add("border-success", "is-valid");
     } else {
-      inputTel.classList.add("border-danger");
+      inputTel.classList.add("border-danger", "is-invalid");
       failInputTel2.style.display = "inline";
       r = false;
     }
   }
   if (inputMensaje.value == "") {
-    inputMensaje.classList.add("border-danger");
+    inputMensaje.classList.add("border-danger", "is-invalid");
     failInputMensaje.style.display = "inline";
     r = false;
   } else {
-    inputMensaje.classList.add("border-success");
+    inputMensaje.classList.add("border-success", "is-valid");
   }
   return r;
 }
