@@ -12,8 +12,8 @@
   <!-- CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS -->
-  <link rel="stylesheet" href="../compiled-css/custom-bootstrap.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap-reducido.css"> -->
+  <!-- <link rel="stylesheet" href="../compiled-css/custom-bootstrap.css"> -->
+  <link rel="stylesheet" href="css/bootstrap-reducido.css">
   <link rel="stylesheet" href="css/globalStyle.css">
   <link rel="stylesheet" href="css/responsiveNav.css">
   <!-- Fuentes -->
@@ -87,40 +87,6 @@
     <h1 class="titulos tgrande">Novedades</h1>
     <br><br><br>
     <div class="row" id="contenedorNovedades">
-      <div class="col-sm-6">
-        <a href="inscripciones.html" target="_blank">
-          <div class="card cajadegradado bg-light mb-3 sombra">
-            <div class="card-header">
-              <h3 class="color otraletra d-flex">
-                <span class="material-icons bd-highlight">event</span>
-                <span class="fecha bd-highlight">07/07</span>
-                <span class="material-icons ms-auto bd-highlight">link</span>
-              </h3>
-            </div>
-            <h2 class="card-title">Nueva página para inscripciones a eventos</h2>
-            <div class="card-body">
-              <p class="card-text otraletra">Desde esta web puedes ver y inscrivirte a cualquier evento digital o precencial organizado por PrevencionUNSL o Asociados (Beta).</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-6">
-        <a href="inscripciones.html" target="_blank">
-          <div class="card cajadegradado bg-light mb-3 sombra">
-            <div class="card-header">
-              <h3 class="color otraletra d-flex">
-                <span class="material-icons bd-highlight">event</span>
-                <span class="fecha bd-highlight">07/07</span>
-                <span class="material-icons ms-auto bd-highlight">link</span>
-              </h3>
-            </div>
-            <h2 class="card-title">Nueva página para inscripciones a eventos</h2>
-            <div class="card-body">
-              <p class="card-text otraletra">Desde esta web puedes ver y inscrivirte a cualquier evento digital o precencial organizado por PrevencionUNSL o Asociados (Beta).</p>
-            </div>
-          </div>
-        </a>
-      </div>
     </div>
   </section>
   <!-- Fin Seccion Novedades -->
@@ -589,31 +555,37 @@
       <form action="https://docs.google.com/forms/d/e/1FAIpQLSdlHwWJ913HbYGXtAk2gWSvFlnBOFwDlFkKPI3p52_MECfG6A/formResponse" target="_self" id="bootstrapForm" method="POST" class="row g-3" novalidate>
         <!-- Field type: "short" id: "1633920210" -->
         <fieldset class="col-sm-6 col-md-4">
-          <legend for="1633920210">Nombre</legend>
+          <legend for="1633920210">Nombre<span class="text-danger">*</span></legend>
           <div class="form-group">
-            <input id="2005620554" type="text" name="entry.2005620554" class="form-control otraletra inputBorderDefault" required>
-            <div id="failInputNombre" class="invalid-feedback">
-              Ingresa tu nombre.
+            <input id="2005620554" type="text" name="entry.2005620554" class="form-control otraletra border border-2" required>
+            <div id="failInputNombre" class="text-white fw-bold bg-danger p-1 rounded collapse">
+              Ingresa tu nombre
             </div>
           </div>
         </fieldset>
         <!-- Field type: "short" id: "1770822543" -->
         <fieldset class="col-sm-6 col-md-4">
-          <legend for="1770822543">Teléfono</legend>
+          <legend for="1770822543">Teléfono<span class="text-info">*</span></legend>
           <div class="form-group">
-            <input id="1166974658" type="tel" name="entry.1166974658" class="form-control otraletra inputBorderDefault">
-            <div id="failInputTel" class="invalid-feedback">
-              Se necesita este dato o un email.
+            <input id="1166974658" type="tel" name="entry.1166974658" class="form-control otraletra border border-2">
+            <div id="failInputTel" class="text-white fw-bold bg-info p-1 rounded collapse">
+              Se necesita este dato o un email
+            </div>
+            <div id="failInputTel2" class="text-white fw-bold bg-danger p-1 rounded collapse">
+              Ingresa un telefono valido o borra este campo
             </div>
           </div>
         </fieldset>
         <!-- Field type: "short" id: "227649005" -->
         <fieldset class="col-sm-12 col-md-4">
-          <legend for="227649005">Email</legend>
+          <legend for="227649005">Email<span class="text-info">*</span></legend>
           <div class="form-group">
-            <input id="1045781291" type="email" name="entry.1045781291" class="form-control otraletra inputBorderDefault">
-            <div id="failInputEmail" class="invalid-feedback">
-              Se necesita este dato o un Telefono.
+            <input id="1045781291" type="email" name="entry.1045781291" class="form-control otraletra border border-2">
+            <div id="failInputEmail" class="text-white fw-bold bg-info p-1 rounded collapse">
+              Se necesita este dato o un Telefono
+            </div>
+            <div id="failInputEmail2" class="text-white fw-bold bg-danger p-1 rounded collapse">
+              Ingresa un email valido o borra este campo
             </div>
           </div>
         </fieldset>
@@ -651,9 +623,16 @@
         -->
         <!-- Field type: "paragraph" id: "1846923513" -->
         <fieldset class="col-sm-12">
-          <legend for="1846923513">Mensaje</legend>
+          <legend for="1846923513">Mensaje<span class="text-danger">*</span></legend>
           <div class="form-group">
-            <textarea id="839337160" name="entry.839337160" class="form-control"></textarea>
+            <textarea id="839337160" name="entry.839337160" class="form-control otraletra border border-2" maxlength="500" rows="3"></textarea>
+            <div id="failInputMensaje" class="text-white fw-bold bg-danger p-1 rounded collapse">
+              Deja un mensaje o consulta
+            </div>
+            <div>
+              <span id="inputMensajeCount">0</span>
+              <span>/ 500</span>
+            </div>
           </div>
         </fieldset>
         <input type="hidden" name="fvv" value="1">

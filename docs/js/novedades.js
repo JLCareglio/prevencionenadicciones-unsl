@@ -4,7 +4,7 @@ var listadoNovedades;
 const hojaNovedades =
   "https://spreadsheets.google.com/feeds/list/1TUAdPdrHf1lWyYhQe_xm7o9BET8Pi7bioyMAm1zuFVo/o7d3cgn/public/values?alt=json";
 
-/* actualizarListadoNovedades(); */
+actualizarListadoNovedades();
 async function actualizarListadoNovedades() {
   await fetchNovedades();
   async function fetchNovedades() {

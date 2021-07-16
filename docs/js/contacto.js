@@ -5,43 +5,43 @@ var inputEmail = document.getElementById("1045781291");
 var inputMensaje = document.getElementById("839337160");
 
 /* ----------Validar Formulario---------- */
-function colorearBorder(idElement, color) {
-  idElement.style.border = "2px solid " + color;
+function resetInputsStyle() {
+  inputNombre.classList.remove("border-success", "border-danger");
+  inputTel.classList.remove("border-success", "border-danger", "border-info");
+  inputEmail.classList.remove("border-success", "border-danger", "border-info");
+  inputMensaje.classList.remove("border-success", "border-danger");
+  failInputNombre.style.display = "none";
+  failInputTel.style.display = "none";
+  failInputTel2.style.display = "none";
+  failInputEmail.style.display = "none";
+  failInputEmail2.style.display = "none";
+  failInputMensaje.style.display = "none";
 }
 function comprobarTodosInputs() {
   let r = true;
+  resetInputsStyle();
   if (inputNombre.value == "") {
-    colorearBorder(inputNombre, "#FC220D");
+    inputNombre.classList.add("border-danger");
     failInputNombre.style.display = "inline";
     r = false;
   } else {
-    colorearBorder(inputNombre, "#0DFC77");
-    failInputNombre.style.display = "none";
+    inputNombre.classList.add("border-success");
   }
   if (inputEmail.value == "" && inputTel.value == "") {
-    colorearBorder(inputEmail, "#00FAFC");
-    colorearBorder(inputTel, "#00FAFC");
-    failInputEmail.innerText = "Se necesita este dato o un Telefono.";
+    inputEmail.classList.add("border-info");
+    inputTel.classList.add("border-info");
     failInputEmail.style.display = "inline";
-    failInputTel.innerText = "Se necesita este dato o un Email.";
     failInputTel.style.display = "inline";
     r = false;
-  } else {
-    colorearBorder(inputEmail, "#ced4da");
-    colorearBorder(inputTel, "#ced4da");
-    failInputEmail.style.display = "none";
-    failInputTel.style.display = "none";
   }
   if (inputEmail.value != "") {
     const exprecionRegular =
       /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
     if (exprecionRegular.test(String(inputEmail.value))) {
-      colorearBorder(inputEmail, "#0DFC77");
-      failInputEmail.style.display = "none";
+      inputEmail.classList.add("border-success");
     } else {
-      colorearBorder(inputEmail, "#FC220D");
-      failInputEmail.innerText = "Ingresa un email valido.";
-      failInputEmail.style.display = "inline";
+      inputEmail.classList.add("border-danger");
+      failInputEmail2.style.display = "inline";
       r = false;
     }
   }
@@ -49,17 +49,25 @@ function comprobarTodosInputs() {
     const exprecionRegular =
       /^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g;
     if (exprecionRegular.test(String(inputTel.value))) {
-      colorearBorder(inputTel, "#0DFC77");
-      failInputTel.style.display = "none";
+      inputTel.classList.add("border-success");
     } else {
-      colorearBorder(inputTel, "#FC220D");
-      failInputTel.innerText = "Ingresa un telefono valido.";
-      failInputTel.style.display = "inline";
+      inputTel.classList.add("border-danger");
+      failInputTel2.style.display = "inline";
       r = false;
     }
   }
+  if (inputMensaje.value == "") {
+    inputMensaje.classList.add("border-danger");
+    failInputMensaje.style.display = "inline";
+    r = false;
+  } else {
+    inputMensaje.classList.add("border-success");
+  }
   return r;
 }
+inputMensaje.addEventListener("keyup", function () {
+  inputMensajeCount.innerText = inputMensaje.value.length;
+});
 /* ----------Envio de consulta a GoogleForm---------- */
 // This script requires jQuery and jquery-form plugin
 $("#bootstrapForm").submit(function (event) {
@@ -73,13 +81,11 @@ $("#bootstrapForm").submit(function (event) {
         // Submit of form should be successful but JSONP callback will fail because Google Forms
         // does not support it, so this is handled as a failure.
         $("#contactoEnviadoModal").modal("show");
-        document
-          .querySelector("#btnCerrar")
-          .addEventListener("click", resetForm);
       },
     });
   }
 });
-function resetForm() {
+document.getElementById("btnCerrar").addEventListener("click", function () {
+  resetInputsStyle();
   bootstrapForm.reset();
-}
+});
