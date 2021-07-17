@@ -76,6 +76,17 @@ function validarEmail() {
     return false;
   }
 }
+function validarEvento() {
+  if (inputEvento.value != "") {
+    inputEvento.classList.remove("border-danger", "is-invalid");
+    inputEvento.classList.add("border-success", "is-valid");
+    return true;
+  } else {
+    inputEvento.classList.remove("border-success", "is-valid");
+    inputEvento.classList.add("border-danger", "is-invalid");
+    return false;
+  }
+}
 function validarOtraOpcion() {
   if (
     inputComoEnteraste.value == "__other_option__" &&
@@ -123,7 +134,12 @@ function resetInputsStyle() {
 }
 function comprobarTodosInputs() {
   resetInputsStyle();
-  return validarEmail() && validarNombre() && validarOtraOpcion();
+  let r = true;
+  r = validarNombre() ? r : false;
+  r = validarEmail() ? r : false;
+  r = validarEvento() ? r : false;
+  r = validarOtraOpcion() ? r : false;
+  return r;
 }
 inputComentarios.addEventListener("keyup", function () {
   inputComentariosCount.innerText = inputComentarios.value.length;
@@ -134,6 +150,7 @@ $("#bootstrapForm").submit(function (event) {
   event.preventDefault();
   var extraData = {};
   if (comprobarTodosInputs()) {
+    document.getElementById("btnSubmit").disabled = true;
     document.getElementById("comprobanteInscripcion").innerHTML = `
       <h2 class="color">Comprobante de Inscripcion</h2>
       <p>Nombre: ${inputNombre.value}</p>
@@ -156,16 +173,15 @@ $("#bootstrapForm").submit(function (event) {
           });
       },
     });
-  } else {
-    alert(
-      "Para inscribirte primero corrige todas las entradas marcadas en rojo."
-    );
   }
 });
-document.getElementById("btnCerrar").addEventListener("click", function () {
+$("#inscripcionEnviadaModal").on("hidden.bs.modal", function () {
   resetInputsStyle();
+  inputComentariosCount.innerText = "0";
   bootstrapForm.reset();
+  document.getElementById("btnSubmit").disabled = false;
 });
+
 /* ----------Imprimir Comprobante---------- */
 function imprimirElemento(elemento) {
   var ventana = window.open("", "PRINT");

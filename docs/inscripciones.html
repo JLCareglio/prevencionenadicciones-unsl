@@ -15,7 +15,7 @@
   <meta property="og:description" content="Selecciona e inscríbete a todos los eventos creados y organizados por PrencionUNSL" />
   <!-- CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- CSS  -->
+  <!-- CSS -->
   <!-- <link rel="stylesheet" href="../compiled-css/custom-bootstrap.css"> -->
   <link rel="stylesheet" href="css/bootstrap-reducido.css">
   <link rel="stylesheet" href="css/globalStyle.css">
@@ -77,10 +77,14 @@
       <br>
       <!-- Field type: "dropdown" id: "831586866" -->
       <fieldset class="col-12">
-        <legend for="831586866">Selecciona el evento al que deseas inscribirte<span class="text-danger">*</span></legend>
+        <legend for="831586866">Evento al que deseas inscribirte:<span class="text-danger">*</span></legend>
         <div class="form-group">
-          <select id="831586866" name="entry.1134359719" class="form-control otraletra border border-2">
+          <select id="831586866" name="entry.1134359719" class="form-control otraletra border border-2" required>
+            <option value="">Selecciona una opcion: 👇</option>
           </select>
+          <div id="failInputEvento" class="text-white fw-bold bg-danger p-1 rounded collapse">
+            Tienes que seleccionar un evento de la lista
+          </div>
         </div>
       </fieldset>
       <br>
@@ -138,7 +142,9 @@
       <input type="hidden" name="pageHistory" value="0">
       <br>
       <div class="col-12">
-        <input class="boton otraletra float-center otraletra" type="submit" value="Inscribirme a Evento">
+        <button id="btnSubmit" class="boton otraletra float-center otraletra" type="submit">
+          Inscribirme a Evento
+        </button>
       </div>
     </form>
   </div>

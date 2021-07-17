@@ -47,11 +47,11 @@ function comprobarTodosInputs() {
   const exRegTel =
     /^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g;
   if (exRegNom.test(String(inputNombre.value))) {
+    inputNombre.classList.add("border-success", "is-valid");
+  } else {
     inputNombre.classList.add("border-danger", "is-invalid");
     failInputNombre.style.display = "inline";
     r = false;
-  } else {
-    inputNombre.classList.add("border-success", "is-valid");
   }
   if (inputEmail.value == "" && inputTel.value == "") {
     inputEmail.classList.add("border-info");
@@ -96,6 +96,7 @@ $("#bootstrapForm").submit(function (event) {
   event.preventDefault();
   var extraData = {};
   if (comprobarTodosInputs()) {
+    document.getElementById("btnSubmit").disabled = true;
     $("#bootstrapForm").ajaxSubmit({
       data: extraData,
       dataType: "jsonp", // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
@@ -107,7 +108,9 @@ $("#bootstrapForm").submit(function (event) {
     });
   }
 });
-document.getElementById("btnCerrar").addEventListener("click", function () {
+$("#contactoEnviadoModal").on("hidden.bs.modal", function () {
   resetInputsStyle();
+  inputMensajeCount.innerText = "0";
   bootstrapForm.reset();
+  document.getElementById("btnSubmit").disabled = false;
 });
