@@ -48,28 +48,31 @@ inputComoEnterasteOtraOpcion.addEventListener("focus", function () {
   inputComoEnteraste[3].checked = true;
 });
 
-function validarEmail() {
-  const exprecionRegular =
-    /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
-  if (exprecionRegular.test(String(inputEmail.value))) {
-    console.log("email valido");
-    colorearBorder(inputEmail, "#0DFC77");
-    return true;
-  } else {
-    console.log("email invalido");
-    colorearBorder(inputEmail, "#FC220D");
-    return false;
-  }
-}
 function validarNombre() {
-  const exprecionRegular = /^[A-Za-z\s]+$/;
-  if (exprecionRegular.test(String(inputNombre.value))) {
+  const exRegNom = /^[A-Za-z\s]+$/;
+  if (exRegNom.test(String(inputNombre.value))) {
     console.log("nombre valido");
-    colorearBorder(inputNombre, "#0DFC77");
+    inputNombre.classList.remove("border-danger", "is-invalid");
+    inputNombre.classList.add("border-success", "is-valid");
     return true;
   } else {
     console.log("nombre invalido");
-    colorearBorder(inputNombre, "#FC220D");
+    inputNombre.classList.remove("border-success", "is-valid");
+    inputNombre.classList.add("border-danger", "is-invalid");
+    return false;
+  }
+}
+function validarEmail() {
+  const exRegEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
+  if (exRegEmail.test(String(inputEmail.value))) {
+    console.log("email valido");
+    inputEmail.classList.remove("border-danger", "is-invalid");
+    inputEmail.classList.add("border-success", "is-valid");
+    return true;
+  } else {
+    console.log("email invalido");
+    inputEmail.classList.remove("border-success", "is-valid");
+    inputEmail.classList.add("border-danger", "is-invalid");
     return false;
   }
 }
@@ -79,24 +82,52 @@ function validarOtraOpcion() {
     inputComoEnterasteOtraOpcion.value == ""
   ) {
     console.log("por favor, escribe algo si seleccionas 'otra opción'");
-    colorearBorder(inputComoEnterasteOtraOpcion, "#FC220D");
-    return false;
+    inputComoEnterasteOtraOpcion.classList.remove("border-success");
+    inputComoEnterasteOtraOpcion.classList.add("border-info");
+    return true;
   } else {
     console.log("'otra opción' ok");
-    colorearBorder(inputComoEnterasteOtraOpcion, "#0DFC77");
-    if (inputComoEnterasteOtraOpcion.value == "") {
-      inputComoEnterasteOtraOpcion.style.border = "1px solid #ced4da";
+    inputComoEnterasteOtraOpcion.classList.remove("border-info");
+    inputComoEnterasteOtraOpcion.classList.add("border-success");
+    if (inputComoEnteraste.value != "__other_option__") {
+      inputComoEnterasteOtraOpcion.classList.remove(
+        "border-success",
+        "border-info"
+      );
     }
     return true;
   }
 }
-function colorearBorder(idElement, color) {
-  idElement.style.border = "2px solid " + color;
+
+function resetInputsStyle() {
+  inputNombre.classList.remove(
+    "border-success",
+    "border-danger",
+    "is-valid",
+    "is-invalid"
+  );
+  inputEmail.classList.remove(
+    "border-success",
+    "border-danger",
+    "is-valid",
+    "is-invalid"
+  );
+  inputComoEnterasteOtraOpcion.classList.remove(
+    "border-success",
+    "border-info",
+    "is-valid"
+  );
+  inputComentarios.classList.remove("border-success", "is-valid");
+  failInputNombre.style.display = "none";
+  failInputEmail.style.display = "none";
 }
 function comprobarTodosInputs() {
+  resetInputsStyle();
   return validarEmail() && validarNombre() && validarOtraOpcion();
 }
-
+inputComentarios.addEventListener("keyup", function () {
+  inputComentariosCount.innerText = inputComentarios.value.length;
+});
 /* ----------Envio de inscripcion a GoogleForm---------- */
 // This script requires jQuery and jquery-form plugin
 $("#bootstrapForm").submit(function (event) {
@@ -123,9 +154,6 @@ $("#bootstrapForm").submit(function (event) {
             var div = document.querySelector("#comprobanteInscripcion");
             imprimirElemento(div);
           });
-        document
-          .querySelector("#btnCerrar")
-          .addEventListener("click", resetForm);
       },
     });
   } else {
@@ -134,12 +162,10 @@ $("#bootstrapForm").submit(function (event) {
     );
   }
 });
-function resetForm() {
+document.getElementById("btnCerrar").addEventListener("click", function () {
+  resetInputsStyle();
   bootstrapForm.reset();
-  colorearBorder(inputEmail, "#ced4da");
-  colorearBorder(inputNombre, "#ced4da");
-  colorearBorder(inputComoEnterasteOtraOpcion, "#ced4da");
-}
+});
 /* ----------Imprimir Comprobante---------- */
 function imprimirElemento(elemento) {
   var ventana = window.open("", "PRINT");

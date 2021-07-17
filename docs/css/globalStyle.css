@@ -182,13 +182,3 @@ form legend {
   border-color: black;
   border-radius: 0.2rem;
 }
-
-.cont-contacto {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  border: 0.1rem solid #ced4da;
-}
-
-.inputBorderDefault {
-  border: 0.2rem solid #ced4da;
-}

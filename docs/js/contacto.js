@@ -42,7 +42,11 @@ function resetInputsStyle() {
 function comprobarTodosInputs() {
   let r = true;
   resetInputsStyle();
-  if (inputNombre.value == "") {
+  const exRegNom = /^[A-Za-z\s]+$/;
+  const exRegEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
+  const exRegTel =
+    /^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g;
+  if (exRegNom.test(String(inputNombre.value))) {
     inputNombre.classList.add("border-danger", "is-invalid");
     failInputNombre.style.display = "inline";
     r = false;
@@ -57,9 +61,7 @@ function comprobarTodosInputs() {
     r = false;
   }
   if (inputEmail.value != "") {
-    const exprecionRegular =
-      /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
-    if (exprecionRegular.test(String(inputEmail.value))) {
+    if (exRegEmail.test(String(inputEmail.value))) {
       inputEmail.classList.add("border-success", "is-valid");
     } else {
       inputEmail.classList.add("border-danger", "is-invalid");
@@ -68,9 +70,7 @@ function comprobarTodosInputs() {
     }
   }
   if (inputTel.value != "") {
-    const exprecionRegular =
-      /^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g;
-    if (exprecionRegular.test(String(inputTel.value))) {
+    if (exRegTel.test(String(inputTel.value))) {
       inputTel.classList.add("border-success", "is-valid");
     } else {
       inputTel.classList.add("border-danger", "is-invalid");

@@ -50,70 +50,80 @@
   </header>
   <!-- Fin HeaderMobile -->
   <div id="inscripcion" class="container cajadegradado my-4">
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfEsXircgUUCgpK9iuxgqFm8NXd84hvTzx-MV9sf1qTdXPFUg/formResponse" target="_self" id="bootstrapForm" method="POST">
-      <fieldset>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfEsXircgUUCgpK9iuxgqFm8NXd84hvTzx-MV9sf1qTdXPFUg/formResponse" target="_self" id="bootstrapForm" method="POST" class="row g-3 text-center" novalidate>
+      <fieldset class="col-12">
         <h1 class="titulos">Formulario de inscripción a eventos<br></h1>
       </fieldset>
-      <fieldset>
-        <legend for="">Email</legend>
+      <!-- Field type: "short" id: "1939986332" -->
+      <fieldset class="col-sm-6">
+        <legend for="1939986332">Nombre<span class="text-danger">*</span></legend>
         <div class="form-group">
-          <input id="emailAddress" type="email" name="emailAddress" class="form-control otraletra inputBorderDefault" required>
+          <input id="7835639" type="text" name="entry.7835639" class="form-control otraletra border border-2" required>
+          <div id="failInputNombre" class="text-white fw-bold bg-danger p-1 rounded collapse">
+            Ingresa tu nombre
+          </div>
         </div>
       </fieldset>
       <br>
-      <!-- Field type: "short" id: "1939986332" -->
-      <fieldset>
-        <legend for="1939986332">Nombre</legend>
+      <fieldset class="col-sm-6">
+        <legend for="">Email<span class="text-danger">*</span></legend>
         <div class="form-group">
-          <input id="7835639" type="text" name="entry.7835639" class="form-control otraletra inputBorderDefault" required>
+          <input id="emailAddress" type="email" name="emailAddress" class="form-control otraletra border border-2" required>
+          <div id="failInputEmail" class="text-white fw-bold bg-danger p-1 rounded collapse">
+            Ingresa un email valido
+          </div>
         </div>
       </fieldset>
       <br>
       <!-- Field type: "dropdown" id: "831586866" -->
-      <fieldset>
-        <legend for="831586866">Selecciona el evento al que deseas inscribirte</legend>
+      <fieldset class="col-12">
+        <legend for="831586866">Selecciona el evento al que deseas inscribirte<span class="text-danger">*</span></legend>
         <div class="form-group">
-          <select id="831586866" name="entry.1134359719" class="form-control otraletra inputBorderDefault">
+          <select id="831586866" name="entry.1134359719" class="form-control otraletra border border-2">
           </select>
         </div>
       </fieldset>
       <br>
       <!-- Field type: "choices" id: "615247920" -->
-      <fieldset>
-        <legend for="615247920">¿Cómo te enteraste de este evento? (Opcional)</legend>
-        <div class="form-group">
-          <div class="radio">
+      <fieldset class="col-12">
+        <legend for="615247920">¿Cómo te enteraste de este evento?</legend>
+        <div class="form-group row" style="max-width: 30rem; margin: auto;">
+          <div class="radio col-4">
             <label class="otraletra">
               <input type="radio" name="entry.253668503" value="Sitio web">
               Sitio web
             </label>
           </div>
-          <div class="radio">
+          <div class="radio col-4">
             <label class="otraletra">
               <input type="radio" name="entry.253668503" value="Amigo">
               Amigo
             </label>
           </div>
-          <div class="radio">
+          <div class="radio col-4">
             <label class="otraletra">
               <input type="radio" name="entry.253668503" value="Anuncio">
               Anuncio
             </label>
           </div>
-          <div class="radio">
+          <div class="radio col-12">
             <label class="otraletra">
               <input type="radio" name="entry.253668503" value="__other_option__"> Otro (especificar):
-              <input type="text" name="entry.253668503.other_option_response" class="inputBorderDefault">
+              <input type="text" name="entry.253668503.other_option_response" class="form-control otraletra border border-2" style="width: 28rem;">
             </label>
           </div>
         </div>
       </fieldset>
       <br>
       <!-- Field type: "paragraph" id: "291690101" -->
-      <fieldset>
-        <legend for="291690101">Comentarios o preguntas (Opcional)</legend>
+      <fieldset class="col-12">
+        <legend for="291690101">Comentarios o preguntas</legend>
         <div class="form-group">
-          <textarea id="710177639" name="entry.710177639" class="form-control otraletra"></textarea>
+          <textarea id="710177639" name="entry.710177639" class="form-control otraletra border border-2" maxlength="250" rows="2"></textarea>
+          <div>
+            <span id="inputComentariosCount">0</span>
+            <span>/ 250</span>
+          </div>
         </div>
       </fieldset>
 
@@ -127,7 +137,9 @@
   -->
       <input type="hidden" name="pageHistory" value="0">
       <br>
-      <input class="boton otraletra float-center otraletra" type="submit" value="Inscribirme a Evento">
+      <div class="col-12">
+        <input class="boton otraletra float-center otraletra" type="submit" value="Inscribirme a Evento">
+      </div>
     </form>
   </div>
   <!-- Modal que se activa al enviar el formulario -->
