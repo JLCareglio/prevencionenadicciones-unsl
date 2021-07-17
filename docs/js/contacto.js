@@ -1,3 +1,4 @@
+import { validar } from "./utilidades.js";
 // Variables de todos los inputs del formulario de contacto
 var inputNombre = document.getElementById("2005620554");
 var inputTel = document.getElementById("1166974658");
@@ -5,6 +6,20 @@ var inputEmail = document.getElementById("1045781291");
 var inputMensaje = document.getElementById("839337160");
 
 /* ----------Validar Formulario---------- */
+const exRegVacio = /([^\s])/;
+const exRegNom = /^[A-Za-z\s]+$/;
+const exRegEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
+const exRegTel =
+  /^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/;
+// Asignacion de funciones que validan lo ingresado
+inputNombre.addEventListener("focusout", function () {
+  validar(exRegNom, inputNombre, failInputNombre);
+});
+inputTel.addEventListener("focusout", comprobarTelYEmail);
+inputEmail.addEventListener("focusout", comprobarTelYEmail);
+inputMensaje.addEventListener("focusout", function () {
+  validar(exRegVacio, inputMensaje, failInputMensaje);
+});
 function resetInputsStyle() {
   inputNombre.classList.remove(
     "border-success",
@@ -39,52 +54,45 @@ function resetInputsStyle() {
   failInputEmail2.style.display = "none";
   failInputMensaje.style.display = "none";
 }
+function comprobarTelYEmail() {
+  let r = true;
+  inputTel.classList.remove(
+    "border-success",
+    "border-danger",
+    "border-info",
+    "is-valid",
+    "is-invalid"
+  );
+  inputEmail.classList.remove(
+    "border-success",
+    "border-danger",
+    "border-info",
+    "is-valid",
+    "is-invalid"
+  );
+  if (inputTel.value == "" && inputEmail.value == "") {
+    failInputTel2.style.display = "none";
+    failInputEmail2.style.display = "none";
+    r = validar(exRegTel, inputTel, failInputTel) ? r : false;
+    r = validar(exRegEmail, inputEmail, failInputEmail) ? r : false;
+  } else {
+    failInputTel.style.display = "none";
+    failInputEmail.style.display = "none";
+    if (inputTel.value != "") {
+      r = validar(exRegTel, inputTel, failInputTel2) ? r : false;
+    }
+    if (inputEmail.value != "") {
+      r = validar(exRegEmail, inputEmail, failInputEmail2) ? r : false;
+    }
+  }
+  return r;
+}
 function comprobarTodosInputs() {
   let r = true;
   resetInputsStyle();
-  const exRegNom = /^[A-Za-z\s]+$/;
-  const exRegEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
-  const exRegTel =
-    /^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g;
-  if (exRegNom.test(String(inputNombre.value))) {
-    inputNombre.classList.add("border-success", "is-valid");
-  } else {
-    inputNombre.classList.add("border-danger", "is-invalid");
-    failInputNombre.style.display = "inline";
-    r = false;
-  }
-  if (inputEmail.value == "" && inputTel.value == "") {
-    inputEmail.classList.add("border-info");
-    inputTel.classList.add("border-info");
-    failInputEmail.style.display = "inline";
-    failInputTel.style.display = "inline";
-    r = false;
-  }
-  if (inputEmail.value != "") {
-    if (exRegEmail.test(String(inputEmail.value))) {
-      inputEmail.classList.add("border-success", "is-valid");
-    } else {
-      inputEmail.classList.add("border-danger", "is-invalid");
-      failInputEmail2.style.display = "inline";
-      r = false;
-    }
-  }
-  if (inputTel.value != "") {
-    if (exRegTel.test(String(inputTel.value))) {
-      inputTel.classList.add("border-success", "is-valid");
-    } else {
-      inputTel.classList.add("border-danger", "is-invalid");
-      failInputTel2.style.display = "inline";
-      r = false;
-    }
-  }
-  if (inputMensaje.value == "") {
-    inputMensaje.classList.add("border-danger", "is-invalid");
-    failInputMensaje.style.display = "inline";
-    r = false;
-  } else {
-    inputMensaje.classList.add("border-success", "is-valid");
-  }
+  r = validar(exRegNom, inputNombre, failInputNombre) ? r : false;
+  r = comprobarTelYEmail() ? r : false;
+  r = validar(exRegVacio, inputMensaje, failInputMensaje) ? r : false;
   return r;
 }
 inputMensaje.addEventListener("keyup", function () {

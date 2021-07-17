@@ -1,3 +1,4 @@
+import { validar } from "./utilidades.js";
 var listadoEventos;
 // Variables de todos los inputs del formulario de inscripcion
 var inputEmail = document.getElementById("emailAddress");
@@ -37,9 +38,19 @@ async function actualizarListadoEventos() {
 }
 
 /* ----------Validar Formulario---------- */
+const exRegVacio = /([^\s])/;
+const exRegNom = /^[A-Za-z\s]+$/;
+const exRegEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
 // Asignacion de funciones que validan lo ingresado
-inputEmail.addEventListener("focusout", validarEmail);
-inputNombre.addEventListener("focusout", validarNombre);
+inputNombre.addEventListener("focusout", function () {
+  validar(exRegNom, inputNombre, failInputNombre);
+});
+inputEmail.addEventListener("focusout", function () {
+  validar(exRegEmail, inputEmail, failInputEmail);
+});
+inputEvento.addEventListener("change", function () {
+  validar(exRegVacio, inputEvento, failInputEvento);
+});
 for (const radioBtn of inputComoEnteraste) {
   radioBtn.addEventListener("click", validarOtraOpcion);
 }
@@ -48,45 +59,6 @@ inputComoEnterasteOtraOpcion.addEventListener("focus", function () {
   inputComoEnteraste[3].checked = true;
 });
 
-function validarNombre() {
-  const exRegNom = /^[A-Za-z\s]+$/;
-  if (exRegNom.test(String(inputNombre.value))) {
-    console.log("nombre valido");
-    inputNombre.classList.remove("border-danger", "is-invalid");
-    inputNombre.classList.add("border-success", "is-valid");
-    return true;
-  } else {
-    console.log("nombre invalido");
-    inputNombre.classList.remove("border-success", "is-valid");
-    inputNombre.classList.add("border-danger", "is-invalid");
-    return false;
-  }
-}
-function validarEmail() {
-  const exRegEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
-  if (exRegEmail.test(String(inputEmail.value))) {
-    console.log("email valido");
-    inputEmail.classList.remove("border-danger", "is-invalid");
-    inputEmail.classList.add("border-success", "is-valid");
-    return true;
-  } else {
-    console.log("email invalido");
-    inputEmail.classList.remove("border-success", "is-valid");
-    inputEmail.classList.add("border-danger", "is-invalid");
-    return false;
-  }
-}
-function validarEvento() {
-  if (inputEvento.value != "") {
-    inputEvento.classList.remove("border-danger", "is-invalid");
-    inputEvento.classList.add("border-success", "is-valid");
-    return true;
-  } else {
-    inputEvento.classList.remove("border-success", "is-valid");
-    inputEvento.classList.add("border-danger", "is-invalid");
-    return false;
-  }
-}
 function validarOtraOpcion() {
   if (
     inputComoEnteraste.value == "__other_option__" &&
@@ -131,13 +103,14 @@ function resetInputsStyle() {
   inputComentarios.classList.remove("border-success", "is-valid");
   failInputNombre.style.display = "none";
   failInputEmail.style.display = "none";
+  failInputEvento.style.display = "none";
 }
 function comprobarTodosInputs() {
   resetInputsStyle();
   let r = true;
-  r = validarNombre() ? r : false;
-  r = validarEmail() ? r : false;
-  r = validarEvento() ? r : false;
+  r = validar(exRegNom, inputNombre, failInputNombre) ? r : false;
+  r = validar(exRegEmail, inputEmail, failInputEmail) ? r : false;
+  r = validar(exRegVacio, inputEvento, failInputEvento) ? r : false;
   r = validarOtraOpcion() ? r : false;
   return r;
 }
