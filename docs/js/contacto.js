@@ -70,14 +70,14 @@ function comprobarTelYEmail() {
     "is-valid",
     "is-invalid"
   );
+  failInputTel.style.display = "none";
+  failInputEmail.style.display = "none";
+  failInputTel2.style.display = "none";
+  failInputEmail2.style.display = "none";
   if (inputTel.value == "" && inputEmail.value == "") {
-    failInputTel2.style.display = "none";
-    failInputEmail2.style.display = "none";
     r = validar(exRegTel, inputTel, failInputTel) ? r : false;
     r = validar(exRegEmail, inputEmail, failInputEmail) ? r : false;
   } else {
-    failInputTel.style.display = "none";
-    failInputEmail.style.display = "none";
     if (inputTel.value != "") {
       r = validar(exRegTel, inputTel, failInputTel2) ? r : false;
     }
