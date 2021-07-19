@@ -20,6 +20,9 @@ body {
   font-family: "Rubik";
   font-size: 1.2rem;
 }
+p {
+  font-size: 1.6rem;
+}
 #contenedorNovedades a,
 .myHeader a,
 .myNav a {
@@ -61,14 +64,16 @@ body {
 form legend {
   font-size: 1.8rem;
 }
+.titulos,
 .tgrande {
-  font-size: 3.5rem;
-}
-.titulos {
+  font-size: 2.8rem;
   font-weight: bold;
   text-align: center;
   margin-top: 15px;
   font-family: "Rubik", sans-serif;
+}
+.tgrande {
+  font-size: 3.6rem;
 }
 
 /* fin novedades */
@@ -89,7 +94,7 @@ form legend {
 
 .otraletra {
   font-family: "DM Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 /*integrantes*/
 .contenedor-items-logos img {
@@ -112,7 +117,10 @@ form legend {
 }
 /*integrantes*/
 .boton {
+  font-weight: bold;
+  font-size: 1.6rem;
   background-color: var(--secondary-color);
+  color: var(--primary-color);
   border-radius: 1.5rem;
   text-decoration: none;
 }
@@ -123,8 +131,7 @@ form legend {
 }
 /*folletos*/
 .imagenes {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 1.7rem;
 }
 
 /*material*/
@@ -139,7 +146,6 @@ form legend {
   max-width: 50rem;
   margin: auto;
   margin-bottom: 3rem;
-
   margin-right: auto;
   margin-left: auto;
 }
@@ -151,7 +157,6 @@ form legend {
 .mitos-frase {
   border-radius: 1.5rem;
   padding-top: 1rem;
-
   margin: auto;
   margin-right: auto;
   margin-left: auto;
