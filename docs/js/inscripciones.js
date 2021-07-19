@@ -64,12 +64,10 @@ function validarOtraOpcion() {
     inputComoEnteraste.value == "__other_option__" &&
     inputComoEnterasteOtraOpcion.value == ""
   ) {
-    console.log("por favor, escribe algo si seleccionas 'otra opción'");
     inputComoEnterasteOtraOpcion.classList.remove("border-success");
     inputComoEnterasteOtraOpcion.classList.add("border-info");
     return true;
   } else {
-    console.log("'otra opción' ok");
     inputComoEnterasteOtraOpcion.classList.remove("border-info");
     inputComoEnterasteOtraOpcion.classList.add("border-success");
     if (inputComoEnteraste.value != "__other_option__") {

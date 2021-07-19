@@ -1177,7 +1177,9 @@ textarea.form-control.is-invalid {
 .border-2 {
   border-width: 2px !important;
 }
-
+.w-100 {
+  width: 100% !important;
+}
 .justify-content-center {
   -webkit-box-pack: center !important;
   -ms-flex-pack: center !important;
