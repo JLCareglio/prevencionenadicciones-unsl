@@ -13,11 +13,21 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik-Italic";
+  src: url("../fonts/Rubik-Italic-VariableFont_wght.ttf") format("truetype");
+  font-style: italic;
+}
 body {
   min-width: 32rem;
   position: relative;
   overflow-x: hidden;
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   font-size: 1.2rem;
 }
 p {
@@ -67,13 +77,16 @@ form legend {
 .titulos,
 .tgrande {
   font-size: 2.8rem;
-  font-weight: bold;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
   text-align: center;
   margin-top: 15px;
   font-family: "Rubik", sans-serif;
 }
 .tgrande {
   font-size: 3.6rem;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
 }
 
 /* fin novedades */
@@ -89,11 +102,13 @@ form legend {
 }
 .color {
   color: var(--quarter-color);
-  font-family: "DM Sans", sans-serif;
+  font-family: "Rubik-Italic", sans-serif;
+  font-style: italic;
 }
 
 .otraletra {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Rubik-Italic", sans-serif;
+  font-style: italic;
   font-size: 1.6rem;
 }
 /*integrantes*/
@@ -121,8 +136,9 @@ form legend {
   font-size: 1.6rem;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  border-radius: 1.5rem;
+  border-radius: 0.8rem;
   text-decoration: none;
+  padding: 0.4rem;
 }
 .boton:hover {
   box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.5);
@@ -163,7 +179,8 @@ form legend {
 }
 .mitos-texto {
   font-size: 1.5rem;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Rubik-Italic", sans-serif;
+  font-style: italic;
 }
 .falso {
   color: red;
