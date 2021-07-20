@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inscripcion a Evento</title>
   <link rel="icon" type="image/svg+xml" href="img/Isotipo-PrevAdicUNSL.svg">
   <link rel="alternate icon" href="img/Isotipo-PrevAdicUNSL.ico">
@@ -14,7 +14,7 @@
   <meta property="og:title" content="Inscripcion a Eventos - PrevencionUNSL" />
   <meta property="og:description" content="Selecciona e inscríbete a todos los eventos creados y organizados por PrencionUNSL" />
   <!-- CSS -->
-  <!-- <link rel="stylesheet" href="../compiled-css/custom-bootstrap.css"> -->
+  <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/bootstrap-reducido.css">
   <link rel="stylesheet" href="css/globalStyle.css">
   <!-- Fuentes -->
@@ -52,7 +52,7 @@
         <h1 class="titulos">Formulario de inscripción a eventos<br></h1>
       </fieldset>
       <!-- Field type: "short" id: "1939986332" -->
-      <fieldset class="col-sm-6">
+      <fieldset class="col-12 col-sm-6">
         <legend for="1939986332">Nombre<span class="text-danger">*</span></legend>
         <div class="form-group">
           <input id="7835639" type="text" name="entry.7835639" class="form-control otraletra border border-2" required>
@@ -61,8 +61,7 @@
           </div>
         </div>
       </fieldset>
-      <br>
-      <fieldset class="col-sm-6">
+      <fieldset class="col-12 col-sm-6">
         <legend for="">Email<span class="text-danger">*</span></legend>
         <div class="form-group">
           <input id="emailAddress" type="email" name="emailAddress" class="form-control otraletra border border-2" required>
@@ -153,11 +152,11 @@
         <div class="modal-header">
           <h5 class="modal-title titulos tgrande" id="inscripcionEnviadaModalLabel">Gracias por inscribirte</h5>
         </div>
-        <div id="comprobanteInscripcion" class="modal-body otraletra">
+        <div id="comprobanteInscripcion" class="modal-body">
         </div>
         <div class="modal-footer">
           <button id="btnCerrar" type="button" class="boton float-center" data-bs-dismiss="modal">Cerrar</button>
-          <button id="btnImprimir" type="button" class="boton float-center">Imprimir Comprobante</button>
+          <button id="btnImprimir" type="button" class="boton float-center">Descargar Comprobante</button>
         </div>
       </div>
     </div>
@@ -169,7 +168,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
   <!-- CDN de Bootstrap Bundle y Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <!-- JS Propios -->
+  <!-- JS Locales -->
+  <script src="js/html2canvas.min.js"></script>
   <script src="js/inscripciones.js" type="module"></script>
 </body>
 

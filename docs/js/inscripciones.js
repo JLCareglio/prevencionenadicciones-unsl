@@ -1,5 +1,5 @@
-import { validar } from "./utilidades.js";
-var listadoEventos;
+import { validar, resetInputsStyle } from "./utilidades.js";
+
 // Variables de todos los inputs del formulario de inscripcion
 var inputEmail = document.getElementById("emailAddress");
 var inputNombre = document.getElementById("7835639");
@@ -14,6 +14,7 @@ var inputComentarios = document.getElementById("710177639");
 const hojaEventos =
   "https://spreadsheets.google.com/feeds/list/1TUAdPdrHf1lWyYhQe_xm7o9BET8Pi7bioyMAm1zuFVo/od6/public/values?alt=json";
 
+var listadoEventos;
 actualizarListadoEventos();
 async function actualizarListadoEventos() {
   await fetchInscripciones();
@@ -80,31 +81,11 @@ function validarOtraOpcion() {
   }
 }
 
-function resetInputsStyle() {
-  inputNombre.classList.remove(
-    "border-success",
-    "border-danger",
-    "is-valid",
-    "is-invalid"
-  );
-  inputEmail.classList.remove(
-    "border-success",
-    "border-danger",
-    "is-valid",
-    "is-invalid"
-  );
-  inputComoEnterasteOtraOpcion.classList.remove(
-    "border-success",
-    "border-info",
-    "is-valid"
-  );
-  inputComentarios.classList.remove("border-success", "is-valid");
-  failInputNombre.style.display = "none";
-  failInputEmail.style.display = "none";
-  failInputEvento.style.display = "none";
-}
 function comprobarTodosInputs() {
-  resetInputsStyle();
+  resetInputsStyle(
+    [inputNombre, inputEmail, inputEvento, inputComoEnterasteOtraOpcion],
+    [failInputNombre, failInputEmail, failInputEvento]
+  );
   let r = true;
   r = validar(exRegNom, inputNombre, failInputNombre) ? r : false;
   r = validar(exRegEmail, inputEmail, failInputEmail) ? r : false;
@@ -115,6 +96,7 @@ function comprobarTodosInputs() {
 inputComentarios.addEventListener("keyup", function () {
   inputComentariosCount.innerText = inputComentarios.value.length;
 });
+
 /* ----------Envio de inscripcion a GoogleForm---------- */
 // This script requires jQuery and jquery-form plugin
 $("#bootstrapForm").submit(function (event) {
@@ -124,10 +106,12 @@ $("#bootstrapForm").submit(function (event) {
     document.getElementById("btnSubmit").disabled = true;
     document.getElementById("comprobanteInscripcion").innerHTML = `
       <h2 class="color">Comprobante de Inscripcion</h2>
-      <p>Nombre: ${inputNombre.value}</p>
-      <p>Email: ${inputEmail.value}</p>
-      <p>Inscripto a: ${inputEvento.value}</p>
-      <p>Numero de inscripcion: ${Math.floor(Math.random() * 10000000)}</p>
+      <p>Nombre: <span class="otraletra">${inputNombre.value}</span></p>
+      <p>Email: <span class="otraletra">${inputEmail.value}</span></p>
+      <p>Inscripto a: <span class="otraletra">${inputEvento.value}</span></p>
+      <p>Numero de inscripcion: <span class="otraletra">${Math.floor(
+        Math.random() * 10000000
+      )}</span></p>
     `;
     $("#bootstrapForm").ajaxSubmit({
       data: extraData,
@@ -136,33 +120,44 @@ $("#bootstrapForm").submit(function (event) {
         // Submit of form should be successful but JSONP callback will fail because Google Forms
         // does not support it, so this is handled as a failure.
         $("#inscripcionEnviadaModal").modal("show");
-        document
-          .querySelector("#btnImprimir")
-          .addEventListener("click", function () {
-            var div = document.querySelector("#comprobanteInscripcion");
-            imprimirElemento(div);
-          });
       },
     });
   }
 });
 $("#inscripcionEnviadaModal").on("hidden.bs.modal", function () {
-  resetInputsStyle();
+  resetInputsStyle(
+    [inputNombre, inputEmail, inputEvento, inputComoEnterasteOtraOpcion],
+    [failInputNombre, failInputEmail, failInputEvento]
+  );
   inputComentariosCount.innerText = "0";
   bootstrapForm.reset();
   document.getElementById("btnSubmit").disabled = false;
 });
-
-/* ----------Imprimir Comprobante---------- */
-function imprimirElemento(elemento) {
-  var ventana = window.open("", "PRINT");
-  ventana.document.write("<html><head><title>" + document.title + "</title>");
-  ventana.document.write("</head><body >");
-  ventana.document.write(elemento.innerHTML);
-  ventana.document.write("</body></html>");
-  ventana.document.close();
-  ventana.focus();
-  ventana.print();
-  ventana.close();
-  return true;
-}
+/* ----------Generar Comprobante---------- */
+document.querySelector("#btnImprimir").addEventListener("click", function () {
+  var imprimir = document.querySelector("#comprobanteInscripcion");
+  if (screen.width < 1024) {
+    document.getElementById("viewport").setAttribute("content", "width=1200px");
+  }
+  html2canvas(imprimir)
+    .then((canvas) => {
+      document.body.appendChild(canvas);
+      canvas.style.display = "none";
+      return canvas;
+    })
+    .then((canvas) => {
+      const image = canvas
+        .toDataURL("image/png")
+        .replace("image/png", "image/octet-stream");
+      const a = document.createElement("a");
+      a.setAttribute("download", "ComprobanteDeInscripcion.png");
+      a.setAttribute("href", image);
+      a.click();
+      canvas.remove();
+    });
+  if (screen.width < 1024) {
+    document
+      .getElementById("viewport")
+      .setAttribute("content", "width=device-width, initial-scale=1");
+  }
+});

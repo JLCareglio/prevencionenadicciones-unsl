@@ -1,4 +1,4 @@
-import { validar } from "./utilidades.js";
+import { validar, resetInputsStyle } from "./utilidades.js";
 // Variables de todos los inputs del formulario de contacto
 var inputNombre = document.getElementById("2005620554");
 var inputTel = document.getElementById("1166974658");
@@ -20,60 +20,13 @@ inputEmail.addEventListener("focusout", comprobarTelYEmail);
 inputMensaje.addEventListener("focusout", function () {
   validar(exRegVacio, inputMensaje, failInputMensaje);
 });
-function resetInputsStyle() {
-  inputNombre.classList.remove(
-    "border-success",
-    "border-danger",
-    "is-valid",
-    "is-invalid"
-  );
-  inputTel.classList.remove(
-    "border-success",
-    "border-danger",
-    "border-info",
-    "is-valid",
-    "is-invalid"
-  );
-  inputEmail.classList.remove(
-    "border-success",
-    "border-danger",
-    "border-info",
-    "is-valid",
-    "is-invalid"
-  );
-  inputMensaje.classList.remove(
-    "border-success",
-    "border-danger",
-    "is-valid",
-    "is-invalid"
-  );
-  failInputNombre.style.display = "none";
-  failInputTel.style.display = "none";
-  failInputTel2.style.display = "none";
-  failInputEmail.style.display = "none";
-  failInputEmail2.style.display = "none";
-  failInputMensaje.style.display = "none";
-}
 function comprobarTelYEmail() {
   let r = true;
-  inputTel.classList.remove(
-    "border-success",
-    "border-danger",
-    "border-info",
-    "is-valid",
-    "is-invalid"
+  resetInputsStyle(
+    [inputTel, inputEmail],
+    [failInputTel, failInputTel2, failInputEmail, failInputEmail2]
   );
-  inputEmail.classList.remove(
-    "border-success",
-    "border-danger",
-    "border-info",
-    "is-valid",
-    "is-invalid"
-  );
-  failInputTel.style.display = "none";
-  failInputEmail.style.display = "none";
-  failInputTel2.style.display = "none";
-  failInputEmail2.style.display = "none";
+
   if (inputTel.value == "" && inputEmail.value == "") {
     r = validar(exRegTel, inputTel, failInputTel) ? r : false;
     r = validar(exRegEmail, inputEmail, failInputEmail) ? r : false;
@@ -89,7 +42,17 @@ function comprobarTelYEmail() {
 }
 function comprobarTodosInputs() {
   let r = true;
-  resetInputsStyle();
+  resetInputsStyle(
+    [inputNombre, inputTel, inputEmail, inputMensaje],
+    [
+      failInputNombre,
+      failInputTel,
+      failInputTel2,
+      failInputEmail,
+      failInputTel2,
+      failInputMensaje,
+    ]
+  );
   r = validar(exRegNom, inputNombre, failInputNombre) ? r : false;
   r = comprobarTelYEmail() ? r : false;
   r = validar(exRegVacio, inputMensaje, failInputMensaje) ? r : false;
@@ -117,7 +80,17 @@ $("#bootstrapForm").submit(function (event) {
   }
 });
 $("#contactoEnviadoModal").on("hidden.bs.modal", function () {
-  resetInputsStyle();
+  resetInputsStyle(
+    [inputNombre, inputTel, inputEmail, inputMensaje],
+    [
+      failInputNombre,
+      failInputTel,
+      failInputTel2,
+      failInputEmail,
+      failInputTel2,
+      failInputMensaje,
+    ]
+  );
   inputMensajeCount.innerText = "0";
   bootstrapForm.reset();
   document.getElementById("btnSubmit").disabled = false;

@@ -27,3 +27,18 @@ export function validar(expReg, inputObj, failObj) {
     return false;
   }
 }
+
+export function resetInputsStyle(listInputs, listFails) {
+  listInputs.forEach((input) => {
+    input.classList.remove(
+      "border-success",
+      "border-danger",
+      "border-info",
+      "is-valid",
+      "is-invalid"
+    );
+  });
+  listFails.forEach((fail) => {
+    fail.style.display = "none";
+  });
+}
