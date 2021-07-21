@@ -10,6 +10,7 @@
 # Windows
 Thumbs.db
 desktop.ini
+*:Zone.Identifier
 
 # OS X
 .DS_Store
