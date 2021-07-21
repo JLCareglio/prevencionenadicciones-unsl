@@ -21,49 +21,32 @@ async function actualizarListadoNovedades() {
         novedad.gsx$fecha.$t,
         novedad.gsx$titulo.$t,
         novedad.gsx$contenido.$t,
-        novedad.gsx$enlace.$t
+        novedad.gsx$enlace.$t,
+        novedad.gsx$imagen.$t
       );
     }
   }
 }
-function agregarNovedad(fecha, titulo, contenido, enlace) {
+function agregarNovedad(fecha, titulo, contenido, enlace, imagen) {
+  imagen =
+    imagen != ""
+      ? imagen
+      : "https://via.placeholder.com/300x200/FF7F50/000000?text=...";
   contenedorNovedades.innerHTML += `
-  <div class="col-sm-6">
-    ${enlace != "" ? "<a href='" + enlace + "' target='_blank'>" : ""}
-      <div class="card cajadegradado bg-light mb-3${
-        enlace != "" ? " sombra" : ""
-      }">
-        ${
-          fecha != "" || enlace != ""
-            ? "<div class='card-header'><h3 class='color otraletra d-flex'>"
-            : ""
-        }
-          ${
-            fecha != ""
-              ? "<span class='material-icons bd-highlight'>event</span>"
-              : ""
-          }
-          ${
-            fecha != ""
-              ? "<span class='fecha bd-highlight'>" + fecha + "</span>"
-              : ""
-          }
-          ${
-            enlace != ""
-              ? "<span class='material-icons ms-auto bd-highlight'>link</span>"
-              : ""
-          }
-          ${fecha != "" || enlace != "" ? "</h3></div>" : ""}
-        ${titulo != "" ? "<h2 class='card-title'>" + titulo + "</h2>" : ""}
-        ${
-          contenido != ""
-            ? "<div class='card-body'><p class='card-text otraletra'>" +
-              contenido +
-              "</p></div>"
-            : ""
-        }
+  <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+    <div class="widget single-news">
+      <div class="image">
+        <a href="${enlace}" target="_blank">
+          <img src="${imagen}" class="img-responsive">
+          <span class="gradient"></span>
+        </a>
       </div>
-    ${enlace != "" ? "</a>" : ""}
+      <div class="details">
+        <div class="title"><a href="${enlace}" target="_blank">${titulo}</a></div>
+        <h3><a href="${enlace}" target="_blank">${contenido}</a></h3>
+        <time><a href="${enlace}" target="_blank">${fecha}</a></time>
+      </div>
+    </div>
   </div>
   `;
 }
