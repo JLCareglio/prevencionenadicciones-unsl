@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "reducir-bootstrap": "purgecss --css compiled-css/custom-bootstrap.css --content docs/index.html docs/inscripciones.html -o docs/css/bootstrap-reducido.css"
+    "reducir-bootstrap": "purgecss --css node_modules/bootstrap/dist/css/bootstrap.css --content docs/index.html docs/inscripciones.html -o docs/css/bootstrap-reducido.css"
   },
   "repository": {
     "type": "git",
