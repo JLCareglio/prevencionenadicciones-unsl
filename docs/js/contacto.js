@@ -60,6 +60,8 @@ function comprobarTodosInputs() {
 }
 inputMensaje.addEventListener("keyup", function () {
   inputMensajeCount.innerText = inputMensaje.value.length;
+  inputMensaje.style.height = "1px";
+  inputMensaje.style.height = 28 + inputMensaje.scrollHeight + "px";
 });
 /* ----------Envio de consulta a GoogleForm---------- */
 // This script requires jQuery and jquery-form plugin

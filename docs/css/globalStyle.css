@@ -49,7 +49,9 @@ p {
   width: 100%;
   z-index: 10;
 }
-
+.text-bottom {
+  vertical-align: text-bottom;
+}
 .myHeader span {
   font-size: 1.6rem;
   padding-right: 0.2rem;

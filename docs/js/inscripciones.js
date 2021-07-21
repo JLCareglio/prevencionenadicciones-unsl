@@ -95,6 +95,9 @@ function comprobarTodosInputs() {
 }
 inputComentarios.addEventListener("keyup", function () {
   inputComentariosCount.innerText = inputComentarios.value.length;
+  inputComentariosCount.style.height = "1px";
+  inputComentariosCount.style.height =
+    28 + inputComentariosCount.scrollHeight + "px";
 });
 
 /* ----------Envio de inscripcion a GoogleForm---------- */
