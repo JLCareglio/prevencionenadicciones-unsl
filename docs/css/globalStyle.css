@@ -194,16 +194,7 @@ form legend {
 }
 
 /*contacto*/
-.face {
-  margin: auto;
+.social-banner {
   width: 20rem;
   height: 6rem;
-}
-.insta {
-  margin: auto;
-  width: 20rem;
-  height: 6rem;
-  border: solid 0.02rem;
-  border-color: black;
-  border-radius: 0.2rem;
 }
