@@ -100,7 +100,7 @@ form legend {
   -webkit-box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.75);
-  text-decoration-color: red;
+  border-radius: 0.8rem;
 }
 .color {
   color: var(--quarter-color);
@@ -150,6 +150,10 @@ form legend {
 /*folletos*/
 .imagenes {
   margin-top: 1.7rem;
+  border-radius: 0.8rem;
+}
+.border-radius-8 {
+  border-radius: 0.8rem;
 }
 
 /*material*/

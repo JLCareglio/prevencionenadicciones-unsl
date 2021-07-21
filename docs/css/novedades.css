@@ -6,9 +6,11 @@
 .widget.single-news .image img {
   display: block;
   width: 100%;
+  border-radius: 0.8rem;
 }
 
 .widget.single-news .image .gradient {
+  border-radius: 0.8rem;
   position: absolute;
   left: 0;
   right: 0;
