@@ -1,12 +1,12 @@
 import { validar, resetInputsStyle, refreshScrollSpy } from "./utilidades.js";
-window.onload = refreshScrollSpy;
+
 // Variables de todos los inputs del formulario de contacto
 var inputNombre = document.getElementById("2005620554");
 var inputTel = document.getElementById("1166974658");
 var inputEmail = document.getElementById("1045781291");
 var inputMensaje = document.getElementById("839337160");
 
-/* ----------Validar Formulario---------- */
+/* ----------Validar Formulario de Contacto ---------- */
 const exRegVacio = /([^\s])/;
 const exRegNom = /^[A-Za-z\s]+$/;
 const exRegEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+$/;
