@@ -16,17 +16,17 @@ export function validar(expReg, inputObj, failObj) {
 
   if (expReg.test(String(inputObj.value))) {
     inputObj.classList.add("border-success", "is-valid");
-    refreshScrollSpy;
+    refreshScrollSpy();
     return true;
   } else {
     if (failObj.classList.contains("bg-danger")) {
       inputObj.classList.add("border-danger", "is-invalid");
-      refreshScrollSpy;
+      refreshScrollSpy();
     } else {
       inputObj.classList.add("border-info");
     }
     failObj.style.display = "inline";
-    refreshScrollSpy;
+    refreshScrollSpy();
     return false;
   }
 }
@@ -44,7 +44,7 @@ export function resetInputsStyle(listInputs, listFails) {
   listFails.forEach((fail) => {
     fail.style.display = "none";
   });
-  refreshScrollSpy;
+  refreshScrollSpy();
 }
 
 export function refreshScrollSpy() {

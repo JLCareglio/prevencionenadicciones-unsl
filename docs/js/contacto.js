@@ -1,4 +1,5 @@
 import { validar, resetInputsStyle, refreshScrollSpy } from "./utilidades.js";
+window.onload = refreshScrollSpy;
 // Variables de todos los inputs del formulario de contacto
 var inputNombre = document.getElementById("2005620554");
 var inputTel = document.getElementById("1166974658");
