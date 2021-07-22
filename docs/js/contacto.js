@@ -1,4 +1,4 @@
-import { validar, resetInputsStyle } from "./utilidades.js";
+import { validar, resetInputsStyle, refreshScrollSpy } from "./utilidades.js";
 // Variables de todos los inputs del formulario de contacto
 var inputNombre = document.getElementById("2005620554");
 var inputTel = document.getElementById("1166974658");
@@ -56,6 +56,7 @@ function comprobarTodosInputs() {
   r = validar(exRegNom, inputNombre, failInputNombre) ? r : false;
   r = comprobarTelYEmail() ? r : false;
   r = validar(exRegVacio, inputMensaje, failInputMensaje) ? r : false;
+  refreshScrollSpy();
   return r;
 }
 inputMensaje.addEventListener("keyup", function () {

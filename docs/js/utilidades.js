@@ -16,14 +16,17 @@ export function validar(expReg, inputObj, failObj) {
 
   if (expReg.test(String(inputObj.value))) {
     inputObj.classList.add("border-success", "is-valid");
+    refreshScrollSpy;
     return true;
   } else {
     if (failObj.classList.contains("bg-danger")) {
       inputObj.classList.add("border-danger", "is-invalid");
+      refreshScrollSpy;
     } else {
       inputObj.classList.add("border-info");
     }
     failObj.style.display = "inline";
+    refreshScrollSpy;
     return false;
   }
 }
@@ -41,4 +44,17 @@ export function resetInputsStyle(listInputs, listFails) {
   listFails.forEach((fail) => {
     fail.style.display = "none";
   });
+  refreshScrollSpy;
+}
+
+export function refreshScrollSpy() {
+  const savedPosY =
+    window.pageXOffset !== undefined
+      ? window.pageYOffset
+      : document.documentElement.scrollTop;
+  window.scrollTo(0, 0);
+  $('[data-bs-spy="scroll"]').each(function () {
+    $(this).scrollspy("refresh");
+  });
+  window.scrollTo(0, savedPosY);
 }
