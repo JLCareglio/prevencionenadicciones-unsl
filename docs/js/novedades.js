@@ -4,8 +4,15 @@ var listadoNovedades;
 const hojaNovedades =
   "https://spreadsheets.google.com/feeds/list/1TUAdPdrHf1lWyYhQe_xm7o9BET8Pi7bioyMAm1zuFVo/o7d3cgn/public/values?alt=json";
 
-actualizarListadoNovedades();
-async function actualizarListadoNovedades() {
+// Si hay novedades guardadas localmente se cargan inmediatamente
+listadoNovedades = JSON.parse(localStorage.getItem("listadoNovedades")) || {};
+listadoNovedades != {}
+  ? colocarListadoNovedares()
+  : console.log("Sin novedades guardadas localmente");
+
+// Se obtienen las novedades de -hojaNovedades- guardandolas en -listadoNovedades- y luego colocandolas en el HTML
+obtenerListadoNovedades();
+async function obtenerListadoNovedades() {
   await fetchNovedades();
   async function fetchNovedades() {
     const response = await fetch(hojaNovedades);
@@ -14,6 +21,11 @@ async function actualizarListadoNovedades() {
     listadoNovedades = { ...json_novedades };
   }
   console.log("Listado de Novedades json:", listadoNovedades);
+  colocarListadoNovedares();
+  localStorage.setItem("listadoNovedades", JSON.stringify(listadoNovedades));
+}
+function colocarListadoNovedares() {
+  contenedorNovedades.innerHTML = "";
   for (const key in listadoNovedades) {
     if (Object.hasOwnProperty.call(listadoNovedades, key)) {
       const novedad = listadoNovedades[key];
@@ -27,7 +39,8 @@ async function actualizarListadoNovedades() {
     }
   }
 }
-function agregarNovedad(fecha, titulo, contenido, enlace, imagen) {
+function agregarNovedad(fecha, titulo, contenido, enlace = "#", imagen = "") {
+  enlace = enlace != "" ? enlace : "#";
   imagen =
     imagen != ""
       ? imagen
@@ -36,15 +49,20 @@ function agregarNovedad(fecha, titulo, contenido, enlace, imagen) {
   <div class="col-12 col-sm-6 col-md-6 col-lg-4">
     <div class="widget single-news">
       <div class="image">
-        <a href="${enlace}" target="_blank">
+      <a href="${enlace}" ${!enlace.startsWith("#") ? "target='_blank'" : ""}>
           <img src="${imagen}" class="img-responsive">
           <span class="gradient"></span>
         </a>
       </div>
       <div class="details">
         <div class="title"><a href="${enlace}" target="_blank">${titulo}</a></div>
-        <h3><a href="${enlace}" target="_blank">${contenido}</a></h3>
-        <time><a href="${enlace}" target="_blank">${fecha}</a></time>
+        <h3>
+          <a href="${enlace}"${
+    !enlace.startsWith("#") ? "target='_blank'" : ""
+  }>${contenido}</a></h3>
+        <time><a href="${enlace}" ${
+    !enlace.startsWith("#") ? "target='_blank'" : ""
+  }>${fecha}</a></time>
       </div>
     </div>
   </div>
