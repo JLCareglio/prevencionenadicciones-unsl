@@ -1,4 +1,5 @@
 :root {
+  scroll-behavior: auto;
   /* Variables globales */
   --primary-color: #466f7a;
   --secondary-color: #c8effa;
@@ -11,7 +12,7 @@ html {
   /* font-size: 62.5%; facilita el uso de medidas rem, usar rem en lugar de px mejora la accesibilidad, ya que permite a los navegadores usar reglas para escalar correctamente el contenido si es necesario */
   /* Nuevos ejemplos de medidas rem equivalentes a px: 1rem = 10px; 1.8rem = 18px; 18rem = 180px; .2rem = 2px;*/
   font-size: 62.5%;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 @font-face {
   font-family: "Rubik";
