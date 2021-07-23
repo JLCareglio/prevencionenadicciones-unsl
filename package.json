@@ -23,5 +23,8 @@
     "bootstrap": "^5.0.2",
     "html2canvas": "^1.1.4",
     "material-design-icons": "^3.0.1"
+  },
+  "devDependencies": {
+    "purgecss": "^4.0.3"
   }
 }
