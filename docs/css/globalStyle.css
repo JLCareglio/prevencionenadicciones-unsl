@@ -162,37 +162,6 @@ form legend {
   box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.5);
   transition: 800ms;
 }
-/*mitos*/
-.caja-mitos {
-  border-radius: 1.5rem;
-  padding-top: 1rem;
-  max-width: 50rem;
-  margin: auto;
-  margin-bottom: 3rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-.caja-mitos:hover {
-  box-shadow: 0rem 1rem 1.5rem rgba(0, 0, 0, 0.5);
-  transition: 800ms;
-}
-
-.mitos-frase {
-  border-radius: 1.5rem;
-  padding-top: 1rem;
-  margin: auto;
-  margin-right: auto;
-  margin-left: auto;
-}
-.mitos-texto {
-  font-size: 1.5rem;
-  font-family: "Rubik-Italic", sans-serif;
-  font-style: italic;
-}
-.falso {
-  color: red;
-  font-size: 2;
-}
 
 /*contacto*/
 .social-banner {

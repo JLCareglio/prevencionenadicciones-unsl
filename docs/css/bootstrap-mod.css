@@ -1,3 +1,5 @@
+/* Al purgar bootstrap 5 (con purgecss) se ahorra mucho espacio, pero, tambien se pierden las clases tipicas que se agregan solamente usando JS, en este archivo se colocaran las mismas y tambien algunas modificaciones de propiedades*/
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -101,12 +103,12 @@ textarea.form-control.is-invalid {
 @media (min-width: 768px) {
   .carousel-inner .carousel-item-end.active,
   .carousel-inner .carousel-item-next {
-    transform: translateX(25%);
+    transform: translateX(50%);
   }
 
   .carousel-inner .carousel-item-start.active,
   .carousel-inner .carousel-item-prev {
-    transform: translateX(-25%);
+    transform: translateX(-50%);
   }
 }
 
@@ -120,7 +122,7 @@ textarea.form-control.is-invalid {
 }
 
 .carousel-indicators {
-  bottom: 478px;
+  top: -2.7rem;
 }
 
 .carousel-control-prev-icon,
@@ -138,4 +140,49 @@ textarea.form-control.is-invalid {
 }
 .carousel-control-next {
   right: -1.6%;
+}
+
+.carousel.pointer-event {
+  touch-action: pan-y;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
+
+/* rtl:begin:ignore */
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+  transform: translateX(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+  transform: translateX(-100%);
+}
+
+/* rtl:end:ignore */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+  transform: none;
+}
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+  z-index: 1;
+  opacity: 1;
+}
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0s 0.6s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-end {
+    transition: none;
+  }
 }
