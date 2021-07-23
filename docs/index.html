@@ -453,37 +453,39 @@
     <article class="container">
       <div class="row">
         <div class="col-12">
-          <h1 id="material" class="titulos">Material</h1>
+          <h1 id="material" class="titulos">Material Descargable</h1>
         </div>
         <a href="docs/CuidadosEnJuegoNivelInicial.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank"><img src="img/NivelInicial.jpg" class="w-100 imagenes sombra border border-2"></a>
         <a href="docs/CuidadosEnJuegoNivelPrimario.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank"><img src="img/NivelPrimario.jpg" class="w-100 imagenes sombra border border-2"></a>
-        <a href="docs/OrientacionParaElAbordaje.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/OrientacionParaElAbordaje-small.jpg">
-            <source media="(min-width: 768px)" srcset="img/OrientacionParaElAbordaje.jpg">
-            <img src="img/OrientacionParaElAbordaje.jpg" class="w-100 imagenes sombra border border-2">
-          </picture>
+        <!-- Conjunto de portadas mostradas solo si no se superan los 768px de ancho de pantalla -->
+        <div class="col-12 col-sm-4 hide-above-768">
+          <div class="row">
+            <a href="docs/OrientacionParaElAbordaje.pdf" class="col-6 col-sm-12" target="_blank">
+              <img src="img/OrientacionParaElAbordaje-small.jpg" class="w-100 imagenes sombra border border-2">
+            </a>
+            <a href="docs/OrientacionParaLaIntervencion.pdf" class="col-6 col-sm-12" target="_blank">
+              <img src="img/OrientacionParaLaIntervencion-small.jpg" class="w-100 imagenes sombra border border-2">
+            </a>
+            <a href="docs/EstarEnPrevencion.pdf" class="col-6 col-sm-12" target="_blank">
+              <img src="img/EstarEnPrevencion-small.jpg" class="w-100 imagenes sombra border border-2">
+            </a>
+            <a href="docs/ProyectosIntegralesPreventivos.pdf" class="col-6 col-sm-12" target="_blank">
+              <img src="img/ProyectosIntegralesPreventivos-small.jpg" class="w-100 imagenes sombra border border-2">
+            </a>
+          </div>
+        </div>
+        <!-- Conjunto de portadas mostradas solo al superar los 768px de ancho de pantalla -->
+        <a href="docs/OrientacionParaElAbordaje.pdf" class="col-4 hide-below-768" target="_blank">
+          <img src="img/OrientacionParaElAbordaje.jpg" class="w-100 imagenes sombra border border-2">
         </a>
-        <a href="docs/OrientacionParaLaIntervencion.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/OrientacionParaLaIntervencion-small.jpg">
-            <source media="(min-width: 768px)" srcset="img/OrientacionParaLaIntervencion.jpg">
-            <img src="img/OrientacionParaLaIntervencion.jpg" class="w-100 imagenes sombra border border-2">
-          </picture>
+        <a href="docs/OrientacionParaLaIntervencion.pdf" class="col-4 hide-below-768" target="_blank">
+          <img src="img/OrientacionParaLaIntervencion.jpg" class="w-100 imagenes sombra border border-2">
         </a>
-        <a href="docs/EstarEnPrevencion.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/EstarEnPrevencion-small.jpg">
-            <source media="(min-width: 768px)" srcset="img/EstarEnPrevencion.jpg">
-            <img src="img/EstarEnPrevencion.jpg" class="w-100 imagenes sombra border border-2">
-          </picture>
+        <a href="docs/EstarEnPrevencion.pdf" class="col-4 hide-below-768" target="_blank">
+          <img src="img/EstarEnPrevencion.jpg" class="w-100 imagenes sombra border border-2">
         </a>
-        <a href="docs/ProyectosIntegralesPreventivos.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/ProyectosIntegralesPreventivos-small.jpg">
-            <source media="(min-width: 768px)" srcset="img/ProyectosIntegralesPreventivos.jpg">
-            <img src="img/ProyectosIntegralesPreventivos.jpg" class="w-100 imagenes sombra border border-2">
-          </picture>
+        <a href="docs/ProyectosIntegralesPreventivos.pdf" class="col-4 hide-below-768" target="_blank">
+          <img src="img/ProyectosIntegralesPreventivos.jpg" class="w-100 imagenes sombra border border-2">
         </a>
       </div>
     </article>
