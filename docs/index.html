@@ -97,7 +97,7 @@
     </div>
     <br><br>
     <!-- Objetivos -->
-    <article class="container cajadegradado">
+    <article id="objetivos" class="container cajadegradado">
       <div class="row">
         <div class="my-5 text-center p-3">
           <h1 class="titulos">Objetivos</h1><br><br>
@@ -121,7 +121,7 @@
     <br>
     <!-- Fin Objetivos -->
     <!-- Comision -->
-    <article class="container cajadegradado text-center"><br><br><br>
+    <article id="comision" class="container cajadegradado text-center"><br><br><br>
       <h1 class="titulos">Comision Directiva</h1><br><br>
       <div class="row justify-content-center">
         <div class="col-md-12 col-lg-12 p-3">
@@ -222,7 +222,7 @@
     </article><br>
     <!-- Fin Comicion -->
     <!-- Estudiantes -->
-    <article class="container cajadegradado text-center"><br><br><br>
+    <article id="estudiantes" class="container cajadegradado text-center"><br><br><br>
       <h1 class="titulos">Estudiantes</h1><br><br><br><br>
       <div class="row justify-content-center">
         <div class="col-md-6 col-lg-6 p-3">
@@ -292,11 +292,11 @@
     </article>
     <!-- Fin Estudiantes -->
     <!-- Participantes -->
-    <br><br>
-    <article class="container">
+    <article id="participantes" class="container">
+      <br><br>
       <div class="row">
         <div class="col-12">
-          <h1 id="participantes" class="titulos">Participantes</h1>
+          <h1 class="titulos">Participantes</h1>
           <br><br><br>
         </div>
       </div>
@@ -354,13 +354,12 @@
     <div>
       <br><br><br>
       <h1 class="tgrande">Prevencion</h1>
-      <br><br>
     </div>
     <!-- Folletos -->
-    <article class="container">
+    <article id="folletos" class="container"><br><br>
       <div class="row">
         <div class="col-12">
-          <h1 id="folletos" class="titulos">Folletos</h1>
+          <h1 class="titulos">Folletos</h1>
         </div>
         <a href="img/afiche1.png" class="col-12 col-sm-6 imagenes" download><img src="img/afiche1.png" class="w-100 border border-2 sombra border-radius-8"></a>
         <a href="img/afiche2.png" class="col-12 col-sm-6 imagenes" download><img src="img/afiche2.png" class="w-100 border border-2 sombra border-radius-8"></a>
@@ -368,9 +367,9 @@
     </article>
     <!-- Fin Folletos -->
     <!-- Mitos -->
-    <article class="container text-center my-3">
+    <article id="mitos" class="container text-center my-3"><br><br>
       <div class="col-12">
-        <h1 id="mitos" class="titulos">Mitos</h1>
+        <h1 class="titulos">Mitos</h1>
         <br>
       </div>
       <div class="row mx-auto my-auto justify-content-center">
@@ -450,10 +449,10 @@
     </article>
     <!-- Fin Mitos -->
     <!-- Material -->
-    <article class="container">
+    <article id="material" class="container"><br><br>
       <div class="row">
         <div class="col-12">
-          <h1 id="material" class="titulos">Material Descargable</h1>
+          <h1 class="titulos">Material Descargable</h1>
         </div>
         <a href="docs/CuidadosEnJuegoNivelInicial.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank"><img src="img/NivelInicial.jpg" class="w-100 imagenes sombra border border-2"></a>
         <a href="docs/CuidadosEnJuegoNivelPrimario.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank"><img src="img/NivelPrimario.jpg" class="w-100 imagenes sombra border border-2"></a>
@@ -497,12 +496,14 @@
   <section id="actividades" class="container">
     <br><br><br>
     <h1 class="tgrande">Participá de Nuestras Actividades</h1>
-    <br><br>
+
     <!-- Encuestas -->
-    <article class="row cajadegradado">
-      <div class="p-3">
-        <h1 class="titulos">Encuestas</h1>
-        <br>
+    <article id="encuestas"><br><br>
+      <div class="p-3 row cajadegradado">
+        <div>
+          <h1 class="titulos">Encuestas</h1>
+          <br>
+        </div>
         <a href="https://forms.gle/v4tmnJcUumQem5638" target="_blank" rel="noopener noreferrer" class="text-reset text-decoration-none">
           <h2 class="color text-left">Encuesta de Tecnoadicciones en tiempos de COVID-19</h2>
         </a>
@@ -526,21 +527,22 @@
     <!-- Fin Encuestas -->
     <br>
     <!-- Encuentros Realizados -->
-    <article class="row cajadegradado">
-      <div class="p-3">
-        <h1 class="titulos">1° Encuentro: Comunidad y Universidad para la prevención de consumos problemáticos y adicciones</h1>
-        <br>
+    <article id="encuentros"><br><br>
+      <div class="p-3 row cajadegradado">
+        <div>
+          <h1 class="titulos">1° Encuentro: Comunidad y Universidad para la prevención de consumos problemáticos y adicciones</h1>
+          <br>
+        </div>
         <h2 class="color text-left">Objetivo general</h2>
         <p class="text-left"> Convocar a un encuentro entre instituciones y actores sociales de nuestro medio con miembros de la Universidad Nacional de San Luis para promover el intercambio sobre abordajes de consumos problemáticos y adicciones, y la articulación de redes de trabajo preventivo.</p>
         <h2 class="color text-left">Realizado:</h2>
         <p class="text-left">el 5 de Junio del 2019 en el Auditorio Mauricio López (UNSL). <a href="https://www.facebook.com/media/set/?vanity=programauniversitariodeprevencionunsl&set=a.460236394730443" target="_blank">Ver fotos</a></p>
+        <div class="text-center">
+          <button type="button" class="boton" onclick="window.open('docs/Resumen1erEncuentro.pdf')" />
+          Descargar Libro de Resumen
+          </buttom>
+        </div>
       </div>
-      <div class="text-center">
-        <button type="button" class="boton" onclick="window.open('docs/Resumen1erEncuentro.pdf')" />
-        Descargar Libro de Resumen
-        </buttom>
-      </div>
-      <br><br><br>
     </article>
     <!-- Fin Encuentros Realizados -->
   </section>
@@ -587,7 +589,7 @@
             </a>
           </p>
         </div>
-        <div class="col-12 text-center otraletra">
+        <div id="consulta" class="col-12 text-center otraletra">
           <br>
           <h1 class="color titulos">Envianos tu consulta</h1>
         </div>
