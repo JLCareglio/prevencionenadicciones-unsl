@@ -15,12 +15,12 @@ html {
   scroll-behavior: auto;
 }
 @font-face {
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
 }
 @font-face {
-  font-family: "Rubik-Italic";
+  font-family: "Rubik-Italic", sans-serif;
   src: url("../fonts/Rubik-Italic-VariableFont_wght.ttf") format("truetype");
   font-style: italic;
 }
