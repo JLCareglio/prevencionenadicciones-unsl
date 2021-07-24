@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   overflow: hidden;
   position: fixed;
   width: 100%;
