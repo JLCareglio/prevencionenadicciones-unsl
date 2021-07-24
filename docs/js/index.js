@@ -1,6 +1,9 @@
 import { refreshScrollSpy } from "./utilidades.js";
 // Luego de que carge la pagina se actualiza el scrollspy para iluminar en el nav la seccion actual
-window.onload = refreshScrollSpy;
+window.addEventListener("load", function () {
+  //everything is fully loaded, don't use me if you can use DOMContentLoaded
+  setTimeout(refreshScrollSpy, 500);
+});
 
 // Se prepara el carrousel para mostrar los mitos
 let items = document.querySelectorAll(".carousel .carousel-item");
