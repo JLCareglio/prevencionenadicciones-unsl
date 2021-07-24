@@ -11,7 +11,7 @@ listadoNovedades != {}
   : console.log("Sin novedades guardadas localmente");
 
 // Se obtienen las novedades de -hojaNovedades- guardandolas en -listadoNovedades- y luego colocandolas en el HTML
-// obtenerListadoNovedades();
+obtenerListadoNovedades();
 async function obtenerListadoNovedades() {
   await fetchNovedades();
   async function fetchNovedades() {
