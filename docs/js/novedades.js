@@ -44,7 +44,7 @@ function agregarNovedad(fecha, titulo, contenido, enlace = "#", imagen = "") {
   imagen =
     imagen != ""
       ? imagen
-      : "https://via.placeholder.com/300x200/FF7F50/000000?text=...";
+      : "https://via.placeholder.com/300x200/FF7F50/000000?text=" + titulo;
   contenedorNovedades.innerHTML += `
   <div class="col-12 col-sm-6 col-md-6 col-lg-4">
     <div class="widget single-news">
