@@ -5,14 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PrevencionUNSL</title>
-  <link rel="icon" type="image/svg+xml" href="img/Isotipo-PrevAdicUNSL.svg">
-  <link rel="alternate icon" href="img/Isotipo-PrevAdicUNSL.ico">
+  <link rel="icon" type="image/svg+xml" href="img/LogoPreAdicUNSL/Isotipo-PrevAdicUNSL.svg">
+  <link rel="alternate icon" href="img/LogoPreAdicUNSL/Isotipo-PrevAdicUNSL.ico">
   <!-- Eliminar la siguiente linea al finalizar el desarrollo, esta impide que la web sea indexada en los buscadores -->
   <meta name="robots" content="noindex">
-  <!-- Metadatos Open Graph protocol -->
-  <meta property="og:url" content="http://www.prevencionenadicciones.unsl.edu.ar/index.html" />
+  <!-- Metadatos -->
+  <meta name="description" content="Programa Universitario de Prevención de Consumos Problemáticos y Adicciones">
   <meta property="og:title" content="PrevencionUNSL" />
-  <meta property="og:description" content="Programa Universitario de Prevención de Consumos Problemáticos y Adicciones" />
+  <meta property="og:url" content="http://www.prevencionenadicciones.unsl.edu.ar/index.html" />
+  <meta property="og:description" content="Programa Universitario de Prevención de Consumos Problemáticos y Adicciones">
+  <meta property="og:image" content="https://raw.githubusercontent.com/JLCareglio/prevencionenadicciones-unsl/main/docs/img/LogoPreAdicUNSL/Isotipo-PrevAdicUNSL_200x200.png">
+  <meta property="og:type" content="website" />
+  <!-- Og Locale -->
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:locale:alternate" content="es_ES" />
   <!-- CSS -->
   <link rel="stylesheet" href="css/fonts.css">
   <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
@@ -33,7 +39,7 @@
       <svg version="1.1" baseProfile="full" width="56" height="56">
         <a href="#">
           <circle cx="28" cy="28" r="28" fill="white" />
-          <image href="img/Isotipo-PrevAdicUNSL.svg" x="3" y="4" height="50px" width="50px" />
+          <image href="img/LogoPreAdicUNSL/Isotipo-PrevAdicUNSL.svg" x="3" y="4" height="50px" width="50px" />
         </a>
       </svg>
     </div>
@@ -54,7 +60,7 @@
     <svg version="1.1" baseProfile="full" width="56" height="56">
       <a href="#">
         <circle cx="28" cy="28" r="28" fill="white" />
-        <image href="img/Isotipo-PrevAdicUNSL.svg" x="3" y="4" height="50px" width="50px" />
+        <image href="img/LogoPreAdicUNSL/Isotipo-PrevAdicUNSL.svg" x="3" y="4" height="50px" width="50px" />
       </a>
     </svg>
     <ul class="extaInfo">
@@ -459,37 +465,41 @@
         <div class="col-12">
           <h1 class="titulos">Material Descargable</h1>
         </div>
-        <a href="docs/CuidadosEnJuegoNivelInicial.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank"><img src="img/NivelInicial.jpg" class="w-100 imagenes sombra border border-2"></a>
-        <a href="docs/CuidadosEnJuegoNivelPrimario.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank"><img src="img/NivelPrimario.jpg" class="w-100 imagenes sombra border border-2"></a>
+        <a href="docs/CuidadosEnJuegoNivelInicial.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank">
+          <img src="img/portadas/NivelInicial.jpg" class="w-100 imagenes sombra border border-2">
+        </a>
+        <a href="docs/CuidadosEnJuegoNivelPrimario.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank">
+          <img src="img/portadas/NivelPrimario.jpg" class="w-100 imagenes sombra border border-2">
+        </a>
         <!-- Conjunto de portadas mostradas solo si no se superan los 768px de ancho de pantalla -->
         <div class="col-12 col-sm-4 hide-above-768">
           <div class="row">
             <a href="docs/OrientacionParaElAbordaje.pdf" class="col-6 col-sm-12" target="_blank">
-              <img src="img/OrientacionParaElAbordaje-small.jpg" class="w-100 imagenes sombra border border-2">
+              <img src="img/portadas/OrientacionParaElAbordaje-small.jpg" class="w-100 imagenes sombra border border-2">
             </a>
             <a href="docs/OrientacionParaLaIntervencion.pdf" class="col-6 col-sm-12" target="_blank">
-              <img src="img/OrientacionParaLaIntervencion-small.jpg" class="w-100 imagenes sombra border border-2">
+              <img src="img/portadas/OrientacionParaLaIntervencion-small.jpg" class="w-100 imagenes sombra border border-2">
             </a>
             <a href="docs/EstarEnPrevencion.pdf" class="col-6 col-sm-12" target="_blank">
-              <img src="img/EstarEnPrevencion-small.jpg" class="w-100 imagenes sombra border border-2">
+              <img src="img/portadas/EstarEnPrevencion-small.jpg" class="w-100 imagenes sombra border border-2">
             </a>
             <a href="docs/ProyectosIntegralesPreventivos.pdf" class="col-6 col-sm-12" target="_blank">
-              <img src="img/ProyectosIntegralesPreventivos-small.jpg" class="w-100 imagenes sombra border border-2">
+              <img src="img/portadas/ProyectosIntegralesPreventivos-small.jpg" class="w-100 imagenes sombra border border-2">
             </a>
           </div>
         </div>
         <!-- Conjunto de portadas mostradas solo al superar los 768px de ancho de pantalla -->
         <a href="docs/OrientacionParaElAbordaje.pdf" class="col-4 hide-below-768" target="_blank">
-          <img src="img/OrientacionParaElAbordaje.jpg" class="w-100 imagenes sombra border border-2">
+          <img src="img/portadas/OrientacionParaElAbordaje.jpg" class="w-100 imagenes sombra border border-2">
         </a>
         <a href="docs/OrientacionParaLaIntervencion.pdf" class="col-4 hide-below-768" target="_blank">
-          <img src="img/OrientacionParaLaIntervencion.jpg" class="w-100 imagenes sombra border border-2">
+          <img src="img/portadas/OrientacionParaLaIntervencion.jpg" class="w-100 imagenes sombra border border-2">
         </a>
         <a href="docs/EstarEnPrevencion.pdf" class="col-4 hide-below-768" target="_blank">
-          <img src="img/EstarEnPrevencion.jpg" class="w-100 imagenes sombra border border-2">
+          <img src="img/portadas/EstarEnPrevencion.jpg" class="w-100 imagenes sombra border border-2">
         </a>
         <a href="docs/ProyectosIntegralesPreventivos.pdf" class="col-4 hide-below-768" target="_blank">
-          <img src="img/ProyectosIntegralesPreventivos.jpg" class="w-100 imagenes sombra border border-2">
+          <img src="img/portadas/ProyectosIntegralesPreventivos.jpg" class="w-100 imagenes sombra border border-2">
         </a>
       </div>
     </article>
