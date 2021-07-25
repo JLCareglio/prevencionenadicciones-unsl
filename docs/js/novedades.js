@@ -5,12 +5,12 @@ const hojaNovedades =
   "https://spreadsheets.google.com/feeds/list/1TUAdPdrHf1lWyYhQe_xm7o9BET8Pi7bioyMAm1zuFVo/o7d3cgn/public/values?alt=json";
 
 // Si hay novedades guardadas localmente se cargan inmediatamente
-listadoNovedades = JSON.parse(localStorage.getItem("listadoNovedades")) || {};
-listadoNovedades != {}
+listadoNovedades = JSON.parse(localStorage.getItem("listadoNovedades")) || [];
+listadoNovedades != []
   ? colocarListadoNovedares()
   : console.log("Sin novedades guardadas localmente");
 
-// Se obtienen las novedades de -hojaNovedades- guardandolas en -listadoNovedades- y luego colocandolas en el HTML
+// Se obtienen las novedades de -hojaNovedades- guardandolas en -listadoNovedades- para luego colocarlas en el HTML dentro de contenedorNovedades
 obtenerListadoNovedades();
 async function obtenerListadoNovedades() {
   await fetchNovedades();
@@ -19,8 +19,9 @@ async function obtenerListadoNovedades() {
     let json_novedades = await response.json();
     json_novedades = json_novedades.feed.entry;
     listadoNovedades = { ...json_novedades };
+    listadoNovedades = Object.values(listadoNovedades).reverse();
   }
-  console.log("Listado de Novedades json:", listadoNovedades);
+  console.log("Listado de Novedades:", listadoNovedades);
   colocarListadoNovedares();
   localStorage.setItem("listadoNovedades", JSON.stringify(listadoNovedades));
 }
@@ -39,6 +40,7 @@ function colocarListadoNovedares() {
     }
   }
 }
+
 function agregarNovedad(fecha, titulo, contenido, enlace = "#", imagen = "") {
   enlace = enlace != "" ? enlace : "#";
   imagen =
