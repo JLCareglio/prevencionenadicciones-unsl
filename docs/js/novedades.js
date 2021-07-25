@@ -43,10 +43,15 @@ function colocarListadoNovedares() {
 
 function agregarNovedad(fecha, titulo, contenido, enlace = "#", imagen = "") {
   enlace = enlace != "" ? enlace : "#";
-  imagen =
-    imagen != ""
-      ? imagen
-      : "https://via.placeholder.com/300x200/FF7F50/000000?text=" + titulo;
+  if (imagen.includes("drive.google.com/file/d/")) {
+    // Si la imagen esta subida a google drive se le extrae su id y se prepara una url para web
+    imagen =
+      "https://drive.google.com/uc?export=view&id=" +
+      imagen.split("/file/d/")[1].split("/")[0];
+  } else if (imagen == "") {
+    // Si no hay imagen se genera una usando el titulo de la novedad
+    imagen = "https://via.placeholder.com/300x200/FF7F50/000000?text=" + titulo;
+  }
   contenedorNovedades.innerHTML += `
   <div class="col-12 col-sm-6 col-md-6 col-lg-4">
     <div class="widget single-news">
