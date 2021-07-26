@@ -21,8 +21,8 @@
   <meta property="og:locale:alternate" content="es_ES" />
   <!-- CSS -->
   <link rel="stylesheet" href="css/fonts.css">
-  <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="css/bootstrap-reducido.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap-reducido.css"> -->
   <link rel="stylesheet" href="css/bootstrap-mod.css">
   <link rel="stylesheet" href="css/globalStyle.css">
   <link rel="stylesheet" href="css/responsiveNav.css">
@@ -371,8 +371,18 @@
         <div class="col-12">
           <h1 class="titulos">Folletos</h1>
         </div>
-        <a href="img/afiche1.png" class="col-12 col-sm-6 imagenes" download><img src="img/afiche1.png" class="w-100 border border-2 sombra border-radius-8"></a>
-        <a href="img/afiche2.png" class="col-12 col-sm-6 imagenes" download><img src="img/afiche2.png" class="w-100 border border-2 sombra border-radius-8"></a>
+        <a href="img/folletos/afiche1.png" class="col-12 col-sm-6 imagenes" download>
+          <picture>
+            <source srcset="img/folletos/afiche1.webp" type="image/webp">
+            <img src="img/folletos/afiche1.png" alt="Folleto de prevencion: Vos decidis" class="w-100 border border-2 sombra border-radius-8">
+          </picture>
+        </a>
+        <a href="img/folletos/afiche2.png" class="col-12 col-sm-6 imagenes" download>
+          <picture>
+            <source srcset="img/folletos/afiche2.webp" type="image/webp">
+            <img src="img/folletos/afiche2.png" alt="Folleto de prevencion: Para decir NO" class="w-100 border border-2 sombra border-radius-8">
+          </picture>
+        </a>
       </div>
     </article>
     <!-- Fin Folletos -->
@@ -397,7 +407,10 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="img/mitos/mito1.jpeg" class="img-fluid border border-2 border-radius-8">
+                    <picture>
+                      <source srcset="img/mitos/mito1.webp" type="image/webp">
+                      <img src="img/mitos/mito1.jpeg" alt="Es mito que por tomar una vez no pasara nada" class="img-fluid border border-2 border-radius-8">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -406,7 +419,10 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="img/mitos/mito2.jpeg" class="img-fluid border border-2 border-radius-8">
+                    <picture>
+                      <source srcset="img/mitos/mito2.webp" type="image/webp">
+                      <img src="img/mitos/mito2.jpeg" alt="Es mito que con la marihuana las personas aprenden mas rapido" class="img-fluid border border-2 border-radius-8">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -415,7 +431,10 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="img/mitos/mito3.jpeg" class="img-fluid border border-2 border-radius-8">
+                    <picture>
+                      <source srcset="img/mitos/mito3.webp" type="image/webp">
+                      <img src="img/mitos/mito3.jpeg" alt="Es mito que las drogas ayudan a aliviar el estrés" class="img-fluid border border-2 border-radius-8">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -424,7 +443,10 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="img/mitos/mito4.jpeg" class="img-fluid border border-2 border-radius-8">
+                    <picture>
+                      <source srcset="img/mitos/mito4.webp" type="image/webp">
+                      <img src="img/mitos/mito4.jpeg" alt="Es mito que las drogas motivan la creatividad" class="img-fluid border border-2 border-radius-8">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -433,7 +455,10 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="img/mitos/mito5.jpeg" class="img-fluid border border-2 border-radius-8">
+                    <picture>
+                      <source srcset="img/mitos/mito5.webp" type="image/webp">
+                      <img src="img/mitos/mito5.jpeg" alt="Es mito que las drogas mejoran el desempeño académico" class="img-fluid border border-2 border-radius-8">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -442,7 +467,10 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="img/mitos/mito6.jpeg" class="img-fluid border border-2 border-radius-8">
+                    <picture>
+                      <source srcset="img/mitos/mito6.webp" type="image/webp">
+                      <img src="img/mitos/mito6.jpeg" alt="Es mito que al fumar marihuana no tendras ningun problema para estudiar el dia proximo" class="img-fluid border border-2 border-radius-8">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -465,40 +493,70 @@
           <h1 class="titulos">Material Descargable</h1>
         </div>
         <a href="docs/CuidadosEnJuegoNivelInicial.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank">
-          <img src="img/portadas/NivelInicial.jpg" class="w-100 imagenes sombra border border-2">
+          <picture>
+            <source srcset="img/portadas/NivelInicial.webp" type="image/webp">
+            <img src="img/portadas/NivelInicial.jpg" alt="Descargar NivelInicial.pdf" class="w-100 imagenes sombra border border-2">
+          </picture>
         </a>
         <a href="docs/CuidadosEnJuegoNivelPrimario.pdf" class="col-6 col-sm-4 col-md-4 col-lg-4" target="_blank">
-          <img src="img/portadas/NivelPrimario.jpg" class="w-100 imagenes sombra border border-2">
+          <picture>
+            <source srcset="img/portadas/NivelPrimario.webp" type="image/webp">
+            <img src="img/portadas/NivelPrimario.jpg" alt="Descargar NivelPrimario.pdf" class="w-100 imagenes sombra border border-2">
+          </picture>
         </a>
         <!-- Conjunto de portadas mostradas solo si no se superan los 768px de ancho de pantalla -->
         <div class="col-12 col-sm-4 hide-above-768">
           <div class="row">
             <a href="docs/OrientacionParaElAbordaje.pdf" class="col-6 col-sm-12" target="_blank">
-              <img src="img/portadas/OrientacionParaElAbordaje-small.jpg" class="w-100 imagenes sombra border border-2">
+              <picture>
+                <source srcset="img/portadas/OrientacionParaElAbordaje-small.webp" type="image/webp">
+                <img src="img/portadas/OrientacionParaElAbordaje-small.jpg" alt="Descargar OrientacionParaElAbordaje-small.pdf" class="w-100 imagenes sombra border border-2">
+              </picture>
             </a>
             <a href="docs/OrientacionParaLaIntervencion.pdf" class="col-6 col-sm-12" target="_blank">
-              <img src="img/portadas/OrientacionParaLaIntervencion-small.jpg" class="w-100 imagenes sombra border border-2">
+              <picture>
+                <source srcset="img/portadas/OrientacionParaLaIntervencion-small.webp" type="image/webp">
+                <img src="img/portadas/OrientacionParaLaIntervencion-small.jpg" alt="Descargar OrientacionParaLaIntervencion-small.pdf" class="w-100 imagenes sombra border border-2">
+              </picture>
             </a>
             <a href="docs/EstarEnPrevencion.pdf" class="col-6 col-sm-12" target="_blank">
-              <img src="img/portadas/EstarEnPrevencion-small.jpg" class="w-100 imagenes sombra border border-2">
+              <picture>
+                <source srcset="img/portadas/EstarEnPrevencion-small.webp" type="image/webp">
+                <img src="img/portadas/EstarEnPrevencion-small.jpg" alt="Descargar EstarEnPrevencion-small.pdf" class="w-100 imagenes sombra border border-2">
+              </picture>
             </a>
             <a href="docs/ProyectosIntegralesPreventivos.pdf" class="col-6 col-sm-12" target="_blank">
-              <img src="img/portadas/ProyectosIntegralesPreventivos-small.jpg" class="w-100 imagenes sombra border border-2">
+              <picture>
+                <source srcset="img/portadas/ProyectosIntegralesPreventivos-small.webp" type="image/webp">
+                <img src="img/portadas/ProyectosIntegralesPreventivos-small.jpg" alt="Descargar ProyectosIntegralesPreventivos-small.pdf" class="w-100 imagenes sombra border border-2">
+              </picture>
             </a>
           </div>
         </div>
         <!-- Conjunto de portadas mostradas solo al superar los 768px de ancho de pantalla -->
         <a href="docs/OrientacionParaElAbordaje.pdf" class="col-4 hide-below-768" target="_blank">
-          <img src="img/portadas/OrientacionParaElAbordaje.jpg" class="w-100 imagenes sombra border border-2">
+          <picture>
+            <source srcset="img/portadas/OrientacionParaElAbordaje.webp" type="image/webp">
+            <img src="img/portadas/OrientacionParaElAbordaje.jpg" alt="Descargar OrientacionParaElAbordaje.pdf" class="w-100 imagenes sombra border border-2">
+          </picture>
         </a>
         <a href="docs/OrientacionParaLaIntervencion.pdf" class="col-4 hide-below-768" target="_blank">
-          <img src="img/portadas/OrientacionParaLaIntervencion.jpg" class="w-100 imagenes sombra border border-2">
+          <picture>
+            <source srcset="img/portadas/OrientacionParaLaIntervencion.webp" type="image/webp">
+            <img src="img/portadas/OrientacionParaLaIntervencion.jpg" alt="Descargar OrientacionParaLaIntervencion.pdf" class="w-100 imagenes sombra border border-2">
+          </picture>
         </a>
         <a href="docs/EstarEnPrevencion.pdf" class="col-4 hide-below-768" target="_blank">
-          <img src="img/portadas/EstarEnPrevencion.jpg" class="w-100 imagenes sombra border border-2">
+          <picture>
+            <source srcset="img/portadas/EstarEnPrevencion.webp" type="image/webp">
+            <img src="img/portadas/EstarEnPrevencion.jpg" alt="Descargar EstarEnPrevencion.pdf" class="w-100 imagenes sombra border border-2">
+          </picture>
         </a>
         <a href="docs/ProyectosIntegralesPreventivos.pdf" class="col-4 hide-below-768" target="_blank">
-          <img src="img/portadas/ProyectosIntegralesPreventivos.jpg" class="w-100 imagenes sombra border border-2">
+          <picture>
+            <source srcset="img/portadas/ProyectosIntegralesPreventivos.webp" type="image/webp">
+            <img src="img/portadas/ProyectosIntegralesPreventivos.jpg" alt="Descargar ProyectosIntegralesPreventivos.pdf" class="w-100 imagenes sombra border border-2">
+          </picture>
         </a>
       </div>
     </article>
@@ -699,7 +757,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <!-- JS Propios -->
   <script src="js/index.js" type="module"></script>
-  <script src="js/novedades.js"></script>
+  <!-- <script src="js/novedades.js"></script> -->
   <script src="js/contacto.js" type="module"></script>
 </body>
 
